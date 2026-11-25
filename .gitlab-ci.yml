@@ -1,0 +1,8 @@
+# GitLab Pages. غيّر SITE_URL إلى https://USER.gitlab.io/REPO (أو نطاقك)
+image: python:3.12-slim
+pages:
+  variables: { SITE_URL: "https://$CI_PROJECT_NAMESPACE.gitlab.io/$CI_PROJECT_NAME" }
+  script:
+    - python3 tools/deploy.py --url "$SITE_URL" --out public   # أضف --public للنسخة العامة
+  artifacts: { paths: [public] }
+  rules: [{ if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH' }]

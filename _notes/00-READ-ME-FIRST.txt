@@ -1,0 +1,33 @@
+مرجعي الخاص — Headway Study Hub
+(هذا الملف للقراءة فقط وغير ظاهر في الموقع)
+==================================================
+
+1) تشغيل الموقع
+   افتح index.html بالمتصفح مباشرة. لا يحتاج سيرفراً ولا إنترنت (الخطوط محلية داخل assets/fonts، والموقع كله يعمل دون إنترنت).
+   التقدّم والإجابات والإعدادات تُحفظ في متصفحك فقط. للنقل بين الأجهزة: الإعدادات ← النسخ الاحتياطي ← تصدير/استيراد.
+
+2) أين أضع الملفات؟
+   - فيديو الوحدة (2) + فيديو Nick Bruckman:  media/video/unit-1/
+        intro-1.mp4     (فيديو المقدمة 1)
+        intro-2.mp4     (فيديو المقدمة 2)
+        nick-bruckman.mp4
+     (الصيغ المدعومة: mp4 / webm / m4v / mov. أو اربط رابط يوتيوب من زر «ربط رابط» داخل الصفحة.)
+   - ملفات الدروس PDF + PPTX:  media/files/unit-1/<اسم-الدرس>/   (الاثنان في نفس المجلد وبنفس الاسم)
+        مثال: media/files/unit-1/description/Description.pdf  و  Description.pptx
+   - اختبارات HTML التفاعلية:  media/files/unit-1/tests/
+   - بعد وضع أي ملف جديد شغّل:   python3 tools/scan-files.py     ← يضيفه تلقائياً لصفحة «الملفات والروابط»
+   - الصوت (تسجيلات الكتاب):  media/audio/unit-1/track-1.1.mp3 … track-1.8.mp3  (الترتيب في media/audio/unit-1/README.txt)
+   - صور الكتاب (لقطات):  media/images/unit-1/
+   - الصور المولّدة بـChatGPT:  media/images/gen/<id>.png   ← الأسماء والبرومبتات في _notes/image-prompts.html (أو .txt)
+
+3) إضافة رابط جديد
+   افتح data/resources.js وأضف سطراً داخل المجموعة المناسبة:
+   { title: '...', desc: '...', url: 'https://...', type: 'WEB' },
+
+4) إضافة صفحة جديدة من الكتاب
+   أرسل لي الصفحات وسأضيفها بنفس البنية (data/pages/pNN.js ثم تسجيلها في index.html و data/course.js).
+
+5) ملاحظات
+   - Tome أوقفت منتج العروض التقديمية في 2025، لذلك لم تُضف للروابط.
+   - في صورة التراكيب (p.12) زوجان غير معياريين: «Close Views» و«Close Garden». البرومبت المصحّح موجود في مجموعة البرومبتات (info-collocations).
+   - إعادة بناء Tailwind (اختياري): cd build && npm i && ./node_modules/.bin/tailwindcss -c tailwind.config.js -i tw-input.css -o ../assets/css/tailwind.css --minify

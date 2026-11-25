@@ -1,0 +1,478 @@
+مجموعة برومبتات الصور — Headway Study Hub
+============================================================
+طريقة العمل:
+1) افتح محادثة جديدة في ChatGPT (يفضّل محادثة لكل صورة).
+2) انسخ البرومبت كاملاً (STYLE + المحتوى + التوقيع الاختياري) والصقه.
+3) إذا ظهر خطأ إملائي استخدم جملة الإصلاح الموجودة أسفل كل برومبت.
+4) احفظ الصورة بالاسم المذكور (PNG أو JPG) داخل المجلد: media/images/gen/
+5) أرسلها لي أيضاً إن أردت أن أراجعها قبل اعتمادها؛ ولا تحتاج لأي خطوة أخرى — الموقع يعرضها تلقائياً.
+الأولوية: A = الأهم أولاً، B = بعدها، C = اختياري.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[1/39] hero-home   (الأولوية A)
+الاسم: Headway Study Hub — واجهة الصفحة الرئيسية
+الملف: media/images/gen/hero-home.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: الصفحة الرئيسية (بانر أعلى الصفحة)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide welcome banner for an English-learning website. Left-centre: the big bold title "Headway Study Hub" in white on a deep navy rounded panel, with the smaller subtitle "Intermediate English · Unit 1" under it. Right side: a cheerful illustration of four diverse stylised students (different skin tones, one wearing a hijab) sitting around a huge open book, with colourful speech bubbles above them reading "Who?", "Where?", "Why?" and "How?". Floating around the scene: small word tags "cosy", "stunning", "hard-working", "friendly" with tiny icons. Background: a soft blue sky gradient with a stylised city skyline and a few clouds. Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2/39] cover-p09   (الأولوية A)
+الاسم: What's your story? — What's your story?
+الملف: media/images/gen/cover-p09.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة p.9 (بانر)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide header banner for the lesson page titled "What's your story?". Place the title text in large bold white letters on the left inside a deep navy rounded panel. Scene on the right: an open storybook whose pages unfold into a winding path with five small icons along it: a baby, a child, a teenager, an adult, an older person; a speech bubble with a question mark; a glowing lightbulb. Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[3/39] cover-p10   (الأولوية A)
+الاسم: Information questions — Information questions
+الملف: media/images/gen/cover-p10.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة p.10 (بانر)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide header banner for the lesson page titled "Information questions". Place the title text in large bold white letters on the left inside a deep navy rounded panel. Scene on the right: a friendly stylised blonde woman with a laptop and a coffee, standing in front of a long modern bridge over the sea at sunset (Scandinavian style), with six floating question-mark speech bubbles; a small map pin. Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[4/39] cover-p11   (الأولوية A)
+الاسم: Information questions (continued) — Information questions (continued)
+الملف: media/images/gen/cover-p11.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة p.11 (بانر)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide header banner for the lesson page titled "Information questions (continued)". Place the title text in large bold white letters on the left inside a deep navy rounded panel. Scene on the right: a cutaway of a bright modern apartment (balcony, armchair, big window, tree-lined street outside) with a silver laptop on a desk, and floating speech bubbles containing question marks. Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[5/39] cover-p12   (الأولوية A)
+الاسم: All about adjectives — All about adjectives
+الملف: media/images/gen/cover-p12.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة p.12 (بانر)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide header banner for the lesson page titled "All about adjectives". Place the title text in large bold white letters on the left inside a deep navy rounded panel. Scene on the right: three small illustrated advert cards (a smiling couple, a small old three-wheeled blue car, a cosy cottage with a garden), connected by colourful dotted lines to floating adjective tags (no readable extra words other than the title). Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[6/39] cover-p13   (الأولوية A)
+الاسم: A personality quiz — A personality quiz
+الملف: media/images/gen/cover-p13.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة p.13 (بانر)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide header banner for the lesson page titled "A personality quiz". Place the title text in large bold white letters on the left inside a deep navy rounded panel. Scene on the right: a big clipboard with a quiz sheet and tick boxes, surrounded by a colourful ring of simple emoji-style faces showing different moods (smiling, shy, laughing, thoughtful), a pencil and a magnifying glass. Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[7/39] cover-p14   (الأولوية A)
+الاسم: What's their story? — What's their story?
+الملف: media/images/gen/cover-p14.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة p.14 (بانر)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide header banner for the lesson page titled "What's their story?". Place the title text in large bold white letters on the left inside a deep navy rounded panel. Scene on the right: a stylised New York skyline at dusk, six silhouettes of young men with long dark hair and sunglasses standing in a row (pure dark silhouettes, no faces), a film clapperboard and a film reel, and floating question marks. Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[8/39] cover-p15   (الأولوية A)
+الاسم: Their story — Their story
+الملف: media/images/gen/cover-p15.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة p.15 (بانر)
+المقاس: Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a wide header banner for the lesson page titled "Their story". Place the title text in large bold white letters on the left inside a deep navy rounded panel. Scene on the right: a dramatic poster-like scene: a heavy front door with chains slightly open and warm light shining through, six silhouettes in front, a howling wolf silhouette against a big moon, and a film reel; cinematic navy and amber palette. Wide banner composition: keep ALL important content inside the central 60% of the height because the site will crop the top and bottom edges. Landscape 3:2 or 16:9.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[9/39] info-question-words   (الأولوية A)
+الاسم: Question words — أدوات الاستفهام
+الملف: media/images/gen/info-question-words.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.10 — تمرين 1
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Question words". Eight rounded cards in two rows of four, each card with a big coloured question word, a simple icon and one short example question: "Who?" (person icon) — "Who is she?"; "What?" (box icon) — "What do you do?"; "Where?" (map pin) — "Where do you live?"; "When?" (clock) — "When did you start?"; "Why?" (lightbulb) — "Why are you here?"; "Which?" (two arrows choosing) — "Which floor is it?"; "Whose?" (hand holding a bag) — "Whose bag is this?"; "How?" (gear) — "How did you get here?". Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[10/39] info-describing-people   (الأولوية A)
+الاسم: Four similar questions — أربعة أسئلة متشابهة
+الملف: media/images/gen/info-describing-people.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.10 — تمرين 2 / القواعد
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Four similar questions". Four horizontal rows, each with a left icon, the question in a bold blue pill and the answer in a white pill: row 1 icon = personality hearts: "What's she like?" → "She's very nice and easy-going."; row 2 icon = a woman's outline with long wavy hair: "What does she look like?" → "She is tall with long, wavy hair."; row 3 icon = two faces looking alike: "Who does she look like?" → "She looks like her dad."; row 4 icon = a thumbs-up and a smile: "How is she?" → "She is fine, thanks." Use a different accent colour per row. Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[11/39] info-question-order   (الأولوية A)
+الاسم: Word order in questions — ترتيب الكلمات في السؤال
+الملف: media/images/gen/info-question-order.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.11 — Grammar Spot / موضوع القواعد
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Word order in questions". A large horizontal formula with four colour-coded blocks joined by plus signs: "Question word" (blue) + "Auxiliary" (orange) + "Subject" (green) + "Main verb" (purple). Underneath, three example rows with the same four colours aligned under each block: "Where | do | you | live?", "What | did | she | study?", "Why | is | he | crying?". At the bottom a small tip bubble: "Auxiliary comes BEFORE the subject!" Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[12/39] info-subject-vs-object-q   (الأولوية A)
+الاسم: Subject questions vs object questions — أسئلة الفاعل مقابل المفعول
+الملف: media/images/gen/info-subject-vs-object-q.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.11 — Grammar Spot
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Subject questions vs object questions". Split the image into two halves with a vertical divider. LEFT half headed "Who called you?": a phone icon with an arrow pointing INTO a person labelled "you", small note "Someone called you → no do/did". RIGHT half headed "Who did you call?": the arrow pointing OUT from the person to another person, small note "You called someone → use did". Below both, a bottom strip with two more pairs: "What happened?" and "What did you see?". Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[13/39] info-collocations   (الأولوية A)
+الاسم: Adjectives and nouns that go together — صفات وأسماء تُستعمل معاً
+الملف: media/images/gen/info-collocations.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.12 — تمرين 2 (الصورة التي أرسلتها)
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+ملاحظة: في النسخة الحالية للصورة زوجان غير معياريين: «Close Views» و«Close Garden». الحل المعتمد في الكتاب: stunning/thrilling views وmature/stunning garden. أعد توليدها بالبرومبت المصحَّح ثم استبدل الملف.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. (Your first version already exists. This is the CORRECTED prompt: remove the two non-standard pairs "Close Views" and "Close Garden" and use natural collocations.) Title banner: "1. Crowded City, 2. Crowded Room | 3. Cosmopolitan City." Then a grid of 18 rounded illustrated cards, each with its number and caption exactly: "4. Close Relative" (smiling family), "5. Close Match" (football and goal), "6. Stunning Views" (mountain lake at sunset), "7. Stunning Garden" (flower garden), "8. Thrilling Views" (hot-air balloon over mountains), "9. Thrilling Match" (floodlit stadium), "10. Thrilling Job" (laptop with rising chart), "11. Cosy Cottage" (little cottage with warm windows), "12. Cosy Room" (armchair, lamp and bookcase), "13. Mature Garden" (big old tree and flower beds), "14. Challenging Job" (person on a mountain peak), "15. Challenging Match" (chess pieces on a board), "16. Latest Fashions" (clothes on a rail and a hat), "17. Spicy Food" (bowl with red chillies), "18. Fresh Food" (basket of vegetables), "19. Fresh Vegetables" (lettuce, tomatoes, carrots), "20. Cloudy Sky" (blue sky with clouds). Same visual style as your first image (navy title banner with a city skyline at the right). Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[14/39] info-compound-adjectives   (الأولوية A)
+الاسم: Compound adjectives — الصفات المركّبة
+الملف: media/images/gen/info-compound-adjectives.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.12 — تمرين 3
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Compound adjectives". Subtitle: "two words joined by a hyphen". Eight rounded cards in a 4×2 grid, each showing the hyphenated word split in two colours and a simple illustration: "well-behaved" (a polite child sitting quietly), "well-made" (a sturdy wooden chair), "brand-new" (a shiny car with a ribbon), "middle-aged" (a man with a few grey hairs), "full-time" (a clock showing 9 to 5 and a briefcase), "bad-tempered" (an angry face with steam), "home-made" (a cake on a table), "home-sick" (a sad person looking at a house in a thought bubble). Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15/39] info-ed-ing   (الأولوية A)
+الاسم: -ed or -ing? — ‑ed أم ‑ing؟
+الملف: media/images/gen/info-ed-ing.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.12 — تمرين 5
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "-ed or -ing?". Two big panels side by side. LEFT panel in blue headed "-ed = how I FEEL" with a person with a thought bubble; RIGHT panel in orange headed "-ing = what CAUSES the feeling" with a film screen. Under the headings, five matching pairs drawn as rows across both panels: "bored — boring", "interested — interesting", "tired — tiring", "excited — exciting", "relaxed — relaxing", each with a tiny face icon. Bottom example bubble: "I'm bored. The film is boring." Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[16/39] info-personality-wheel   (الأولوية A)
+الاسم: Personality adjectives — صفات الشخصية
+الملف: media/images/gen/info-personality-wheel.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.13 — تمرين 10
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Personality adjectives". A big circle wheel split into two halves. Green half headed "positive" containing these words on small tags: friendly, hard-working, generous, cheerful, honest, patient, easy-going, creative, reliable, thoughtful. Red/orange half headed "negative" containing: lazy, moody, mean, untidy, pessimistic, impatient, bad-tempered, miserable. In the centre a stylised smiling face. Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[17/39] info-opposites-personality   (الأولوية A)
+الاسم: Opposites — الأضداد
+الملف: media/images/gen/info-opposites-personality.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.13 — تمرين 10
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Opposites". Ten horizontal rows, each with two word pills facing each other with a double arrow in the middle: "reliable ↔ unreliable", "lazy ↔ hard-working", "moody ↔ easy-going", "generous ↔ mean", "cheerful ↔ miserable", "talkative ↔ quiet", "untidy ↔ tidy", "optimistic ↔ pessimistic", "shy ↔ outgoing", "patient ↔ impatient". Left pills blue, right pills orange, with tiny matching icons. Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[18/39] info-story-timeline   (الأولوية A)
+الاسم: The story in order — القصة بالترتيب
+الملف: media/images/gen/info-story-timeline.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.15 — The story in order
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "The story in order". A vertical zig-zag timeline with seven numbered milestones on alternating sides, each with a small icon: 1 "Late 1980s — the family begins" (couple and a heart), 2 "The father locks the door" (door with a lock), 3 "Films teach the brothers about life" (film reel), 4 "Mukunda is 15" (boy with a birthday number 15), 5 "The escape" (open door and running figure), 6 "Meeting the film-maker" (camera), 7 "Nowadays — a more normal life" (friends together). Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[19/39] vocab-personality-positive   (الأولوية A)
+الاسم: Positive personality adjectives — صفات الشخصية الإيجابية
+الملف: media/images/gen/vocab-personality-positive.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.13 — تمرين 8
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an illustrated vocabulary poster, exactly like a picture dictionary. Title banner: "Positive personality adjectives". Below it a neat grid of rounded cards (about 12), each card has its number, ONE simple friendly illustration and the word in bold. The cards, in order: 1. "friendly" (two people shaking hands, smiling), 2. "hard-working" (person busy at a desk with a stack of papers), 3. "generous" (hands giving a gift), 4. "cheerful" (big smile with sparkles), 5. "honest" (hand on heart with a tick), 6. "patient" (person calmly waiting with an hourglass), 7. "easy-going" (person relaxing in a hammock), 8. "creative" (paintbrush and lightbulb), 9. "reliable" (person holding a keys-and-clock badge), 10. "thoughtful" (person bringing a cup of tea to a friend), 11. "funny" (laughing face telling a joke), 12. "ambitious" (person climbing steps to a flag).  Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20/39] vocab-personality-negative   (الأولوية A)
+الاسم: Negative personality adjectives — صفات الشخصية السلبية
+الملف: media/images/gen/vocab-personality-negative.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.13 — تمرين 8
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an illustrated vocabulary poster, exactly like a picture dictionary. Title banner: "Negative personality adjectives". Below it a neat grid of rounded cards (about 12), each card has its number, ONE simple friendly illustration and the word in bold. The cards, in order: 1. "lazy" (person asleep on a sofa), 2. "moody" (face with a stormy cloud), 3. "mean" (person hiding a purse from a friend), 4. "untidy" (messy bedroom), 5. "pessimistic" (person under a rain cloud with a half-empty glass), 6. "impatient" (person tapping a watch), 7. "bad-tempered" (angry red face with steam), 8. "miserable" (crying face with a small cloud), 9. "unreliable" (alarm clock that is late with a broken promise note), 10. "insensitive" (person ignoring a sad friend), 11. "shy" (person hiding behind a book), 12. "reserved" (person with arms folded standing apart).  Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[21/39] cover-cards   (الأولوية B)
+الاسم: Flashcards — بطاقات الحفظ
+الملف: media/images/gen/cover-cards.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة «بطاقات الحفظ»
+المقاس: Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a clean header illustration for a study-tool page titled "Flashcards" (title in bold white letters on a deep navy rounded panel at the left). Right side: a fanned stack of colourful flashcards with a small lightning icon and a brain, one card flipped showing a simple star. Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[22/39] cover-quiz   (الأولوية B)
+الاسم: Review quiz — اختبار المراجعة
+الملف: media/images/gen/cover-quiz.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة «اختبار المراجعة»
+المقاس: Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a clean header illustration for a study-tool page titled "Review quiz" (title in bold white letters on a deep navy rounded panel at the left). Right side: a clipboard with a checklist, a green tick, a trophy and a stopwatch. Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[23/39] cover-glossary   (الأولوية B)
+الاسم: Glossary — قاموس الوحدة
+الملف: media/images/gen/cover-glossary.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة «قاموس الوحدة»
+المقاس: Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a clean header illustration for a study-tool page titled "Glossary" (title in bold white letters on a deep navy rounded panel at the left). Right side: a thick open dictionary with an A–Z tab strip and a magnifying glass over a word. Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[24/39] cover-lib   (الأولوية B)
+الاسم: Files & links — الملفات والروابط
+الملف: media/images/gen/cover-lib.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة «الملفات والروابط»
+المقاس: Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a clean header illustration for a study-tool page titled "Files & links" (title in bold white letters on a deep navy rounded panel at the left). Right side: a tidy bookshelf with folders, a PDF page, a slideshow screen, a video play button and a chain-link icon. Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[25/39] cover-grammar   (الأولوية B)
+الاسم: Grammar — القواعد
+الملف: media/images/gen/cover-grammar.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة «القواعد»
+المقاس: Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a clean header illustration for a study-tool page titled "Grammar" (title in bold white letters on a deep navy rounded panel at the left). Right side: a friendly toolbox open with grammar building blocks (coloured puzzle pieces) and a pencil, a small ruler. Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[26/39] cover-words   (الأولوية B)
+الاسم: Words — الأضداد وعائلات الكلمات
+الملف: media/images/gen/cover-words.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: رأس صفحة «الكلمات»
+المقاس: Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create a clean header illustration for a vocabulary page titled "Words" (bold white letters on a deep navy rounded panel at the left). Right side: two big puzzle-like word tiles facing each other as opposites, a tree whose branches carry small word leaves (a word family tree), and a magnifying glass. Landscape 3:2 (1536×1024), simple composition with generous empty margins because the site will crop it to a wide strip.
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[27/39] info-unit1-map   (الأولوية B)
+الاسم: Unit 1 at a glance — وحدة 1 في نظرة
+الملف: media/images/gen/info-unit1-map.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.9 — قسم Contents
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title banner at top-left: "Unit 1 — What's your story?". Below, six equal rounded cards in a 3×2 grid, each with a bold number, a simple icon and a label: 1 "Grammar — Information questions" (question-mark bubble), 2 "Vocabulary — All about adjectives" (colourful tags), 3 "Everyday English — Making the right noises" (speech bubble with a smile), 4 "Reading — The Angulo Brothers" (open book), 5 "Listening — My closest relative" (headphones), 6 "Writing — Describing a person" (pencil and paper). Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[28/39] info-erika-profile   (الأولوية B)
+الاسم: Meet Erika — تعرّف على إيريكا
+الملف: media/images/gen/info-erika-profile.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.10 — Starter 1
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Design a friendly profile card. Left: a stylised blonde woman with a warm smile in casual clothes. Right: bold name "Erika Nordstrom", then four labelled lines with icons: "Nationality: Swedish", "Lives in: Malmö, southern Sweden", "Job: product quality manager", "Loves: music and the sea". Bottom strip: a stylised long bridge over blue water with the small caption "Malmö · Sweden". Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[29/39] info-how-questions   (الأولوية B)
+الاسم: How + adjective / adverb — How + صفة أو ظرف
+الملف: media/images/gen/info-how-questions.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.11 — Question words
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "How + adjective / adverb". Seven rounded cards in a grid, each with an icon and the question: "How old is she?" (birthday cake), "How tall is he?" (height ruler), "How big is it?" (house outline), "How far is it to your work?" (road with a pin), "How long is the flight?" (aeroplane and clock), "How much does it weigh?" (kitchen scale), "How many bedrooms are there?" (bed). Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[30/39] info-describing-places   (الأولوية B)
+الاسم: Describing where you live — وصف مكان السكن
+الملف: media/images/gen/info-describing-places.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.11 — تمرين 4
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Describing where you live". A cutaway of a small modern apartment building with a tree-lined road in front. Eight label tags with leader lines pointing to the correct parts: "a modern block", "a great view of …", "enormous", "noisy", "a balcony", "ground floor", "a quiet, tree-lined road", "a tiny garden". Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[31/39] info-opposites-prefixes   (الأولوية B)
+الاسم: Making opposites — تكوين الأضداد
+الملف: media/images/gen/info-opposites-prefixes.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.12 — تمرين 4
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Making opposites with prefixes". Four columns, each headed by a large coloured prefix with three example pairs underneath written as "word → opposite": "un-": reliable → unreliable, tidy → untidy, friendly → unfriendly; "in-": sensitive → insensitive, formal → informal, visible → invisible; "im-": patient → impatient, polite → impolite, possible → impossible; "dis-": honest → dishonest, agree → disagree, like → dislike. Add a small bubble at the bottom: "The meaning becomes the opposite!" Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[32/39] info-word-families   (الأولوية B)
+الاسم: Word families — عائلات الكلمات
+الملف: media/images/gen/info-word-families.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: موضوع «عائلات الكلمات»
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Word families". A tree-like diagram: five branches, each starting from a verb in a trunk circle and splitting into small leaves with the noun and adjectives: "interest → interested, interesting"; "bore → boredom → bored, boring"; "tire → tiredness → tired, tiring"; "excite → excitement → excited, exciting"; "relax → relaxation → relaxed, relaxing". Colour the verbs navy, nouns green, adjectives orange. Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[33/39] info-wolfpack-brief   (الأولوية B)
+الاسم: Who are the Angulo brothers? — من هم الإخوة أنغولو؟
+الملف: media/images/gen/info-wolfpack-brief.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.14 — تمرين 1
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Who are the Angulo brothers?". Centre: a stylised high-rise apartment building in New York with a single lit window; six dark silhouettes of young men with long hair standing in front (silhouettes only, no faces). Four icon bullets around it: "Six brothers", "Lived in a small apartment", "Learned about life from films", "Their story became a film: The Wolfpack". Film reel and clapperboard icons in the corners. Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[34/39] info-story-phrases   (الأولوية B)
+الاسم: Useful phrases — عبارات مفيدة
+الملف: media/images/gen/info-story-phrases.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.15 — Useful phrases
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Useful phrases from the article". Six rounded cards in a 3×2 grid, each with a bold phrase and a simple illustration: "an escape from the outside world" (door opening to a city), "cut off from" (broken chain link), "time and time again" (circular repeat arrows), "it was only when … that …" (clock with a spotlight), "a lost tribe" (small campfire with silhouettes), "nowadays" (calendar with the word today). Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[35/39] info-unit1-review   (الأولوية B)
+الاسم: Unit 1 summary — ملخص الوحدة 1
+الملف: media/images/gen/info-unit1-review.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: نهاية p.15
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Unit 1 summary". Three columns: column 1 "Questions" with the formula "Question word + auxiliary + subject + verb" and the example "Where do you live?"; column 2 "Adjectives" with "compound: good-looking, hard-working", "-ed / -ing: bored / boring" and "collocations: stunning views"; column 3 "Describing people" with "What's she like? / What does she look like?". Each column has its own colour and icon. Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[36/39] vocab-appearance   (الأولوية B)
+الاسم: Describing appearance — وصف المظهر
+الملف: media/images/gen/vocab-appearance.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.10 — Starter 2
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an illustrated vocabulary poster, exactly like a picture dictionary. Title banner: "Describing appearance". Below it a neat grid of rounded cards (about 10), each card has its number, ONE simple friendly illustration and the word in bold. The cards, in order: 1. "tall" (tall person next to a door), 2. "short" (short person next to a table), 3. "of medium height" (person next to a ruler at the middle), 4. "straight hair" (woman with long straight hair), 5. "curly hair" (man with curly hair), 6. "wavy hair" (woman with wavy hair), 7. "good-looking" (smiling person with a sparkle), 8. "in his mid-thirties" (man next to the number 35), 9. "about 1 metre 70" (person next to a measuring tape), 10. "quite dark" (person with dark hair and eyes).  Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[37/39] vocab-feelings   (الأولوية B)
+الاسم: Feelings — المشاعر
+الملف: media/images/gen/vocab-feelings.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.12 — تمرين 5
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an illustrated vocabulary poster, exactly like a picture dictionary. Title banner: "Feelings". Below it a neat grid of rounded cards (about 10), each card has its number, ONE simple friendly illustration and the word in bold. The cards, in order: 1. "bored" (yawning face), 2. "interested" (face with raised eyebrow and a book), 3. "tired" (sleepy face with a pillow), 4. "thrilled" (face with starry eyes), 5. "astonished" (wide-eyed face with open mouth), 6. "relaxed" (face with closed eyes on a beach chair), 7. "excited" (jumping person with confetti), 8. "disappointed" (face looking down), 9. "exhausted" (person slumped on the floor), 10. "shocked" (face with hands on cheeks).  Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[38/39] vocab-places   (الأولوية B)
+الاسم: Places and homes — الأماكن والبيوت
+الملف: media/images/gen/vocab-places.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.11 — تمرين 3
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an illustrated vocabulary poster, exactly like a picture dictionary. Title banner: "Places and homes". Below it a neat grid of rounded cards (about 10), each card has its number, ONE simple friendly illustration and the word in bold. The cards, in order: 1. "a modern block" (tall glass apartment building), 2. "ground floor" (building with the first level highlighted), 3. "a balcony" (small balcony with plants), 4. "a tiny garden" (very small garden with a gnome), 5. "a quiet, tree-lined road" (road with trees on both sides), 6. "enormous" (huge house next to a tiny person), 7. "noisy" (street with cars and loud-speaker lines), 8. "a great view" (window with a skyline view), 9. "needs decorating" (room with paint rollers and tins), 10. "a cosy cottage" (little cottage with a chimney smoke).  Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[39/39] info-predict-story   (الأولوية C)
+الاسم: Predicting the story — توقّع القصة
+الملف: media/images/gen/info-predict-story.png أو .jpg   (احفظ بالاسم نفسه تماماً، بصيغة PNG أو JPG)
+يظهر في: p.14 — What do you think?
+المقاس: Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+
+--- البرومبت (انسخه كاملاً إلى ChatGPT) ---
+STYLE (apply to the whole image): modern flat 2D vector illustration in a friendly, polished educational-infographic style, like a premium language-learning app. Soft rounded rectangles and cards, gentle gradients, subtle soft shadows, clean bright palette of deep navy (#14305f), bright blue (#2f6fed), sky blue, warm yellow-orange accents and a light off-white background with faint abstract shapes. Typography: bold, highly legible rounded sans-serif (Poppins / Nunito style), strong contrast, numbered labels where specified. Characters are stylised cartoon people with simple faces, never realistic or based on real individuals. STRICT TEXT RULES: write every piece of text EXACTLY as quoted, in English only, with perfect spelling; do not add, translate or invent any other words, numbers, logos or watermarks. Create an educational infographic. Title: "Predict before you read". Four steps in a horizontal flow with arrows, each a rounded card with an icon: 1 "Look at the photos" (eye), 2 "Read the title" (book), 3 "Ask questions" (question mark), 4 "Guess the story" (lightbulb). Wide landscape, 16:9 (1792×1024 if available, otherwise 3:2 landscape).
+OPTIONAL SIGNATURE: in the bottom-right corner place a small navy curved ribbon containing a blue feather-quill icon and the handwritten-style signature text "Rebhe Ibrahim". (Delete this paragraph if you do not want a signature.)
+If any word is misspelled or missing, do not redraw everything: reply "Regenerate the same image, but fix only these words: …" and list them.
