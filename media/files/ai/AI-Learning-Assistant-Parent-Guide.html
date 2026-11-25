@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الذكاء الاصطناعي كمساعد تعلّم شخصي لأبنائك — دليل عملي لوليّ الأمر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF5EA;--bg-deep:#F3EBD9;--surface:#FFFFFF;--surface-2:#F6F0E2;
+  --ink:#1B2E2B;--ink-2:#3A5450;--muted:#7A8B87;--line:#E7DEC9;--line-strong:#D8CBAD;
+  --accent:#C1502E;--accent-soft:#F8E4DB;--teal:#2E7D6E;--teal-soft:#DEF0EA;
+  --gold:#B98A1E;--gold-soft:#FBF0D3;--plum:#6B4C7A;--plum-soft:#EDE4F2;
+  --rose:#A8324A;--rose-soft:#F9E0E5;--sky:#2D6A8F;--sky-soft:#DEEAF3;
+  --r-s:8px;--r-m:14px;--r-l:22px;--r-xl:30px;
+  --sh-s:0 1px 2px rgba(27,46,43,.05),0 2px 8px rgba(27,46,43,.04);
+  --sh-m:0 2px 4px rgba(27,46,43,.05),0 12px 30px -10px rgba(27,46,43,.16);
+  --sh-l:0 4px 8px rgba(27,46,43,.05),0 24px 56px -18px rgba(27,46,43,.22);
+  --f-head:"Tajawal","Segoe UI",Tahoma,system-ui,sans-serif;
+  --f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono","Courier New",monospace;
+  --gutter:clamp(1rem,4vw,2.5rem);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1rem;font-weight:400;line-height:1.9;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+.page-wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 var(--gutter) 4rem;overflow-x:clip;}
+h1,h2,h3,h4{font-family:var(--f-head);line-height:1.4;margin:0;font-weight:700;}
+p{margin:0 0 1rem;}p:last-child{margin-bottom:0;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
+.hero{position:relative;margin:0 calc(var(--gutter) * -1) 3.5rem;padding:clamp(2.5rem,7vw,4.5rem) var(--gutter) clamp(2.5rem,6vw,3.75rem);background:radial-gradient(ellipse 90% 120% at 88% 0%,var(--gold-soft) 0%,transparent 62%),radial-gradient(ellipse 80% 110% at 8% 100%,var(--teal-soft) 0%,transparent 58%),var(--bg-deep);border-bottom:1px solid var(--line);overflow:hidden;isolation:isolate;}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:30px 30px;opacity:.55;-webkit-mask-image:radial-gradient(ellipse 100% 80% at 50% 40%,#000 20%,transparent 78%);mask-image:radial-gradient(ellipse 100% 80% at 50% 40%,#000 20%,transparent 78%);pointer-events:none;z-index:-1;}
+.hero__kicker{display:inline-flex;align-items:center;gap:.5rem;margin:0 0 1.1rem;padding:.32rem .85rem .32rem .7rem;font-family:var(--f-head);font-size:.79rem;font-weight:700;letter-spacing:.04em;color:var(--accent);background:var(--surface);border:1px solid var(--line-strong);border-radius:100px;box-shadow:var(--sh-s);}
+.hero__kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:0 0 auto;}
+.hero h1{font-size:clamp(1.75rem,5.2vw,2.85rem);font-weight:800;letter-spacing:-.015em;max-width:22ch;margin-bottom:.9rem;color:var(--ink);}
+.hero h1 em{font-style:normal;position:relative;white-space:nowrap;color:var(--accent);}
+.hero h1 em::after{content:"";position:absolute;inset-inline:-.12em;bottom:.05em;height:.32em;background:var(--gold-soft);border-radius:4px;z-index:-1;}
+.hero__sub{max-width:62ch;font-size:clamp(.95rem,2.2vw,1.08rem);line-height:1.95;color:var(--ink-2);margin:0 0 1.2rem;}
+.hero__meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;}
+.hero__badge{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--f-head);font-size:.76rem;font-weight:700;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);padding:.28rem .7rem;border-radius:100px;box-shadow:var(--sh-s);}
+.hero__badge--live{color:var(--teal);background:var(--teal-soft);border-color:var(--teal);}
+.hero__badge--live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+.section{margin-bottom:clamp(3rem,7vw,4.75rem);scroll-margin-top:1.5rem;}
+.section__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.55rem .85rem;margin-bottom:1.75rem;}
+.section__ord{flex:0 0 auto;font-family:var(--f-head);font-size:.83rem;font-weight:700;letter-spacing:.03em;color:var(--surface);background:var(--ink);padding:.28rem .8rem;border-radius:100px;}
+.section h2{font-size:clamp(1.28rem,3.6vw,1.85rem);font-weight:800;letter-spacing:-.01em;flex:1 1 auto;min-width:min(100%,14ch);}
+.section__rule{flex:1 1 100%;height:2px;border-radius:2px;background:linear-gradient(to left,var(--line-strong),transparent);}
+.section__intro{max-width:66ch;color:var(--ink-2);margin:-.75rem 0 1.75rem;}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.9rem;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:1.05rem 1.1rem;box-shadow:var(--sh-s);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh-m);border-color:var(--line-strong);}
+.card__top{display:flex;align-items:center;gap:.6rem;margin-bottom:.55rem;}
+.card__n{flex:0 0 auto;display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:var(--teal-soft);color:var(--teal);font-family:var(--f-head);font-weight:800;font-size:.92rem;line-height:1;}
+.card h4{font-size:1rem;font-weight:700;color:var(--ink);}
+.card p{margin:0;font-size:.9rem;line-height:1.8;color:var(--ink-2);}
+.card ul{margin:0;padding-inline-start:1.1rem;font-size:.9rem;line-height:1.8;color:var(--ink-2);}
+
+.callout{border-radius:var(--r-m);padding:1.1rem 1.2rem;margin-bottom:1.2rem;border:1px solid;font-size:.94rem;line-height:1.9;}
+.callout--warn{background:var(--rose-soft);border-color:var(--rose);color:#6B1E2E;}
+.callout--info{background:var(--sky-soft);border-color:var(--sky);color:#1B3D54;}
+.callout--ok{background:var(--teal-soft);border-color:var(--teal);color:#1A4A40;}
+.callout--gold{background:var(--gold-soft);border-color:var(--gold);color:#6B4E0E;}
+.callout strong{font-weight:700;}
+.callout ul,.callout ol{margin:.5rem 0 0;padding-inline-start:1.2rem;}
+
+.prompt{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:1.4rem clamp(1.05rem,3.4vw,1.75rem) 1.35rem;box-shadow:var(--sh-s);margin-bottom:1.15rem;}
+.prompt::before{content:"";position:absolute;inset-block:1.35rem;inset-inline-start:0;width:4px;border-radius:0 4px 4px 0;background:var(--teal);opacity:.75;}
+.prompt--gold::before{background:var(--gold);}
+.prompt--plum::before{background:var(--plum);}
+.prompt--accent::before{background:var(--accent);}
+.prompt--sky::before{background:var(--sky);}
+.prompt--rose::before{background:var(--rose);}
+.prompt__head{display:flex;align-items:flex-start;gap:.75rem;flex-wrap:wrap;margin-bottom:.9rem;}
+.prompt__num{flex:0 0 auto;display:grid;place-items:center;min-width:40px;height:40px;padding-inline:.4rem;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-family:var(--f-head);font-size:1.02rem;font-weight:800;line-height:1;}
+.prompt__title{flex:1 1 200px;min-width:0;}
+.prompt__title h3{font-size:clamp(1.02rem,2.9vw,1.18rem);font-weight:700;margin-bottom:.15rem;}
+.prompt__tag{display:inline-block;font-family:var(--f-head);font-size:.74rem;font-weight:700;letter-spacing:.02em;color:var(--teal);background:var(--teal-soft);padding:.14rem .6rem;border-radius:100px;}
+.prompt__tag--gold{color:var(--gold);background:var(--gold-soft);}
+.prompt__tag--plum{color:var(--plum);background:var(--plum-soft);}
+.prompt__tag--sky{color:var(--sky);background:var(--sky-soft);}
+.prompt__tag--rose{color:var(--rose);background:var(--rose-soft);}
+.prompt__body{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-m);padding:1rem clamp(.9rem,3vw,1.2rem);font-size:.94rem;line-height:1.95;color:var(--ink);}
+.prompt__body p{margin:0 0 .7rem;}
+.prompt__body p:last-child{margin-bottom:0;}
+.prompt__body ul,.prompt__body ol{margin:.35rem 0 .7rem;padding-inline-start:1.2rem;}
+.prompt__body li{margin-bottom:.45rem;}
+.prompt__body li:last-child{margin-bottom:0;}
+.prompt__body strong{color:var(--ink);font-weight:700;}
+.slot{background:var(--gold-soft);border-bottom:1.5px dotted var(--gold);border-radius:4px 4px 0 0;padding:.05em .3em;color:#7A5A0E;font-weight:500;}
+
+.copy-btn{display:inline-flex;align-items:center;gap:.42rem;margin-top:.9rem;padding:.42rem .9rem;font-family:var(--f-head);font-size:.82rem;font-weight:700;color:var(--ink-2);background:var(--surface);border:1px solid var(--line-strong);border-radius:100px;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .12s ease;}
+.copy-btn:hover{background:var(--ink);color:var(--surface);border-color:var(--ink);}
+.copy-btn:active{transform:scale(.97);}
+.copy-btn__ico{display:inline-flex;flex:0 0 auto;width:15px;height:15px;}
+.copy-btn svg{width:15px;height:15px;display:block;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+.copy-btn .ico-check{display:none;}
+.copy-btn.is-copied{background:var(--teal);border-color:var(--teal);color:#fff;}
+.copy-btn.is-copied .ico-copy{display:none;}
+.copy-btn.is-copied .ico-check{display:block;}
+.copy-btn.is-failed{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);}
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r-l);}
+.data-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;box-shadow:var(--sh-s);font-size:.92rem;}
+.data-table thead th{background:var(--ink);color:var(--surface);font-family:var(--f-head);font-size:.85rem;font-weight:700;letter-spacing:.02em;text-align:start;padding:.85rem 1.05rem;white-space:nowrap;}
+.data-table td{padding:.95rem 1.05rem;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.85;color:var(--ink-2);}
+.data-table tbody tr:last-child td{border-bottom:0;}
+.data-table tbody tr:nth-child(even){background:var(--surface-2);}
+.data-table td:first-child{font-family:var(--f-head);font-weight:700;color:var(--ink);}
+.tool-name{display:inline-block;font-family:var(--f-head);font-size:.83rem;font-weight:700;color:var(--teal);background:var(--teal-soft);padding:.14rem .55rem;border-radius:6px;margin:0 .18rem .3rem 0;direction:ltr;unicode-bidi:isolate;white-space:nowrap;}
+.tool-name--plum{color:var(--plum);background:var(--plum-soft);}
+.tool-name--gold{color:var(--gold);background:var(--gold-soft);}
+.tool-name--rose{color:var(--rose);background:var(--rose-soft);}
+
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:.6rem;}
+.checklist li{display:flex;align-items:flex-start;gap:.65rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:.85rem 1rem;font-size:.94rem;line-height:1.8;color:var(--ink-2);box-shadow:var(--sh-s);}
+.checklist li::before{content:"";flex:0 0 auto;width:18px;height:18px;margin-top:.25rem;border:2px solid var(--line-strong);border-radius:5px;background:var(--surface);}
+.checklist li strong{color:var(--ink);font-weight:700;}
+
+.timeline{position:relative;padding-inline-start:1.8rem;margin:0;list-style:none;}
+.timeline::before{content:"";position:absolute;inset-block:.5rem;inset-inline-start:.45rem;width:2px;background:var(--line-strong);border-radius:2px;}
+.timeline li{position:relative;margin-bottom:1.1rem;padding-bottom:.1rem;}
+.timeline li:last-child{margin-bottom:0;}
+.timeline li::before{content:"";position:absolute;inset-inline-start:-1.55rem;top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);}
+.timeline__time{display:inline-block;font-family:var(--f-head);font-size:.78rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:.1rem .55rem;border-radius:100px;margin-bottom:.25rem;}
+.timeline__title{font-family:var(--f-head);font-size:.98rem;font-weight:700;color:var(--ink);margin:0 0 .15rem;}
+.timeline__desc{font-size:.9rem;line-height:1.8;color:var(--ink-2);margin:0;}
+
+.modes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.75rem;}
+.mode{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:.95rem 1rem;box-shadow:var(--sh-s);transition:transform .2s ease,box-shadow .2s ease;}
+.mode:hover{transform:translateY(-3px);box-shadow:var(--sh-m);}
+.mode__icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--plum-soft);color:var(--plum);font-family:var(--f-head);font-size:1.05rem;font-weight:800;margin-bottom:.55rem;}
+.mode h4{font-size:.95rem;font-weight:700;margin-bottom:.2rem;}
+.mode p{margin:0;font-size:.85rem;line-height:1.75;color:var(--ink-2);}
+
+.ref-list{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;}
+.ref-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:.9rem 1.05rem;box-shadow:var(--sh-s);font-size:.9rem;line-height:1.8;color:var(--ink-2);}
+.ref-item strong{display:block;font-family:var(--f-head);font-size:.95rem;color:var(--ink);margin-bottom:.15rem;}
+.ref-item .ref-year{display:inline-block;font-family:var(--f-head);font-size:.75rem;font-weight:700;color:var(--sky);background:var(--sky-soft);padding:.1rem .5rem;border-radius:100px;margin-inline-start:.4rem;vertical-align:middle;}
+
+.site-footer{margin-top:1rem;padding-top:1.5rem;border-top:1px solid var(--line);text-align:center;font-size:.82rem;color:var(--muted);}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(27,46,43,.6);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:1rem;}
+.modal-overlay.is-open{display:flex;}
+.modal{background:var(--surface);border-radius:var(--r-xl);max-width:600px;width:100%;max-height:85vh;overflow-y:auto;padding:1.5rem;box-shadow:var(--sh-l);position:relative;}
+.modal__close{position:absolute;top:.9rem;inset-inline-end:.9rem;width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink-2);cursor:pointer;font-size:1.1rem;line-height:1;transition:background .18s ease,color .18s ease;}
+.modal__close:hover{background:var(--ink);color:var(--surface);border-color:var(--ink);}
+.modal h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;padding-inline-end:2.2rem;}
+.modal p{font-size:.9rem;color:var(--ink-2);margin-bottom:1rem;}
+.modal__textarea{width:100%;min-height:200px;border:1px solid var(--line-strong);border-radius:var(--r-m);padding:.9rem;font-family:var(--f-body);font-size:.9rem;line-height:1.9;color:var(--ink);background:var(--surface-2);resize:vertical;direction:rtl;}
+.modal__textarea:focus{outline:2px solid var(--accent);outline-offset:2px;}
+.modal__hint{margin-top:.6rem;font-size:.8rem;color:var(--muted);text-align:center;}
+
+@media (max-width:720px){
+  .hero{margin-bottom:2.75rem;}
+  .table-scroll{overflow-x:visible;}
+  .data-table{border:0;background:transparent;box-shadow:none;border-radius:0;display:block;overflow:visible;}
+  .data-table thead{display:none;}
+  .data-table tbody{display:block;}
+  .data-table tr{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);margin-bottom:.85rem;padding:.4rem 0;box-shadow:var(--sh-s);}
+  .data-table tbody tr:nth-child(even){background:var(--surface);}
+  .data-table td{display:block;border-bottom:0;padding:.55rem 1rem;}
+  .data-table td::before{content:attr(data-label);display:block;font-family:var(--f-head);font-size:.74rem;font-weight:700;letter-spacing:.03em;color:var(--accent);margin-bottom:.2rem;}
+  .data-table td:first-child{padding-top:.75rem;}
+}
+@media (max-width:420px){
+  .card-grid{grid-template-columns:1fr;}
+  .copy-btn{width:100%;justify-content:center;}
+  .modes-grid{grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+}
+@media print{
+  @page{margin:14mm;}
+  body{background:#fff;color:#000;font-size:11.5pt;line-height:1.65;}
+  .page-wrap{max-width:100%;padding:0;overflow:visible;}
+  .hero{margin:0 0 1.4rem;padding:0 0 1rem;background:none;border-bottom:1.5pt solid #000;}
+  .hero::before,.copy-btn,.hero__kicker::before,.modal-overlay{display:none !important;}
+  .hero h1 em{color:#000;}
+  .hero h1 em::after{display:none;}
+  .hero__sub{color:#000;}
+  .section{margin-bottom:1.6rem;page-break-inside:auto;}
+  .section__ord{background:none;color:#000;padding:0;font-weight:800;}
+  .section__rule{background:none;border-top:1pt solid #999;height:0;}
+  .card,.prompt,.data-table,.checklist li,.ref-item,.mode{box-shadow:none !important;border:1pt solid #bbb !important;background:#fff !important;break-inside:avoid;page-break-inside:avoid;}
+  .prompt::before{display:none;}
+  .callout{border:1pt solid #999 !important;background:#f8f8f8 !important;color:#000 !important;}
+  .slot{background:#f2f2f2 !important;border-bottom:0;color:#000 !important;}
+  .prompt__num,.card__n,.prompt__tag,.tool-name,.mode__icon{background:#eee !important;color:#000 !important;box-shadow:none !important;border:1pt solid #999;}
+  .prompt__body,.data-table tbody tr:nth-child(even){background:#fff !important;}
+  .data-table thead th{background:#eee !important;color:#000 !important;border-bottom:1pt solid #999;}
+  .data-table td{border-bottom:.5pt solid #ccc;color:#000;}
+  .timeline::before{background:#999;}
+  .timeline li::before{border-color:#666;}
+  .site-footer{color:#555;}
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <header class="hero">
+    <p class="hero__kicker">دليل عملي لوليّ الأمر — نسخة 2.2</p>
+    <h1>الذكاء الاصطناعي <em>كمساعد تعلّم شخصي</em> لأبنائك</h1>
+    <p class="hero__sub">دليل عملي لوليّ الأمر لبناء تجربة تعلّم آمنة، تفاعلية، ومبنية على أساليب تعلّم فعّالة.</p>
+    <p class="hero__sub" style="font-size:.9rem;color:var(--muted);">هذا ليس «دليل برومبتات» فحسب؛ بل نظام كامل يشرح كيف يحدث التعلّم فعلياً، وكيف يستخدم AI لدعمه دون أن يحلّ محلّ تفكير الطفل. مبني على UNESCO + UNICEF + EEF + أبحاث محكّمة، ومنظّم في 26 قسماً متكاملاً.</p>
+    <div class="hero__meta">
+      <span class="hero__badge hero__badge--live">آخر مراجعة: سبتمبر 2026</span>
+      <span class="hero__badge">26 قسماً • 30+ برومبت • مراجع موثقة</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 01 — ابدأ هنا -->
+    <section class="section" id="start" aria-labelledby="start-h">
+      <div class="section__head">
+        <span class="section__ord">01</span>
+        <h2 id="start-h">ابدأ هنا — ما الذي يستطيع AI فعله؟ وما الذي لا ينبغي أن يفعله؟</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">قبل أي برومبت أو أداة، وليّ الأمر يحتاج إلى صورة واضحة عن الحدود. AI ليس معلماً بديلاً، وليس آلة إجابات؛ إنه مساعد يمكن أن يزيد التفكير أو يلغيه — حسب طريقة استخدامك له.</p>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">✓</span><h4>ما يستطيع AI فعله</h4></div>
+          <p>يشرح المفاهيم بطرق متعددة، يولّد أسئلة تدريبية، يصحّح الأخطاء ويشخّصها، يلخّص المصادر، يساعد في المراجعة المتباعدة، ويصمم أنشطة تعليمية — كل ذلك بأسلوب يتكيف مع مستوى الطالب.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">✗</span><h4>ما لا ينبغي أن يفعله</h4></div>
+          <p>لا تكتب الواجب كاملاً بدل الطالب، لا تحلّ كل المسائل قبل محاولته، لا تُنتج بحثاً جاهزاً للتسليم دون فهم، لا تتخذ قرارات عن الطالب، لا تُقيّم نهائياً بدل المعلم، ولا تقدّم تشخيصاً صحياً أو نفسياً.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">★</span><h4>القاعدة الأساسية</h4></div>
+          <p>استخدم AI لزيادة التفكير، وليس لإلغاء التفكير. الفرق بين «AI يجيب» و«AI يساعد على التعلّم» هو الفرق بين إنجاز المهمة وفهمها.</p>
+        </article>
+      </div>
+      <div class="callout callout--warn" style="margin-top:1.2rem;">
+        <strong>⚠️ تنبيه مهم:</strong> جودة نتيجة AI تعتمد على السياق وطريقة الاستخدام والتدخل التربوي، وليست نتيجة تلقائية لاستخدام أي أداة. لا يوجد ضمان أن كل إجابة صحيحة، والتحقق مسؤولية وليّ الأمر.
+      </div>
+    </section>
+
+    <!-- 02 — قواعد الأمان والعمر -->
+    <section class="section" id="safety" aria-labelledby="safety-h">
+      <div class="section__head">
+        <span class="section__ord">02</span>
+        <h2 id="safety-h">قواعد الأمان والعمر — من يستخدم ماذا ومتى؟</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">ليست كل أداة مناسبة لكل عمر. وليس كل استخدام آمن. هذه المصفوفة تربوية عملية، وليست حدوداً قانونية؛ حدود كل منصة نفسها يجب التحقق منها بشكل منفصل.</p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption class="sr-only">مصفوفة الأعمار لاستخدام AI في التعلم</caption>
+          <thead>
+            <tr><th scope="col">الفئة العمرية</th><th scope="col">نمط الاستخدام</th><th scope="col">دور وليّ الأمر</th><th scope="col">ملاحظات</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="الفئة العمرية">6–9 سنوات</td><td data-label="نمط الاستخدام">Parent-led</td><td data-label="دور وليّ الأمر">ولي الأمر هو من يتعامل مع AI، والطفل يشارك في نشاط التعلم.</td><td data-label="ملاحظات">الطفل لا يستخدم AI مباشرة. وليّ الأمر يقرأ ويشرح ويطرح الأسئلة.</td></tr>
+            <tr><td data-label="الفئة العمرية">10–12 سنة</td><td data-label="نمط الاستخدام">Parent-supervised</td><td data-label="دور وليّ الأمر">استخدام أكثر تفاعلاً، لكن مع إشراف واضح وضوابط زمنية.</td><td data-label="ملاحظات">يمكن للطفل أن يتفاعل مع AI تحت مراقبة مباشرة، مع مراجعة المخرجات.</td></tr>
+            <tr><td data-label="الفئة العمرية">13–15 سنة</td><td data-label="نمط الاستخدام">Guided independent use</td><td data-label="دور وليّ الأمر">استخدام مستقل تدريجياً مع ضوابط وتوعية.</td><td data-label="ملاحظات">يُنصح بتفعيل أدوات الرقابة الأبوية. بعض المنصات تشترط موافقة الوالدين.</td></tr>
+            <tr><td data-label="الفئة العمرية">16–18 سنة</td><td data-label="نمط الاستخدام">Independent + AI literacy</td><td data-label="دور وليّ الأمر">التركيز على الاستقلالية والتحقق والنزاهة الأكاديمية.</td><td data-label="ملاحظات">التدريب على اكتشاف الأخطاء والتحقق من المصادر والاستخدام الأخلاقي.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--info" style="margin-top:1.2rem;">
+        <strong>📌 قواعد عمرية خاصة بكل منصة (يجب التحقق منها مباشرة):</strong>
+        <ul>
+          <li><strong>Claude.ai:</strong> 18+ وفق شروط Anthropic الحالية. لا يُستخدم مباشرة من قِبل طفل دون 18.</li>
+          <li><strong>ChatGPT:</strong> ليس مخصصاً لمن دون 13. من 13–18 يحتاج موافقة الوالدين. لمن دون 13، يجب أن يكون التفاعل الفعلي بواسطة شخص بالغ. يوجد تجربة <strong>ChatGPT for Teens</strong> مع حماية ملائمة للعمر.</li>
+          <li><strong>Gemini:</strong> متاح للأطفال دون 13 عبر <strong>Family Link</strong> بحساب خاضع للإشراف. الفلاتر ليست مثالية.</li>
+          <li><strong>NotebookLM:</strong> متاح للمستخدمين الأصغر سناً في حسابات المستهلك، مع سياسات أكثر صرامة لمن دون 18. حسابات Workspace for Education لها ترتيبات مختلفة.</li>
+        </ul>
+      </div>
+      <h3 style="margin:2rem 0 1rem;font-size:1.1rem;">قواعد الخصوصية — لا ترفع إلى AI</h3>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">!</span><h4>لا ترفع بيانات شخصية</h4></div>
+          <p>الاسم الكامل إذا لم يكن ضرورياً، العنوان، رقم الهاتف، كلمات المرور، بيانات المدرسة غير اللازمة، معلومات صحية حساسة، صور شخصية غير ضرورية، معلومات عن طفل آخر.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">i</span><h4>راجع إعدادات الخصوصية</h4></div>
+          <p>تأكد من إعدادات الخصوصية في كل منصة. علّم طفلك التوقف قبل مشاركة معلومات عنه أو عن غيره. استخدم حسابات خاضعة للإشراف حيث أمكن.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">◈</span><h4>المصلحة الفضلى للطفل</h4></div>
+          <p>UNICEF توصي بالتقليل من جمع البيانات، ومراجعة الإعدادات، وتعليم الطفل حدود المشاركة. القرار دائماً لمصلحة الطفل، لا لمصلحة الأداة.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 — كيف يحدث التعلم -->
+    <section class="section" id="learning" aria-labelledby="learning-h">
+      <div class="section__head">
+        <span class="section__ord">03</span>
+        <h2 id="learning-h">كيف يحدث التعلم فعلياً؟ — 5 مبادئ مثبتة</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">قبل أن تطلب من AI أي شيء، افهم هذه المبادئ. AI يمكن أن يدعمها — أو يخالفها. الفرق بين جلسة تعلّم ناجحة وجلسة مضيعة للوقت غالباً يعود إلى هذه المبادئ الخمسة.</p>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">١</span><h4>الاسترجاع النشط</h4></div>
+          <p>لا تجعل الطالب يعيد قراءة الإجابة فقط؛ اطلب منه استدعاء المعلومة من الذاكرة. هذا أقوى من إعادة القراءة. AI يمكنه أن يسأل بدلاً من أن يشرح.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">٢</span><h4>المراجعة المتباعدة</h4></div>
+          <p>لا يدرس الفصل مرة واحدة ثم ينتهي. يعود إليه بعد فترات زمنية متباعدة. AI يمكنه أن يخطط لك جدول مراجعة بناءً على الأخطاء.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">٣</span><h4>التغذية الراجعة</h4></div>
+          <p>ليس فقط «صح/خطأ»، بل: أين حدث الخطأ؟ ولماذا؟ وكيف أتجنبه؟ AI يمكنه أن يحدد نوع الخطأ (حفظ، فهم، تطبيق) ويقترح تصحيحاً.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">٤</span><h4>ما وراء المعرفة</h4></div>
+          <p>اجعل الطالب يخطط، يراقب فهمه، ثم يقيّم نفسه. AI يمكنه أن يسأل: «كيف وصلت إلى هذه الإجابة؟» و«ما الذي لم تفهمه بعد؟»</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">٥</span><h4>الانتقال من المساعدة إلى الاستقلال</h4></div>
+          <p>في البداية AI يشرح، ثم يعطي تلميحات، ثم يترك الطالب يحل وحده. هذا التدرج هو ما يجعل التعلّم مستداماً.</p>
+        </article>
+      </div>
+      <div class="callout callout--gold" style="margin-top:1.2rem;">
+        <strong>💡 ملاحظة:</strong> هذه المبادئ مدعومة بأبحاث محكّمة. المراجعة المتباعدة والاسترجاع النشط لهما قاعدة أدلة قوية (Nature Reviews Psychology). ما وراء المعرفة والتنظيم الذاتي لهما قاعدة أدلة قوية أيضاً (EEF 2025). «أنماط التعلّم» (Visual/Auditory/Kinesthetic) لا تمتلك قاعدة أدلة كافية لتطبيقها تربوياً (Pashler et al.).
+      </div>
+    </section>
+
+    <!-- 04 — ملف المتعلّم -->
+    <section class="section" id="profile" aria-labelledby="profile-h">
+      <div class="section__head">
+        <span class="section__ord">04</span>
+        <h2 id="profile-h">ملف المتعلّم (Learner Profile) — بديل «أنماط التعلّم»</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">لا تصنّف طفلك بأنه «بصري» أو «سمعي» — هذا التصنيف لا يمتلك قاعدة أدلة كافية. بدلاً من ذلك، ابنِ ملفاً عملياً يحدد ما يعرفه، وما يحتاجه، وما يحبه، وما يجد صعوبة فيه.</p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption class="sr-only">عناصر ملف المتعلّم</caption>
+          <thead>
+            <tr><th scope="col">العنصر</th><th scope="col">ماذا نحدد؟</th><th scope="col">مثال</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="العنصر">العمر والصف</td><td data-label="ماذا نحدد؟">العمر الحالي والصف الدراسي</td><td data-label="مثال">10 سنوات، الصف الخامس</td></tr>
+            <tr><td data-label="العنصر">المعرفة السابقة</td><td data-label="ماذا نحدد؟">ماذا يعرف بالفعل عن الموضوع؟</td><td data-label="مثال">يعرف الجمع والطرح، لكنه لم يتقن الكسور بعد</td></tr>
+            <tr><td data-label="العنصر">الهدف</td><td data-label="ماذا نحدد؟">فهم / تدريب / مراجعة / امتحان</td><td data-label="مثال">فهم مفهوم الكسور المتكافئة</td></tr>
+            <tr><td data-label="العنصر">مستوى الصعوبة</td><td data-label="ماذا نحدد؟">مبتدئ / متوسط / متقدم</td><td data-label="مثال">مبتدئ</td></tr>
+            <tr><td data-label="العنصر">اللغة</td><td data-label="ماذا نحدد؟">العربية / الإنجليزية / ثنائي اللغة</td><td data-label="مثال">العربية مع مصطلحات إنجليزية</td></tr>
+            <tr><td data-label="العنصر">نقاط الضعف</td><td data-label="ماذا نحدد؟">المهارات التي يجد فيها صعوبة</td><td data-label="مثال">يبسّط الكسور بشكل خاطئ، يخلط بين البسط والمقام</td></tr>
+            <tr><td data-label="العنصر">الاهتمامات</td><td data-label="ماذا نحدد؟">ما يحبه لتوظيفه في الأمثلة</td><td data-label="مثال">كرة القدم، الألعاب، الفضاء</td></tr>
+            <tr><td data-label="العنصر">القيود</td><td data-label="ماذا نحدد؟">وقت، قراءة بطيئة، تركيز محدود</td><td data-label="مثال">15 دقيقة كحد أقصى للجلسة</td></tr>
+            <tr><td data-label="العنصر">التفضيلات</td><td data-label="ماذا نحدد؟">أمثلة، رسومات، أسئلة، صوت — كتفضيل لا كهوية</td><td data-label="مثال">يفضّل الأمثلة والرسومات، لكن هذا ليس تصنيفاً ثابتاً</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--info" style="margin-top:1.2rem;">
+        <strong>📌 لماذا هذا أفضل؟</strong> «أنماط التعلّم» تفترض أن الطفل يتعلم بشكل أفضل إذا قُدّم المحتوى بنمط واحد ثابت. الأبحاث لا تدعم هذا الافتراض. «ملف المتعلّم» يصف الحالة الفعلية للطفل في لحظة معينة، ويسمح بتغيير الاستراتيجية حسب المادة والهدف — وهذا أكثر دقة تربوياً.
+      </div>
+    </section>
+
+    <!-- 05 — Learning Prompt Framework -->
+    <section class="section" id="framework" aria-labelledby="framework-h">
+      <div class="section__head">
+        <span class="section__ord">05</span>
+        <h2 id="framework-h">Learning Prompt Framework — بديل «المعادلة الذهبية»</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">لا توجد صيغة واحدة مثبتة علمياً تجعل أي Prompt ممتازاً. لكن هناك إطار عملي يزيد الاحتمال بشكل كبير. الفرق بين «اشرح لي» و«شخّص ما أعرفه → اشرح ما ينقصني → اجعلني أجيب → صحّح → اختبرني → حدّد ما أراجعه لاحقاً» هو فرق جوهري.</p>
+      <div class="prompt prompt--sky">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">إطار</span>
+          <div class="prompt__title">
+            <h3>عناصر Learning Prompt Framework</h3>
+            <span class="prompt__tag prompt__tag--sky">10 عناصر</span>
+          </div>
+        </div>
+        <div class="prompt__body" id="framework-body">
+          <p><strong>المصدر</strong> — ما هو المرجع؟ (كتاب، ملزمة، صفحات محددة)</p>
+          <p><strong>المتعلّم</strong> — العمر، الصف، المعرفة السابقة، نقاط الضعف، الاهتمامات</p>
+          <p><strong>الهدف</strong> — فهم / تدريب / مراجعة / امتحان</p>
+          <p><strong>المحتوى</strong> — الموضوع المحدد بدقة</p>
+          <p><strong>طريقة التدريس</strong> — تشبيهات، أمثلة، خطوات، أسئلة سقراطية</p>
+          <p><strong>التفاعل</strong> — لا تعطِ الإجابة مباشرة؛ اسأل، لمّح، وجّه</p>
+          <p><strong>القيود</strong> — الوقت المتاح، مستوى الصعوبة، اللغة</p>
+          <p><strong>التقييم</strong> — كيف نعرف أن التعلّم حدث؟ (أسئلة استرجاع، شرح بكلمات الطالب)</p>
+          <p><strong>التحقق</strong> — كيف نتأكد من صحة المعلومات؟ (مصدر، عدم يقين، مراجعة)</p>
+          <p><strong>الخطوة التالية</strong> — ماذا يراجع الطالب لاحقاً؟ ومتى؟</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="framework-body">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ الإطار</span>
+        </button>
+      </div>
+      <div class="callout callout--ok">
+        <strong>✅ الفرق العملي:</strong> الـ Prompt الذي يطلب «اشرح لي الكسور» ينتج شرحاً. الـ Prompt الذي يطلب «شخّص معرفتي بالكسور، ثم اشرح ما ينقصني، ثم اجعلني أحل، ثم صحّح، ثم اختبرني، ثم حدّد ما أراجعه» ينتج جلسة تعلّم كاملة.
+      </div>
+    </section>
+
+    <!-- 06 — Master Tutor Prompt -->
+    <section class="section" id="master" aria-labelledby="master-h">
+      <div class="section__head">
+        <span class="section__ord">06</span>
+        <h2 id="master-h">Master Tutor Prompt — البرومبت الرئيسي</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">هذا هو البرومبت الذي يمكن لوليّ الأمر استخدامه كأساس لكل مادة. باقي البرومبتات في الدليل هي Modules تعدّل هذا الـPrompt. انسخه واحفظه.</p>
+      <div class="prompt prompt--plum">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">★</span>
+          <div class="prompt__title">
+            <h3>Master Tutor Prompt</h3>
+            <span class="prompt__tag prompt__tag--plum">النظام الرئيسي</span>
+          </div>
+        </div>
+        <div class="prompt__body" id="master-body">
+          <p>أنت مساعد تعلّم شخصي، ولست مجرد مولّد إجابات.</p>
+          <p>هدفك الأساسي هو مساعدة الطالب على الفهم والاسترجاع والتطبيق، وليس إنجاز المهمة بدلاً عنه.</p>
+          <p><strong>بيانات المتعلّم:</strong></p>
+          <ul>
+            <li>العمر: <span class="slot">[....]</span></li>
+            <li>الصف: <span class="slot">[....]</span></li>
+            <li>المادة: <span class="slot">[....]</span></li>
+            <li>مستوى المعرفة الحالية: <span class="slot">[....]</span></li>
+            <li>الهدف: <span class="slot">[فهم / تدريب / مراجعة / امتحان]</span></li>
+            <li>اللغة: <span class="slot">[العربية / الإنجليزية / ثنائي اللغة]</span></li>
+            <li>الوقت المتاح: <span class="slot">[....]</span></li>
+            <li>نقاط الضعف المعروفة: <span class="slot">[....]</span></li>
+          </ul>
+          <p><strong>قواعد التفاعل:</strong></p>
+          <ol style="padding-inline-start:1.2rem;">
+            <li>ابدأ بتحديد ما يعرفه الطالب قبل شرح المفهوم.</li>
+            <li>لا تقدّم الإجابة النهائية فوراً عندما يمكن للطالب المحاولة.</li>
+            <li>استخدم أسئلة وتلميحات تدريجية (Hint 1 → Hint 2 → Hint 3).</li>
+            <li>اشرح الخطأ قبل إعطاء الحل الصحيح.</li>
+            <li>اطلب من الطالب تفسير الإجابة بكلماته عند الحاجة.</li>
+            <li>استخدم أمثلة وتطبيقات مرتبطة بالمستوى العمري والاهتمامات.</li>
+            <li>بعد الشرح، نفّذ اختبار استرجاع قصير (3–5 أسئلة).</li>
+            <li>أنشئ أسئلة جديدة تقيس نفس المهارة وليس نفس الصياغة.</li>
+            <li>في نهاية الجلسة حدّد: ما أتقنه الطالب، ما لم يتقنه، الخطأ المتكرر، ما ينبغي مراجعته لاحقاً ومتى.</li>
+            <li>إذا لم تكن المعلومة مؤكدة، صرّح بعدم اليقين ولا تخمّن.</li>
+            <li>عند تزويدك بمصدر، اعتبره المصدر الأساسي ولا تضف معلومة غير موجودة فيه دون توضيح.</li>
+            <li>لا تدّعِ معرفة ما سيأتي في الامتحان؛ أنشئ أسئلة تدريبية بناءً على المواد المعطاة فقط.</li>
+          </ol>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="master-body">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ البرومبت الرئيسي</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 06.5 — نظام Modes -->
+    <section class="section" id="modes" aria-labelledby="modes-h">
+      <div class="section__head">
+        <span class="section__ord">06.5</span>
+        <h2 id="modes-h">نظام Modes — كيف تستخدم كل برومبت في سياقه الصحيح؟</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">بدل أن تختار من قائمة 30+ برومبت، اختر الوضع المناسب للحظة. كل وضع يحدد: من يقود الجلسة، وما المخرج المتوقع، وكيف تنتهي الجلسة. هذا يجعل الدليل منتجاً قابلاً للاستخدام، لا مقالاً طويلاً.</p>
+      <div class="modes-grid">
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true">؟</div>
+          <h4>علّمني</h4>
+          <p>AI يشرح المفهوم بمستوى الطالب. مناسب للبداية. ينتهي بأسئلة استرجاع.</p>
+        </article>
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">↻</div>
+          <h4>درّبني</h4>
+          <p>AI يعطي تمارين متدرجة، تلميحات، ولا يعطي الحل قبل 3 محاولات.</p>
+        </article>
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">✓</div>
+          <h4>اختبرني</h4>
+          <p>AI يطرح أسئلة استرجاع، يصحّح، ويحدد ما يحتاج مراجعة. لا إجابات قبل الانتهاء.</p>
+        </article>
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">!</div>
+          <h4>حلّل أخطائي</h4>
+          <p>AI يصنّف الأخطاء (حفظ/فهم/تطبيق)، يحدد السبب، ويولّد أسئلة مشابهة.</p>
+        </article>
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">⏱</div>
+          <h4>راجع معي</h4>
+          <p>AI يخطط جدول مراجعة متباعدة بناءً على الأخطاء السابقة.</p>
+        </article>
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true" style="background:var(--teal-soft);color:var(--teal);">📖</div>
+          <h4>استخدم الكتاب فقط</h4>
+          <p>AI يبني إجاباته من المصادر المرفوعة فقط. لا يخترع. يذكر الصفحة.</p>
+        </article>
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">⚒</div>
+          <h4>ساعدني أبني مشروعاً</h4>
+          <p>AI يساعد في التخطيط، التقسيم، البحث، لكن لا ينجز المشروع بدل الطالب.</p>
+        </article>
+        <article class="mode">
+          <div class="mode__icon" aria-hidden="true" style="background:var(--accent-soft);color:var(--accent);">✦</div>
+          <h4>حوّل الدرس إلى وسائط</h4>
+          <p>AI يحوّل الدرس إلى قصة، سيناريو فيديو، وصف انفوجرافيك، أو لعبة.</p>
+        </article>
+      </div>
+      <div class="callout callout--info" style="margin-top:1.2rem;">
+        <strong>📌 كيف تستخدم الأوضاع؟</strong> ابدأ كل جلسة بتحديد الوضع صراحةً في البرومبت: «الوضع: درّبني. المادة: الرياضيات. الموضوع: الكسور.» هذا يجعل AI يفهم دوره مباشرة، ويمنع الخلط بين الشرح والتدريب والاختبار في جلسة واحدة.
+      </div>
+    </section>
+
+    <!-- 07 — أفهم -->
+    <section class="section" id="understand" aria-labelledby="understand-h">
+      <div class="section__head">
+        <span class="section__ord">07</span>
+        <h2 id="understand-h">أفهم — شرح المفاهيم الصعبة</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">الهدف هنا ليس الحصول على شرح فقط، بل الحصول على شرح يناسب مستوى الطالب ويشخّص ما ينقصه. لا تقفز إلى الشرح قبل تحديد ما يعرفه الطالب بالفعل.</p>
+
+      <div class="prompt">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true">١</span>
+          <div class="prompt__title"><h3>شرح مفهوم صعب</h3><span class="prompt__tag">Explain</span></div>
+        </div>
+        <div class="prompt__body" id="p-understand-1">
+          <p>"تصرف كـ معلم خبير في <span class="slot">[المادة]</span>. اشرح مفهوم <span class="slot">[المفهوم]</span> لطالب في الصف <span class="slot">[الصف]</span> عمره <span class="slot">[العمر]</span>.</p>
+          <p><strong>قبل الشرح:</strong> اطرح 3 أسئلة قصيرة لتحديد ما يعرفه الطالب عن هذا المفهوم بالفعل.</p>
+          <p><strong>ثم اشرح:</strong> استخدم <span class="slot">[تشبيه من الحياة اليومية / قصة قصيرة / مثال من اهتماماته]</span>. قسّم الشرح إلى 3 خطوات رئيسية فقط، واستخدم لغة بسيطة وجمل قصيرة.</p>
+          <p><strong>بعد الشرح:</strong> اطرح 3 أسئلة استرجاع قصيرة (لا تعطِ الإجابات). ثم اطلب من الطالب أن يشرح المفهوم بكلماته.</p>
+          <p><strong>في النهاية:</strong> حدّد ما أتقنه الطالب، وما لم يتقنه، وما ينبغي مراجعته لاحقاً."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-understand-1">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--gold">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">٢</span>
+          <div class="prompt__title"><h3>شرح متعدد المستويات</h3><span class="prompt__tag prompt__tag--gold">Multi-level</span></div>
+        </div>
+        <div class="prompt__body" id="p-understand-2">
+          <p>"اشرح مفهوم <span class="slot">[المفهوم]</span> بثلاثة مستويات:</p>
+          <ul>
+            <li><strong>المستوى الأول (مبسّط جداً):</strong> لطفل عمره 7 سنوات — جملة واحدة + تشبيه بسيط.</li>
+            <li><strong>المستوى الثاني (متوسط):</strong> لطالب في الصف <span class="slot">[الصف]</span> — فقرة قصيرة + مثال.</li>
+            <li><strong>المستوى الثالث (متقدم):</strong> لطالب في الصف <span class="slot">[الصف الأعلى]</span> — شرح أدق + تطبيق.</li>
+          </ul>
+          <p>بعد كل مستوى، اطرح سؤالاً واحداً للتأكد من الفهم."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-understand-2">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--sky">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">٣</span>
+          <div class="prompt__title"><h3>إعادة الشرح بطريقة أخرى</h3><span class="prompt__tag prompt__tag--sky">Re-explain</span></div>
+        </div>
+        <div class="prompt__body" id="p-understand-3">
+          <p>"لم يفهم الطالب الشرح السابق. أعد شرح مفهوم <span class="slot">[المفهوم]</span> بطريقة مختلفة تماماً:</p>
+          <ul>
+            <li>استخدم تشبيهاً جديداً من مجال <span class="slot">[اهتمامه]</span>.</li>
+            <li>قسّم الشرح إلى خطوات أصغر (5 خطوات بدلاً من 3).</li>
+            <li>بعد كل خطوة، اسأل سؤالاً بسيطاً للتأكد من المتابعة.</li>
+            <li>لا تتجاوز 3 جمل في كل خطوة.</li>
+          </ul>
+          <p>إذا لم يفهم بعد هذا الشرح، اقترح طريقة ثالثة واشرحها."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-understand-3">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 08 — أتدرّب -->
+    <section class="section" id="practice" aria-labelledby="practice-h">
+      <div class="section__head">
+        <span class="section__ord">08</span>
+        <h2 id="practice-h">أتدرّب — تمارين وتلميحات تدريجية</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">الهدف هنا ليس «حل المسألة»، بل التدريب على المهارة. لا تسمح لـ AI بإعطاء الإجابة قبل محاولة الطالب. استخدم Hint Mode.</p>
+
+      <div class="prompt">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true">١</span>
+          <div class="prompt__title"><h3>تمارين متدرجة الصعوبة</h3><span class="prompt__tag">Practice</span></div>
+        </div>
+        <div class="prompt__body" id="p-practice-1">
+          <p>"أنشئ 5 تمارين متدرجة الصعوبة في موضوع <span class="slot">[الموضوع]</span> للصف <span class="slot">[الصف]</span>.</p>
+          <p><strong>المستويات:</strong> تمرينان سهلان (تطبيق مباشر)، تمرينان متوسطان (تطبيق مع خطوتين)، تمرين واحد صعب (تطبيق مع تفكير).</p>
+          <p><strong>قواعد:</strong></p>
+          <ul>
+            <li>لا تعطِ الإجابات. اتركها للطالب.</li>
+            <li>بعد كل تمرين، اسأل: "ما خطتك لحل هذا التمرين؟"</li>
+            <li>إذا طلب الطالب مساعدة، أعطِ Hint 1 (تلميح عام). إذا احتاج أكثر، Hint 2 (تلميح محدد). إذا احتاج أكثر، Hint 3 (خطوة أولى).</li>
+            <li>لا تعطِ الحل الكامل إلا بعد 3 محاولات.</li>
+          </ul>
+          <p>في النهاية، لخّص: ما المهارة التي تدرب عليها الطالب؟ وما الذي يحتاج مراجعة؟"</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-practice-1">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--gold">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">٢</span>
+          <div class="prompt__title"><h3>Hint Mode — سؤال واحد كل مرة</h3><span class="prompt__tag prompt__tag--gold">Hints</span></div>
+        </div>
+        <div class="prompt__body" id="p-practice-2">
+          <p>"أنا أتدرب على <span class="slot">[الموضوع]</span>. اطرح عليّ سؤالاً واحداً فقط في كل مرة.</p>
+          <p>عندما أجيب:</p>
+          <ul>
+            <li>إذا كانت إجابتي صحيحة: قل "صحيح" وانتقل للسؤال التالي.</li>
+            <li>إذا كانت خاطئة: لا تعطِ الإجابة. اسأل سؤالاً توجيهياً يساعدني على اكتشاف الخطأ.</li>
+            <li>إذا طلبت مساعدة: أعطِ تلميحاً واحداً فقط، لا الحل.</li>
+          </ul>
+          <p>بعد 5 أسئلة، توقف وأخبرني: كم أصبت؟ وما نوع الأخطاء التي وقعت فيها؟"</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-practice-2">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--rose">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">٣</span>
+          <div class="prompt__title"><h3>أخطاء متعمدة — اكتشف الخطأ</h3><span class="prompt__tag prompt__tag--rose">Error Detection</span></div>
+        </div>
+        <div class="prompt__body" id="p-practice-3">
+          <p>"اعرض عليّ 3 مسائل محلولة في <span class="slot">[الموضوع]</span>، لكن واحدة منها فيها خطأ متعمد.</p>
+          <p>اطلب مني تحديد المسألة الخاطئة، وشرح سبب الخطأ، وتصحيحه.</p>
+          <p>لا تخبرني أي مسألة فيها الخطأ حتى أحاول. بعد إجابتي، صحّح لي وأخبرني إن كنت اكتشفت الخطأ أم لا."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-practice-3">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--plum">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">٤</span>
+          <div class="prompt__title"><h3>التفاعل الحواري — الطريقة السقراطية</h3><span class="prompt__tag prompt__tag--plum">Socratic Method</span></div>
+        </div>
+        <div class="prompt__body" id="p-practice-4">
+          <p>"أريدك أن تلعب دور «المعلم التفاعلي» مع ابني.</p>
+          <p><strong>القاعدة الأساسية:</strong> لا تعطه الإجابات المباشرة.</p>
+          <p><strong>الأسلوب:</strong></p>
+          <ul>
+            <li>اطرح عليه سؤالاً واحداً في مادة <span class="slot">[المادة]</span> حول موضوع <span class="slot">[الموضوع]</span>.</li>
+            <li>عندما يجيب، حلّل إجابته وأخبره إن كانت صحيحة أم لا (بدون إعطاء الإجابة الصحيحة).</li>
+            <li>اطرح سؤالاً توجيهياً أعمق ليتحقق من الإجابة بنفسه.</li>
+            <li>استمر بهذا النمط حتى يصل إلى الإجابة الصحيحة بنفسه.</li>
+            <li>إذا تعثر 3 مرات، أعطِ تلميحاً واحداً فقط (وليس الحل).</li>
+          </ul>
+          <p>ابدأ الآن بتحيته وسؤاله الأول بأسلوب مشجع ومرح."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-practice-4">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 09 — أختبر نفسي -->
+    <section class="section" id="test" aria-labelledby="test-h">
+      <div class="section__head">
+        <span class="section__ord">09</span>
+        <h2 id="test-h">أختبر نفسي — Quiz وبطاقات واختبار محاكي</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">الاختبار الذاتي ليس غاية، بل أداة لمعرفة ما يحتاج مراجعة. لا تختبر نفسك بعد قراءة الملخص مباشرة — اختبر نفسك بعد فترة قصيرة، ثم بعد فترة أطول.</p>
+
+      <div class="prompt prompt--plum">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">١</span>
+          <div class="prompt__title"><h3>Retrieval Quiz — اختبار استرجاع</h3><span class="prompt__tag prompt__tag--plum">Quiz</span></div>
+        </div>
+        <div class="prompt__body" id="p-test-1">
+          <p>"أنشئ 5 أسئلة استرجاع قصيرة في موضوع <span class="slot">[الموضوع]</span> للصف <span class="slot">[الصف]</span>.</p>
+          <p><strong>قواعد:</strong></p>
+          <ul>
+            <li>الأسئلة يجب أن تقيس الفهم والاسترجاع، لا الحفظ الحرفي.</li>
+            <li>لا تعطِ الإجابات مع الأسئلة.</li>
+            <li>بعد إجابتي على كل سؤال، صحّح لي: هل الإجابة صحيحة؟ ولماذا؟</li>
+            <li>إذا كانت خاطئة، اشرح الخطأ ولا تكتفِ بالإجابة الصحيحة.</li>
+          </ul>
+          <p>في النهاية، أعطني تقييماً: ما الذي أتقنته؟ وما الذي يحتاج مراجعة؟"</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-test-1">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--sky">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">٢</span>
+          <div class="prompt__title"><h3>بطاقات استذكار (Flashcards)</h3><span class="prompt__tag prompt__tag--sky">Flashcards</span></div>
+        </div>
+        <div class="prompt__body" id="p-test-2">
+          <p>"اقرأ النص التالي: <span class="slot">[النص أو المصدر]</span>.</p>
+          <p>ثم أنشئ:</p>
+          <ul>
+            <li><strong>جدول مفاهيم:</strong> (المصطلح | التعريف في سطر واحد | مثال عملي).</li>
+            <li><strong>5 بطاقات استذكار:</strong> سؤال في الوجه، إجابة مختصرة في الوجه الآخر.</li>
+            <li><strong>3 أسئلة استرجاع إضافية</strong> تقيس نفس المفاهيم بصياغة مختلفة.</li>
+          </ul>
+          <p>لا تضف معلومات غير موجودة في النص. إذا كان النص ناقصاً، قل ذلك."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-test-2">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--gold">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">٣</span>
+          <div class="prompt__title"><h3>Exam Simulation — محاكاة اختبار</h3><span class="prompt__tag prompt__tag--gold">Exam Mode</span></div>
+        </div>
+        <div class="prompt__body" id="p-test-3">
+          <p>"أنشئ اختباراً تدريبياً في موضوع <span class="slot">[الموضوع]</span> للصف <span class="slot">[الصف]</span>.</p>
+          <p><strong>المواصفات:</strong> 10 أسئلة، مدتها 20 دقيقة، تغطي جميع المهارات الأساسية في الموضوع.</p>
+          <p><strong>قواعد:</strong></p>
+          <ul>
+            <li>لا تدّعِ أن هذه الأسئلة هي "الأسئلة الفعلية" للامتحان. هي أسئلة تدريبية فقط.</li>
+            <li>اجعل الأسئلة متنوعة: اختيار من متعدد، صح/خطأ، إكمال، مسائل.</li>
+            <li>لا تعطِ الإجابات حتى أنتهي من الاختبار.</li>
+            <li>بعد الانتهاء، صحّح وأعطني: الدرجة، وتحليل الأخطاء (نوع الخطأ: حفظ/فهم/تطبيق)، وخطة مراجعة.</li>
+          </ul>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-test-3">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 10 — أصلح أخطائي -->
+    <section class="section" id="errors" aria-labelledby="errors-h">
+      <div class="section__head">
+        <span class="section__ord">10</span>
+        <h2 id="errors-h">أصلح أخطائي — بنك الأخطاء (Error Bank)</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">الخطأ ليس فشلاً، بل معلومة. بنك الأخطاء هو المكان الذي تسجّل فيه كل خطأ، وتحدد نوعه، وتربطه بمهارة، وتولّد سؤالاً جديداً مشابهاً. هذا ما يجعل AI مساعداً في التشخيص وليس مجرد إجابة.</p>
+      <div class="prompt prompt--rose">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">★</span>
+          <div class="prompt__title"><h3>تحليل الأخطاء وبناء بنك الأخطاء</h3><span class="prompt__tag prompt__tag--rose">Error Bank</span></div>
+        </div>
+        <div class="prompt__body" id="p-errors">
+          <p>"أنا وليّ أمر أراجع مع ابني <span class="slot">[المادة]</span> للصف <span class="slot">[الصف]</span>. هذه قائمة بالأخطاء التي وقع فيها: <span class="slot">[أدخل الأسئلة والأجوبة الخاطئة]</span>.</p>
+          <p><strong>المطلوب:</strong></p>
+          <ul>
+            <li>حلّل كل خطأ: ما نوعه؟ (حفظ / فهم / تطبيق / إهمال).</li>
+            <li>ما المهارة المرتبطة به؟</li>
+            <li>ما سبب الخطأ الفعلي؟ (ليس فقط "أخطأ"، بل لماذا).</li>
+            <li>أنشئ سؤالاً جديداً مشابهاً في الفكرة، مختلفاً في الصياغة، لتدريبه على نفس المهارة.</li>
+            <li>اقترح تاريخ مراجعة لاحق (بعد يوم، بعد أسبوع).</li>
+          </ul>
+          <p>اعرض النتيجة في جدول:</p>
+          <p style="font-family:var(--f-mono);font-size:.85rem;background:var(--surface);padding:.6rem;border-radius:6px;direction:ltr;text-align:left;">السؤال | إجابة الطالب | الخطأ | سبب الخطأ | المهارة | سؤال جديد | تاريخ المراجعة</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-errors">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 11 — أراجع لاحقاً -->
+    <section class="section" id="review" aria-labelledby="review-h">
+      <div class="section__head">
+        <span class="section__ord">11</span>
+        <h2 id="review-h">أراجع لاحقاً — نظام المراجعة المتباعدة</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">دراسة الفصل مرة واحدة لا تكفي. المراجعة المتباعدة (Spaced Practice) تعني العودة للموضوع على فترات متزايدة. الجدول التالي نموذج عملي قابل للتعديل — ليس قانوناً علمياً ثابتاً.</p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption class="sr-only">نموذج جدول مراجعة متباعدة</caption>
+          <thead>
+            <tr><th scope="col">المرحلة</th><th scope="col">المهمة</th><th scope="col">الوقت التقريبي</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="المرحلة">اليوم نفسه</td><td data-label="المهمة">اختبار استرجاع قصير (3–5 أسئلة)</td><td data-label="الوقت">5 دقائق</td></tr>
+            <tr><td data-label="المرحلة">بعد يوم</td><td data-label="المهمة">3 أسئلة استرجاع بدون ملاحظات</td><td data-label="الوقت">3 دقائق</td></tr>
+            <tr><td data-label="المرحلة">بعد 3 أيام</td><td data-label="المهمة">3 أسئلة مختلطة (موضوعات متعددة)</td><td data-label="الوقت">5 دقائق</td></tr>
+            <tr><td data-label="المرحلة">بعد أسبوع</td><td data-label="المهمة">اختبار قصير (5 أسئلة)</td><td data-label="الوقت">7 دقائق</td></tr>
+            <tr><td data-label="المرحلة">قبل الامتحان</td><td data-label="المهمة">اختبار شامل + مراجعة بنك الأخطاء</td><td data-label="الوقت">15 دقيقة</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prompt prompt--gold" style="margin-top:1.2rem;">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">★</span>
+          <div class="prompt__title"><h3>توليد جدول مراجعة مخصص</h3><span class="prompt__tag prompt__tag--gold">Spaced Review</span></div>
+        </div>
+        <div class="prompt__body" id="p-review">
+          <p>"أنشئ جدول مراجعة متباعدة لموضوع <span class="slot">[الموضوع]</span>.</p>
+          <p><strong>بناءً على:</strong> الأخطاء التي وقعت فيها <span class="slot">[أدخل قائمة الأخطاء أو نقاط الضعف]</span>.</p>
+          <p><strong>المطلوب:</strong></p>
+          <ul>
+            <li>حدد 5 مواعيد مراجعة (اليوم، بعد يوم، بعد 3 أيام، بعد أسبوع، قبل الامتحان).</li>
+            <li>لكل موعد: عدد الأسئلة ونوعها (استرجاع، تطبيق، مختلط).</li>
+            <li>لا تجعل الأرقام قانوناً ثابتاً — اجعلها نموذجاً قابلاً للتعديل.</li>
+            <li>أضف عموداً فارغاً لتسجيل "تم / لم يتم".</li>
+          </ul>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-review">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 12 — المصادر -->
+    <section class="section" id="source" aria-labelledby="source-h">
+      <div class="section__head">
+        <span class="section__ord">12</span>
+        <h2 id="source-h">أتعامل مع الكتاب والمصادر — Source-Grounded AI</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">عندما ترفع المصادر (كتاب المدرسة، صفحات المنهج، PDF، PowerPoint، ورقة المعلم)، فعّل «وضع المصدر الموثوق». هذا يمنع AI من اختراع معلومات غير موجودة، ويجعله يبني إجاباته على ما رفعته.</p>
+      <div class="prompt prompt--sky">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">★</span>
+          <div class="prompt__title"><h3>وضع المصدر الموثوق</h3><span class="prompt__tag prompt__tag--sky">Source-Grounded</span></div>
+        </div>
+        <div class="prompt__body" id="p-source">
+          <p>"استخدم المصادر المرفوعة كأساس للإجابة.</p>
+          <p><strong>القواعد:</strong></p>
+          <ul>
+            <li>إذا لم تجد الإجابة في المصادر، قل ذلك صراحة: "هذه المعلومة غير موجودة في المصدر المرفق."</li>
+            <li>لا تخترع رقم صفحة أو مرجعاً أو اقتباساً.</li>
+            <li>ميّز بين ثلاثة أنواع من المعلومات:
+              <ul>
+                <li><strong>مذكور في المصدر:</strong> اذكر الصفحة أو القسم.</li>
+                <li><strong>استنتاج:</strong> قل "هذا استنتاج بناءً على..."</li>
+                <li><strong>معلومة خارجية:</strong> قل "هذه معلومة عامة، وليست من المصدر."</li>
+              </ul>
+            </li>
+            <li>لا تضف معلومات من معرفتك العامة إلا إذا طلبت منك ذلك صراحة.</li>
+          </ul>
+          <p><strong>السؤال:</strong> <span class="slot">[اكتب سؤالك هنا]</span>"</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-source">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+      <div class="callout callout--info" style="margin-top:1.2rem;">
+        <strong>📌 أدوات تدعم Source-Grounded:</strong> <span class="tool-name">NotebookLM</span> — يبني إجاباته من المصادر التي ترفعها ويعرض إحالات إليها. <span class="tool-name">Gemini Guided Learning</span> — يمكنه العمل مع مصادر Google Classroom. <span class="tool-name tool-name--plum">Claude Projects</span> — يمكنه العمل مع ملفات مرفوعة (لمن 18+).
+      </div>
+    </section>
+
+    <!-- 12.5 — طبقة التحقق -->
+    <section class="section" id="verification" aria-labelledby="verification-h">
+      <div class="section__head">
+        <span class="section__ord">12.5</span>
+        <h2 id="verification-h">طبقة التحقق — قبل أن تعتمد إجابة AI</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">«راجع الإجابات قبل إعطائها لطفلك» نصيحة غير كافية. هذا بروتوكول عملي: 6 أسئلة قبل الاعتماد، وبرومبت للمراجعة الذاتية من منظور مدرس المادة.</p>
+      <h3 style="margin:1rem 0 .8rem;font-size:1.05rem;">٦ أسئلة قبل الاعتماد</h3>
+      <ul class="checklist">
+        <li><strong>هل المصدر معروف؟</strong> — إذا كانت الإجابة من معرفة AI العامة دون مصدر محدد، خفّض مستوى الثقة.</li>
+        <li><strong>هل السؤال يتطلب حقيقة دقيقة؟</strong> — التواريخ، الأرقام، أسماء العلماء، الصيغ الكيميائية: تحقق إضافي مطلوب.</li>
+        <li><strong>هل هناك عملية حسابية؟</strong> — أعد الحساب يدوياً أو بآلة حاسبة. الأخطاء الحسابية شائعة.</li>
+        <li><strong>هل توجد معلومة تاريخية أو علمية حساسة؟</strong> — الأحداث التاريخية، الفيزياء الحديثة، الأحياء: قد تكون AI قديمة أو غير دقيقة.</li>
+        <li><strong>هل تستطيع مقارنة الإجابة بكتاب المدرسة؟</strong> — إذا نعم، افعلها. الكتاب هو المرجع النهائي للمنهج.</li>
+        <li><strong>هل أشار النموذج إلى عدم اليقين؟</strong> — إذا لم يُشر، لا يعني أنه متأكد. اسأله صراحة: «ما مدى ثقتك؟».</li>
+      </ul>
+      <h3 style="margin:1.5rem 0 .8rem;font-size:1.05rem;">برومبت المراجعة من منظور مدرس المادة</h3>
+      <div class="prompt prompt--rose">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">★</span>
+          <div class="prompt__title"><h3>المراجعة الذاتية</h3><span class="prompt__tag prompt__tag--rose">Self-Audit</span></div>
+        </div>
+        <div class="prompt__body" id="p-verification">
+          <p>"راجع إجابتك السابقة من منظور <strong>مدرس مادة <span class="slot">[المادة]</span> للصف <span class="slot">[الصف]</span></strong> في المنهج <span class="slot">[المنهج / البلد]</span>.</p>
+          <p><strong>المطلوب:</strong></p>
+          <ul>
+            <li>حدد أي جزء من إجابتك <strong>غير مؤكد</strong> ويحتاج إلى تحقق خارجي.</li>
+            <li>حدد أي جزء قد يكون <strong>مختلفاً</strong> عن صياغة المنهج المدرسي.</li>
+            <li>حدد أي جزء يعتمد على <strong>معرفة عامة</strong> وليس على مصدر محدد.</li>
+            <li>إذا كانت الإجابة تحتوي على معلومات تاريخية أو علمية حساسة، اذكر مستوى ثقتك في كل معلومة.</li>
+            <li>اقترح طريقة عملية لولي الأمر للتحقق من الإجابة (مقارنة بالكتاب، سؤال المعلم، مصدر موثوق).</li>
+          </ul>
+          <p><strong>مهم:</strong> لا تقل «الإجابة صحيحة 100%». لا يوجد ضمان. الصدق في تحديد عدم اليقين أهم من الثقة الزائفة."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-verification">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 13 — الأنشطة والموارد -->
+    <section class="section" id="activities" aria-labelledby="activities-h">
+      <div class="section__head">
+        <span class="section__ord">13</span>
+        <h2 id="activities-h">الأنشطة والموارد — تحويل الدرس إلى مواد تعليمية جاهزة</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">هذه البرومبتات لا تعلّم طفلك مباشرة، بل تنتج لك مواد جاهزة للاستخدام: أوراق عمل، بطاقات مكافآت، مطويات، ملخصات بخط اليد، وألعاب تفاعلية. استخدمها أنت كوليّ أمر أو المعلم، وراجع المخرجات قبل تقديمها للطفل.</p>
+
+      <div class="prompt prompt--gold">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">١</span>
+          <div class="prompt__title"><h3>تحضير الدروس (Lesson Planning)</h3><span class="prompt__tag prompt__tag--gold">Lesson Plan</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-1">
+          <p>"أنت معلم خبير ومحترف في موضوع <span class="slot">[المادة]</span>. حضر لي درساً عن <span class="slot">[الموضوع]</span> لصف <span class="slot">[الصف]</span>، مدة الحصة <span class="slot">[....]</span> دقيقة.</p>
+          <p><strong>يجب أن يتضمن:</strong></p>
+          <ul>
+            <li>الأهداف التعليمية (قابلة للقياس).</li>
+            <li>التهيئة (5 دقائق).</li>
+            <li>خطوات الشرح (مقسمة على الوقت).</li>
+            <li>الأنشطة الصفية (فردية + جماعية).</li>
+            <li>التقويم (تكويني + ختامي).</li>
+            <li>الواجب المنزلي (متدرج).</li>
+            <li>مراعاة الفروق الفردية (للطلاب المتعثرين والمتفوقين).</li>
+          </ul>
+          <p>اعرض الخطة في جدول واضح مع توزيع الوقت."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-1">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true">٢</span>
+          <div class="prompt__title"><h3>ورقة عمل جاهزة للطباعة (Worksheet)</h3><span class="prompt__tag">Worksheet</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-2">
+          <p>"أنشئ ورقة عمل تعليمية في موضوع <span class="slot">[الموضوع]</span> للصف <span class="slot">[الصف]</span>.</p>
+          <p><strong>المواصفات:</strong></p>
+          <ul>
+            <li>العنوان + بيانات الطالب (الاسم، التاريخ، الصف).</li>
+            <li>10 أسئلة متدرجة الصعوبة (سهل → متوسط → صعب).</li>
+            <li>أنواع الأسئلة: اختيار من متعدد، إكمال، توصيل، مسائل تطبيقية.</li>
+            <li>مساحة كافية للحل بجانب كل سؤال.</li>
+            <li>صورة توضيحية واحدة أو اثنتان (وصفها نصياً).</li>
+            <li>مفتاح الإجابة في صفحة منفصلة (للمعلم/ولي الأمر فقط).</li>
+            <li>تنسيق بألوان زاهية مناسبة لعمر الطالب، قابل للطباعة على A4.</li>
+          </ul>
+          <p><strong>أضف في النهاية:</strong> سؤال تقويم ذاتي ("كيف تقيّم أدائك في هذه الورقة؟") ومقياس تقييم بسيط (Rubric) من 4 مستويات."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-2">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--plum">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">٣</span>
+          <div class="prompt__title"><h3>تحويل أي درس إلى ملخص بخط اليد</h3><span class="prompt__tag prompt__tag--plum">Handwritten Notes</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-3">
+          <p>يمكنك استخدام هذا الأمر في مولّدات الصور التي تدعم كتابة النص بجودة عالية (GPT-4o Image، DALL-E 3، Ideogram، Google Imagen). بدل صيغة الأمر المختصرة، استخدم وصفاً كاملاً يعطي نتيجة أدق:</p>
+          <p>"أنشئ صفحة ملاحظات دراسية مكتوبة بخط اليد في دفتر طالب، لموضوع <span class="slot">[الموضوع]</span> للصف <span class="slot">[الصف]</span>.</p>
+          <p><strong>يجب أن تحتوي الصفحة على:</strong></p>
+          <ul>
+            <li>عنوان الدرس بخط عربي واضح في أعلى الصفحة.</li>
+            <li>أهم 5–7 معلومات أساسية كاملة (بجمل قصيرة).</li>
+            <li>رسم توضيحي واحد على الأقل مع تسميات مكتوبة بأسماء الأجزاء.</li>
+            <li>تنظيم بصري يساعد على المراجعة (ألوان خفيفة، عناوين فرعية، إطارات).</li>
+            <li>أسلوب دفتر طالب حقيقي: خط يدوي، هامش، تظليل بعض النقاط المهمة.</li>
+            <li>لغة عربية سليمة وبخط واضح (بأسلوب خط الرقعة أو النسخ).</li>
+          </ul>
+          <p><strong>مهم:</strong> جميع المعلومات العلمية يجب أن تكون صحيحة ومطابقة للمنهج. إذا كانت الأداة لا تجيد كتابة العربية بجودة عالية، أنشئ الصورة كنموذج بصري ثم أضف النص العربي النهائي في Canva أو Figma."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-3">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--accent">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true">٤</span>
+          <div class="prompt__title"><h3>بطاقة مكافآت مدرسية</h3><span class="prompt__tag">Reward Card</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-4">
+          <p>"صمم بطاقة مكافآت مدرسية أنيقة ومنظمة، بتصميم بسيط وواضح مناسب للطلاب.</p>
+          <p><strong>العنوان الرئيسي</strong> في أعلى البطاقة: «بطاقة المكافآت» بخط عربي واضح وأنيق.</p>
+          <p>أسفل العنوان مساحة مستطيلة كبيرة لكتابة اسم الطالب، وبجانبها عبارة قصيرة مثل: «اجمع 10 نقاط واحصل على مكافأة».</p>
+          <p>في الجهة اليمنى من البطاقة، أنشئ 10 خانات متساوية مرتبة على شكل عمودين × 5 صفوف، بحيث تكون كل خانة مخصصة لتسجيل نقطة أو ختم أو ملصق مكافأة. اجعل الخانات فارغة وقابلة للكتابة أو إضافة الملصقات داخلها.</p>
+          <p>استخدم إطارات واضحة ومتناسقة، مساحات بيضاء واسعة، محاذاة دقيقة، وتوزيعاً متوازناً للعناصر. التصميم مدرسي احترافي، بسيط، لطيف، قابل للطباعة بدون ازدحام، وبدون صور أشخاص.</p>
+          <p>الألوان زاهية ملائمة لطلاب الصف الأول والثاني."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-4">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--sky">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">٥</span>
+          <div class="prompt__title"><h3>مطوية لشرح درس</h3><span class="prompt__tag prompt__tag--sky">Brochure</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-5">
+          <p>"صمم مطوية لشرح درس <span class="slot">[اسم الدرس]</span> للصف <span class="slot">[الصف]</span>.</p>
+          <p><strong>المواصفات:</strong></p>
+          <ul>
+            <li>مطوية ثلاثية الطيات (Tri-fold).</li>
+            <li>الوجه الأول: عنوان الدرس + صورة توضيحية رئيسية.</li>
+            <li>الوجه الثاني: الأهداف + المفاهيم الأساسية (3–5 نقاط).</li>
+            <li>الوجه الثالث: مثال محلول خطوة بخطوة.</li>
+            <li>الوجه الرابع: نشاط تطبيقي للطالب.</li>
+            <li>الوجه الخامس: ملخص سريع + أسئلة تقويم ذاتي.</li>
+            <li>الوجه السادس: مراجع إضافية أو تذكير بمعلومات مهمة.</li>
+          </ul>
+          <p><strong>مثال:</strong> «مطوية لشرح درس المعادلة بمجهول واحد — الصف السابع»."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-5">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--rose">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">٦</span>
+          <div class="prompt__title"><h3>لعبة عجلة الحظ التفاعلية</h3><span class="prompt__tag prompt__tag--rose">Interactive Game</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-6">
+          <p>يُفضّل استخدام هذا البرومبت داخل <strong>Gemini Canvas</strong> أو <strong>ChatGPT Canvas</strong>، لأنهما يولّدان لعبة تفاعلية كاملة قابلة للتشغيل:</p>
+          <p>"صمم لعبة تعليمية تفاعلية بعنوان «عجلة الحظ» لطلاب الصف <span class="slot">[الصف]</span> في موضوع <span class="slot">[الموضوع]</span>.</p>
+          <p><strong>المواصفات:</strong></p>
+          <ul>
+            <li>عجلة حظ تفاعلية مقسمة إلى 8 أقسام، كل قسم يحتوي على سؤال أو تحدٍ مرتبط بمحتوى الدرس.</li>
+            <li>زر «أدر العجلة» — عند الضغط تدور العجلة وتتوقف عشوائياً على أحد التحديات.</li>
+            <li>يظهر السؤال للطالب مع مؤقت 30 ثانية.</li>
+            <li>التحديات متنوعة ومتدرجة في الصعوبة (سهل / متوسط / صعب).</li>
+            <li>نظام نقاط + تغذية راجعة فورية (صح/خطأ + شرح قصير).</li>
+            <li>مؤثرات بصرية وصوتية مناسبة (اختيارية، مع زر كتم الصوت).</li>
+            <li>تصميم ثلاثي الأبعاد، عصري، ملوّن، ممتع، سهل الاستخدام.</li>
+            <li>يدعم اللغة العربية بالكامل (RTL).</li>
+          </ul>
+          <p><strong>مهم:</strong> الأسئلة يجب أن تُبنى على المحتوى الفعلي للدرس، وليس على معلومات عامة."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-6">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--gold">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">٧</span>
+          <div class="prompt__title"><h3>بوستر إنفوجرافيك تعليمي (3D)</h3><span class="prompt__tag prompt__tag--gold">3D Poster</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-7">
+          <p>بوستر إنفوجرافيك تعليمي في <span class="slot">[المادة]</span> عن «<span class="slot">[الموضوع]</span>» مصمم لطلاب <span class="slot">[المرحلة]</span>.</p>
+          <p><strong>الأسلوب (Style):</strong> رندر ثلاثي الأبعاد لطيف بأسلوب الصلصال الرقمي (3D Pixar/Disney claymation render)، لوحة ألوان باستيل هادئة، بطاقات مقسمة بحواف دائرية ونظيفة، إضاءة وخامات واقعية، ونبرة ودودة ومحفزة.</p>
+          <p><strong>العنوان العلوي:</strong> شريط أبيض عريض ممتد بحواف دائرية يحتوي على عنوان الموضوع بخط عربي عريض، مع شارات معلومات فرعية صغيرة (المادة، المستوى، رقم الدرس).</p>
+          <p><strong>العنصر البصري الرئيسي:</strong> مجسم ثلاثي الأبعاد يعبّر عن جوهر الموضوع (مثال: بيتزا مقسمة للكسور، قلب تشريحي للدورة الدموية، مجسم ذرة للكيمياء)، بجواره شخصية كرتونية ثلاثية الأبعاد لطفل يشير إليه بحماس.</p>
+          <p><strong>بطاقات الخطوات (5 بطاقات مرقمة بأيقونات دائرية):</strong> «اكتشف» (عدسة مكبرة)، «افهم» (مصباح)، «اربط» (قطعة لغز)، «طبّق» (ترس)، «اختبر نفسك» (علامة استفهام). كل بطاقة تحتوي على نص عربي قصير وواضح.</p>
+          <p><strong>الأقسام السفلية:</strong> مثال بصري إضافي (مثل لوح شوكولاتة مقسم لتوضيح كسر آخر)، وملاحظة صغيرة على لوحة بمشبك بعنوان «تذكّر».</p>
+          <p><strong>الخلفية والملحقات:</strong> خلفية بيضاء عاجية هادئة مع أدوات مكتبية لطيفة (آلة حاسبة، نباتات صغيرة، أدوات هندسية). تفاصيل دقيقة وحادة، خط عربي حديث ونظيف، بدقة عالية فائقة.</p>
+          <p><strong>الأبعاد:</strong> 2:3 (عمودي).</p>
+          <p><strong>مهم جداً:</strong> يجب أن تكون جميع النصوص العربية مكتوبة بخط واضح وسليم إملائياً. جميع التسميات العلمية يجب أن تكون صحيحة ومطابقة للمنهج."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-7">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+
+      <div class="prompt prompt--plum">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">٨</span>
+          <div class="prompt__title"><h3>انفوجرافيك بأسلوب مصمم جرافيك محترف</h3><span class="prompt__tag prompt__tag--plum">Graphic Designer</span></div>
+        </div>
+        <div class="prompt__body" id="p-act-8">
+          <p>"بصفتك مصمم جرافيك محترفاً في مجال التعليم، أنشئ انفوجرافيك حول موضوع <span class="slot">[الموضوع]</span> باللغة العربية، على غرار محور الرسم البياني المعلوماتي المستخدم في المرحلتين الابتدائية والإعدادية.</p>
+          <p><strong>الأسلوب:</strong> ألوان زاهية، شخصيات مرحة، أسلوب كرتوني، تصميم هادئ، أنيق، واحترافي.</p>
+          <p><strong>المحتوى:</strong> العنوان الرئيسي + 4–5 نقاط محورية، كل نقطة معها شرح قصير (10 كلمات) وأيقونة أو صورة توضيحية مناسبة.</p>
+          <p><strong>الختام:</strong> صندوق ملخص في الأسفل يحتوي على أهم فكرة يجب تذكرها.</p>
+          <p>يمكن ملاءمة هذا البرومبت لكل موضوع ولأي صف فقط مع تغيير المعطيات. جميع النصوص العربية يجب أن تكون مكتوبة بخط واضح وسليم."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-act-8">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 14 — الصور والفيديو والوسائط -->
+    <section class="section" id="visual" aria-labelledby="visual-h">
+      <div class="section__head">
+        <span class="section__ord">14</span>
+        <h2 id="visual-h">الصور والفيديو والوسائط — التعلم البصري والتفاعلي</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">أدوات توليد الصور في 2026 تجيد كتابة النص داخل الصورة بجودة عالية، وتدعم العربية بتحسّن مستمر. لكن الصورة تظل توضيحاً بصرياً، وليست مصدراً علمياً. الفرق بين «النص مرسوم بشكل جميل» و«المعلومة صحيحة» فرق جوهري.</p>
+      <div class="callout callout--ok">
+        <strong>✅ القاعدة الصحيحة للنص على الصورة:</strong>
+        <ul>
+          <li><strong>النص الزخرفي/العنواني</strong> (العنوان، اسم الدرس، عبارة قصيرة): مسموح بل مستحسن — الجودة عالية في معظم الأدوات.</li>
+          <li><strong>النص العربي الطويل</strong> (شرح كامل أو فقرة نصية): مسموح، لكن راجع الجودة الإملائية والتشكيل — بعض الأدوات ما زالت تخطئ.</li>
+          <li><strong>التسميات العلمية الدقيقة</strong> (أسماء أجزاء تشريحية، معادلات، وسوم خرائط): مسموح بعد التحقق من صحة المعلومة. المشكلة ليست في رسم النص، بل في المعلومة التي قد يخترعها المولّد.</li>
+        </ul>
+      </div>
+      <div class="callout callout--warn">
+        <strong>⚠️ التحذير الحقيقي:</strong> لا تجعل الصورة <em>المصدر الوحيد للحقيقة</em> للمعلومات العلمية. حتى لو رُسم النص بشكل جميل، قد يكون الوسم خاطئاً (اسم جزء في القلب في المكان الخطأ، معادلة غير مكتملة، وسوم خريطة مغلوطة). للأشياء الحساسة (التشريح، الرياضيات، الخرائط، الأشكال الهندسية، الرسوم العلمية)، تحقّق من المعلومة في الكتاب أو المصدر الأصلي قبل الاعتماد على الصورة.
+      </div>
+      <h3 style="margin:1.5rem 0 1rem;font-size:1.1rem;">سير العمل الموصى به للصور التعليمية</h3>
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption class="sr-only">خطوات إنتاج صورة تعليمية</caption>
+          <thead>
+            <tr><th scope="col">الخطوة</th><th scope="col">من ينفذها؟</th><th scope="col">النتيجة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="الخطوة">١. تحديد المحتوى التعليمي</td><td data-label="من ينفذها؟">AI نصي</td><td data-label="النتيجة">قائمة المفهوم + الخطوات + الأمثلة + التسميات الصحيحة</td></tr>
+            <tr><td data-label="الخطوة">٢. تحديد الهيكل البصري</td><td data-label="من ينفذها؟">AI نصي</td><td data-label="النتيجة">وصف دقيق للتخطيط: أين العنوان، أين الصور، أين البطاقات</td></tr>
+            <tr><td data-label="الخطوة">٣. توليد الصورة</td><td data-label="من ينفذها؟">مولّد صور (GPT-4o Image، DALL-E 3، Imagen، Ideogram، Midjourney)</td><td data-label="النتيجة">صورة كاملة بالنص والألوان والرسم</td></tr>
+            <tr><td data-label="الخطوة">٤. المراجعة والتحقق</td><td data-label="من ينفذها؟">وليّ الأمر</td><td data-label="النتيجة">التأكد من صحة المعلومة + جودة النص العربي</td></tr>
+            <tr><td data-label="الخطوة">٥. التعديل النهائي (اختياري)</td><td data-label="من ينفذها؟">Canva / Figma</td><td data-label="النتيجة">إضافة النص النهائي إذا كانت جودة الصورة غير كافية</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prompt prompt--plum" style="margin-top:1.5rem;">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">★</span>
+          <div class="prompt__title"><h3>وضع الإبداع — تحويل درس إلى قصة أو وسائط</h3><span class="prompt__tag prompt__tag--plum">Creative Mode</span></div>
+        </div>
+        <div class="prompt__body" id="p-visual">
+          <p>"حوّل درس <span class="slot">[الموضوع]</span> للصف <span class="slot">[الصف]</span> إلى:</p>
+          <ul>
+            <li><strong>قصة قصيرة:</strong> 5 فقرات، بأسلوب مشوق، مع شخصيات من اهتمامات الطفل.</li>
+            <li><strong>سيناريو فيديو:</strong> مشهدان أو ثلاثة، كل مشهد 30 ثانية، مع وصف بصري كامل.</li>
+            <li><strong>وصف انفوجرافيك:</strong> العنوان الرئيسي، 3–4 نقاط محورية، صندوق ختامي — مع وصف كل عنصر بصري.</li>
+            <li><strong>برومبت صورة جاهز:</strong> صياغة كاملة لمولّد الصور، تتضمن: العنوان، الألوان، الشخصيات، التسميات العلمية، جودة الخط العربي المطلوبة.</li>
+          </ul>
+          <p><strong>مهم:</strong> جميع المعلومات العلمية في القصة والفيديو والانفوجرافيك يجب أن تكون صحيحة ومطابقة للمنهج."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-visual">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 15 — أدوات AI الحالية -->
+    <section class="section" id="tools" aria-labelledby="tools-h">
+      <div class="section__head">
+        <span class="section__ord">15</span>
+        <h2 id="tools-h">أدوات AI الحالية — Tool Matrix (سبتمبر 2026)</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">هذا الجدول يوثّق الأدوات والمنصات، مع ملاحظة أنها تتغير بسرعة. تحقق دائماً من العمر والحساب والمنطقة والميزة قبل الاعتماد عليها.</p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption class="sr-only">مصفوفة أدوات AI للتعلم — سبتمبر 2026</caption>
+          <thead>
+            <tr><th scope="col">المهمة</th><th scope="col">الأداة / الفئة</th><th scope="col">مناسبة لمن؟</th><th scope="col">الميزة الأساسية</th><th scope="col">ملاحظة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="المهمة">تعلم تفاعلي</td><td data-label="الأداة"><span class="tool-name">ChatGPT Study Mode</span></td><td data-label="مناسبة لمن؟">13+ مع موافقة الوالدين؛ دون 13 عبر شخص بالغ</td><td data-label="الميزة">شرح خطوة بخطوة، أسئلة، تدرج، يعمل مع الملفات والصور</td><td data-label="ملاحظة">متاح عالمياً عبر Free والاشتراكات على الويب وiOS وAndroid. تحقق من قواعد العمر.</td></tr>
+            <tr><td data-label="المهمة">تعلم تفاعلي</td><td data-label="الأداة"><span class="tool-name">Gemini Guided Learning</span></td><td data-label="مناسبة لمن؟">حسب الحساب والمنطقة؛ Family Link لدون 13</td><td data-label="الميزة">تفكيك المسألة، أسئلة إرشادية، تكييف الشرح</td><td data-label="ملاحظة">توفر الميزات يتغير حسب الحساب والمنطقة.</td></tr>
+            <tr><td data-label="المهمة">مصادر المنهج</td><td data-label="الأداة"><span class="tool-name tool-name--plum">NotebookLM</span></td><td data-label="مناسبة لمن؟">حسب الحساب والعمر؛ سياسات أكثر صرامة لدون 18</td><td data-label="الميزة">إجابات من المصادر + إحالات + Audio Overviews</td><td data-label="ملاحظة">متاح في حسابات المستهلك، وحسابات Workspace for Education لها ترتيبات مختلفة.</td></tr>
+            <tr><td data-label="المهمة">تحضير الدروس</td><td data-label="الأداة"><span class="tool-name">MagicSchool AI</span> <span class="tool-name">Edcafe</span> <span class="tool-name">Diffit</span></td><td data-label="مناسبة لمن؟">المعلم / وليّ الأمر</td><td data-label="الميزة">أكثر من 60 أداة لتخطيط الدروس والتقييمات</td><td data-label="ملاحظة">راجع الناتج قبل استخدامه.</td></tr>
+            <tr><td data-label="المهمة">عروض تقديمية</td><td data-label="الأداة"><span class="tool-name">Gamma</span> <span class="tool-name">Slidesgo AI</span></td><td data-label="مناسبة لمن؟">المعلم / وليّ الأمر / الطالب الأكبر</td><td data-label="الميزة">عروض تلقائية من ملاحظات الدرس</td><td data-label="ملاحظة">تحقق من جودة الناتج.</td></tr>
+            <tr><td data-label="المهمة">بطاقات ومراجعة</td><td data-label="الأداة"><span class="tool-name">Anki</span> <span class="tool-name">Quizlet AI</span></td><td data-label="مناسبة لمن؟">حسب العمر</td><td data-label="الميزة">Retrieval + Spaced Repetition</td><td data-label="ملاحظة">لا تعتمد على التلخيص وحده.</td></tr>
+            <tr><td data-label="المهمة">إنشاء ملفات Office</td><td data-label="الأداة"><span class="tool-name">Claude</span> <span class="tool-name">Gemini Canvas</span></td><td data-label="مناسبة لمن؟"><strong>Claude: 18+ فقط.</strong> Gemini Canvas: حسب الحساب</td><td data-label="الميزة">Excel، PowerPoint، Word، PDF مباشرة</td><td data-label="ملاحظة"><strong>Claude.ai ليس أداة لطفل دون 18.</strong> استخدمه أنت كوليّ أمر. Gemini Canvas يمكنه تصدير إلى Docs أو Word/PDF.</td></tr>
+            <tr><td data-label="المهمة">فيديو وقصص بصرية</td><td data-label="الأداة"><span class="tool-name tool-name--gold">Google Flow</span> <span class="tool-name tool-name--gold">Veo 3.1</span></td><td data-label="مناسبة لمن؟">المعلم / وليّ الأمر / الطالب الأكبر</td><td data-label="الميزة">تحويل الأفكار إلى مقاطع فيديو، إضافة صوت، تحكم بالكاميرا</td><td data-label="ملاحظة">مناسبة للشروحات البصرية القصيرة.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--warn" style="margin-top:1.2rem;">
+        <strong>⚠️ تنبيه عمر Claude:</strong> Claude.ai حالياً 18+ وفق شروط Anthropic. لا تكتب «أفضل أدوات الطفل: ChatGPT + Gemini + Claude». Claude أداة لوليّ الأمر/المعلم البالغ، وليست أداة استخدام مباشر لطفل دون 18.
+      </div>
+    </section>
+
+    <!-- 16 — تجربة 15 دقيقة -->
+    <section class="section" id="walkthrough" aria-labelledby="walkthrough-h">
+      <div class="section__head">
+        <span class="section__ord">16</span>
+        <h2 id="walkthrough-h">تجربة 15 دقيقة — جلسة تعلّم كاملة</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">هذه جلسة عملية يمكنك تطبيقها اليوم. لا تنهِ الجلسة عند حصول الطفل على الإجابة الصحيحة. أنهاها عندما يستطيع شرح الفكرة واستخدامها دون مساعدة.</p>
+      <ul class="timeline">
+        <li><span class="timeline__time">00:00–02:00</span><p class="timeline__title">تشخيص سريع</p><p class="timeline__desc">اسأل الطفل: ماذا تعرف عن هذا الموضوع؟ 3 أسئلة قصيرة لتحديد نقطة البداية.</p></li>
+        <li><span class="timeline__time">02:00–05:00</span><p class="timeline__title">شرح المفهوم</p><p class="timeline__desc">استخدم AI لشرح المفهوم بمستوى الطفل، مع تشبيه من اهتماماته. لا تتجاوز 3 خطوات.</p></li>
+        <li><span class="timeline__time">05:00–08:00</span><p class="timeline__title">حل مثال مع الطالب</p><p class="timeline__desc">AI يعرض مثالاً محلولاً، ثم يطلب من الطفل حل مثال مشابه بمساعدة تدريجية.</p></li>
+        <li><span class="timeline__time">08:00–11:00</span><p class="timeline__title">3 أسئلة مستقلة</p><p class="timeline__desc">الطفل يحل 3 أسئلة بدون مساعدة. AI لا يعطي الإجابات، فقط يصحح بعد المحاولة.</p></li>
+        <li><span class="timeline__time">11:00–13:00</span><p class="timeline__title">تحليل الأخطاء</p><p class="timeline__desc">إذا وقع الطفل في أخطاء، حللها: نوع الخطأ، سببه، وسؤال جديد مشابه.</p></li>
+        <li><span class="timeline__time">13:00–15:00</span><p class="timeline__title">اختبار استرجاع + تحديد المراجعة</p><p class="timeline__desc">سؤالان استرجاع سريعان. ثم حدد موعد المراجعة القادمة.</p></li>
+      </ul>
+      <div class="callout callout--ok" style="margin-top:1.2rem;">
+        <strong>✅ معيار النجاح:</strong> الجلسة ناجحة إذا استطاع الطفل في نهايتها أن يشرح الفكرة بكلماته، وأن يحل سؤالاً جديداً دون مساعدة. ليست ناجحة إذا حصل على الإجابات الصحيحة فقط.
+      </div>
+    </section>
+
+    <!-- 17 — دور وليّ الأمر -->
+    <section class="section" id="parent" aria-labelledby="parent-h">
+      <div class="section__head">
+        <span class="section__ord">17</span>
+        <h2 id="parent-h">دور وليّ الأمر — قبل وأثناء وبعد الجلسة</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">AI ليس كل العملية. وليّ الأمر هو من يحدد الهدف، يراقب الجودة، ويقرر الخطوة التالية. هذا ليس دوراً ثانوياً.</p>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__top"><span class="card__n" style="background:var(--gold-soft);color:var(--gold);">١</span><h4>قبل الجلسة</h4></div>
+          <ul>
+            <li>حدد الهدف بدقة (فهم / تدريب / مراجعة).</li>
+            <li>راجع المصدر الذي سيرفع إلى AI.</li>
+            <li>حدد وقت الجلسة (10–20 دقيقة).</li>
+            <li>جهّز ملف المتعلّم (العمر، الصف، نقاط الضعف).</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" style="background:var(--sky-soft);color:var(--sky);">٢</span><h4>أثناء الجلسة</h4></div>
+          <ul>
+            <li>لا تترك AI يحل بدل الطفل.</li>
+            <li>راقب طريقة التفكير، ليس الإجابة فقط.</li>
+            <li>اسأل: «لماذا اخترت هذه الخطوة؟»</li>
+            <li>إذا أعطى AI الإجابة بسرعة، تدخّل واطلب Hint Mode.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" style="background:var(--teal-soft);color:var(--teal);">٣</span><h4>بعد الجلسة</h4></div>
+          <ul>
+            <li>راجع الأخطاء وسجّلها في بنك الأخطاء.</li>
+            <li>حدد ما يحتاج مراجعة ومتى.</li>
+            <li>سجّل ملاحظة قصيرة: ما أتقنه الطفل؟ ما لم يتقنه؟</li>
+            <li>حدد الخطوة التالية (جلسة قادمة، مراجعة، تدريب).</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 17.5 — محو الأمية في AI -->
+    <section class="section" id="literacy" aria-labelledby="literacy-h">
+      <div class="section__head">
+        <span class="section__ord">17.5</span>
+        <h2 id="literacy-h">محو الأمية في AI — ماذا يجب أن يعرفه طفلك؟</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">لا يكفي أن يعرف الطفل كيف يستخدم AI. يجب أن يعرف متى يثق فيه ومتى يشك فيه. هذا ما يسمى AI Literacy، وهو مطلوب في إطار UNESCO للكفاءات (12 كفاءة عبر 4 أبعاد). هذا القسم موجه للطفل مباشرة — اقرأه معه أو اشرحه له.</p>
+      <div class="callout callout--info">
+        <strong>📌 ملاحظة لوليّ الأمر:</strong> هذه الرسائل يجب أن تُقال للطفل بلغته، وفي عمر 10 سنوات على الأقل. للصغار (6–9)، اقتصر على: «AI يساعدنا نتعلّم، بس مش دايماً بيكون صح».
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">١</span><h4>AI قد يخطئ</h4></div>
+          <p>حتى عندما يتحدث AI بثقة، قد يكون مخطئاً. الثقة في النبرة لا تعني صحة المعلومة. دائماً اسأل: «كيف أعرف أن هذا صحيح؟»</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">٢</span><h4>AI قد يخترع معلومات</h4></div>
+          <p>يُسمى هذا «هلوسة» (Hallucination). AI قد يخترع أسماء، تواريخ، اقتباسات، أو مراجع لا وجود لها. إذا لم تجد المعلومة في مصدر آخر، لا تعتمد عليها.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--gold-soft);color:var(--gold);">٣</span><h4>AI ليس شخصاً</h4></div>
+          <p>AI لا يفهم العالم كما تفهمه أنت. لا يشعر، لا يعرف تجاربك، ولا يفكر كما يفكر الإنسان. هو أداة ذكية، لكنه أداة.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">٤</span><h4>AI لا يعرفك شخصياً</h4></div>
+          <p>لا تخبر AI باسمك الكامل، عنوانك، مدرستك، أو أي معلومات شخصية. AI لا «صديق» يثق به، بل أداة تعمل بقواعد.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--teal-soft);color:var(--teal);">٥</span><h4>التحقق مسؤوليتك</h4></div>
+          <p>إذا كانت المعلومة مهمة (للامتحان، للواجب، لصحة شخص)، تحقق منها في مصدر آخر: كتاب، معلم، موقع موثوق. لا تعتمد على AI وحده.</p>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--plum-soft);color:var(--plum);">٦</span><h4>AI ليس بديلاً عن التفكير</h4></div>
+          <p>إذا استخدمت AI ليعطيك الجواب فوراً، فلن تتعلم. استخدمه ليفهمك، ليس ليعطيك الإجابة. اسأله: «لماذا؟» و«كيف؟» و«أعطني مثالاً».</p>
+        </article>
+      </div>
+      <div class="callout callout--gold" style="margin-top:1.2rem;">
+        <strong>💡 نشاط عملي للطفل:</strong> اطلب منه أن يسأل AI سؤالاً يعرف إجابته مسبقاً (مثل: «ما عاصمة الأردن؟»). ثم سؤالاً لا يعرف إجابته. ثم اطلبا معاً التحقق من الإجابتين في مصدر موثوق. الهدف: أن يرى الطفل بنفسه أن AI قد يخطئ، وأن التحقق ضروري.
+      </div>
+    </section>
+
+    <!-- 18 — النزاهة الأكاديمية -->
+    <section class="section" id="integrity" aria-labelledby="integrity-h">
+      <div class="section__head">
+        <span class="section__ord">18</span>
+        <h2 id="integrity-h">النزاهة الأكاديمية — متى تستخدم AI ومتى لا؟</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">النزاهة الأكاديمية ليست شكلاً؛ إنها ما يجعل التعلّم حقيقياً. AI يمكن أن يكون أداة نزيهة أو أداة غش — حسب طريقة الاستخدام.</p>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true">✓</span><h4>استخدم AI لكي...</h4></div>
+          <ul>
+            <li>تفهم مفهوماً صعباً.</li>
+            <li>تتدرب على مهارة.</li>
+            <li>تحصل على Feedback على إجابتك.</li>
+            <li>تولّد أسئلة إضافية.</li>
+            <li>تراجع كتابتك.</li>
+            <li>تنظم أفكارك.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card__top"><span class="card__n" aria-hidden="true" style="background:var(--rose-soft);color:var(--rose);">✗</span><h4>لا تستخدم AI لكي...</h4></div>
+          <ul>
+            <li>ينجز واجباً مطلوباً منك.</li>
+            <li>يكتب بحثاً وتسلمه باسمه.</li>
+            <li>يحل اختباراً فعلياً.</li>
+            <li>يخفي استخدام AI عندما تكون القواعد تمنعه.</li>
+            <li>يتخذ قراراً عن الطالب.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="callout callout--warn" style="margin-top:1.2rem;">
+        <strong>⚠️ لماذا هذا مهم؟</strong> UNESCO تناقش الحاجة إلى إعادة التفكير في التقييم عندما تصبح GenAI متاحة بهذا الشكل، بدلاً من التعامل معها فقط كأداة لإنتاج الإجابة النهائية. النزاهة الأكاديمية ليست قيداً، بل شرط لجعل التعلّم ذا معنى.
+      </div>
+    </section>
+
+    <!-- 19 — Checklist -->
+    <section class="section" id="checklist" aria-labelledby="checklist-h">
+      <div class="section__head">
+        <span class="section__ord">19</span>
+        <h2 id="checklist-h">Checklist — هل نجحت الجلسة؟</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">بعد كل جلسة، راجع هذه القائمة. إذا كانت الإجابات كلها «نعم»، فالجلسة ناجحة. إذا لا، فعدّل الاستراتيجية في الجلسة القادمة.</p>
+      <ul class="checklist">
+        <li><strong>هل حددت ما يعرفه الطفل قبل الشرح؟</strong> — التشخيص المسبق ضروري.</li>
+        <li><strong>هل حاول الطفل الإجابة قبل أن يرى الحل؟</strong> — لا تسمح لـ AI بإعطاء الإجابة فوراً.</li>
+        <li><strong>هل شرح الطفل الفكرة بكلماته؟</strong> — الشرح بكلمات الطفل هو أفضل دليل على الفهم.</li>
+        <li><strong>هل حل سؤالاً جديداً دون مساعدة؟</strong> — التطبيق المستقل هو معيار الإتقان.</li>
+        <li><strong>هل حددت نوع الأخطاء (حفظ/فهم/تطبيق)؟</strong> — التشخيص الدقيق يوجه المراجعة.</li>
+        <li><strong>هل حددت موعد المراجعة القادمة؟</strong> — المراجعة المتباعدة ضرورية.</li>
+        <li><strong>هل تحققت من صحة المعلومات الحساسة؟</strong> — لا تعتمد على AI في الحقائق الدقيقة دون تحقق.</li>
+        <li><strong>هل كان الطفل مشاركاً نشطاً، وليس متلقياً سلبياً؟</strong> — التعلّم النشط هو الأساس.</li>
+      </ul>
+    </section>
+
+    <!-- 19.5 — لوحة متابعة وليّ الأمر -->
+    <section class="section" id="dashboard" aria-labelledby="dashboard-h">
+      <div class="section__head">
+        <span class="section__ord">19.5</span>
+        <h2 id="dashboard-h">لوحة متابعة وليّ الأمر — حالة الطالب في لمحة</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">بعد 5–10 جلسات، تحتاج صورة واضحة: ما أتقنه الطفل؟ ما يحتاج مراجعة؟ ما الخطأ المتكرر؟ ما التوصية للجلسة القادمة؟ هذه اللوحة تُبنى دورياً (كل أسبوع أو أسبوعين) من مخرجات الجلسات السابقة.</p>
+
+      <h3 style="margin:1rem 0 .8rem;font-size:1.05rem;">نموذج لوحة المتابعة</h3>
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption class="sr-only">نموذج لوحة متابعة حالة الطالب</caption>
+          <thead>
+            <tr><th scope="col">المحور</th><th scope="col">الحالة</th><th scope="col">التفاصيل</th><th scope="col">الإجراء المقترح</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="المحور">المهارات المتقنة</td><td data-label="الحالة">✅</td><td data-label="التفاصيل">الكسور الأساسية، تبسيط الكسور، المقارنة بين كسرين</td><td data-label="الإجراء">الانتقال إلى المستوى التالي</td></tr>
+            <tr><td data-label="المحور">بحاجة إلى مراجعة</td><td data-label="الحالة">⚠️</td><td data-label="التفاصيل">المقام المشترك، جمع الكسور غير المتشابهة</td><td data-label="الإجراء">10 دقائق مراجعة غداً + 5 أسئلة استرجاع</td></tr>
+            <tr><td data-label="المحور">الخطأ المتكرر</td><td data-label="الحالة">🔁</td><td data-label="التفاصيل">يبدأ الحساب قبل تحليل السؤال</td><td data-label="الإجراء">تدريب على «اقرأ المسألة كاملة قبل الحل» + سؤالان في كل جلسة</td></tr>
+            <tr><td data-label="المحور">المهارة القادمة</td><td data-label="الحالة">→</td><td data-label="التفاصيل">ضرب الكسور (الدرس القادم في المنهج)</td><td data-label="الإجراء">جلسة تشخيص يوم الأحد</td></tr>
+            <tr><td data-label="المحور">الالتزام بالمراجعة</td><td data-label="الحالة">✓</td><td data-label="التفاصيل">3 من 4 مواعيد مراجعة تمت في الأسبوع الماضي</td><td data-label="الإجراء">الاستمرار على نفس الوتيرة</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin:1.5rem 0 .8rem;font-size:1.05rem;">برومبت توليد اللوحة من سجل الجلسات</h3>
+      <div class="prompt prompt--sky">
+        <div class="prompt__head">
+          <span class="prompt__num" aria-hidden="true" style="background:var(--sky-soft);color:var(--sky);">★</span>
+          <div class="prompt__title"><h3>لوحة متابعة أسبوعية</h3><span class="prompt__tag prompt__tag--sky">Dashboard</span></div>
+        </div>
+        <div class="prompt__body" id="p-dashboard">
+          <p>"هذه سجل جلسات ابني خلال الأسبوع الماضي:</p>
+          <p><span class="slot">[الصق هنا: المادة، الموضوع، الأخطاء المسجلة، ما أتقنه، ما تعثر فيه]</span>.</p>
+          <p><strong>أنشئ لوحة متابعة أسبوعية تتضمن:</strong></p>
+          <ul>
+            <li><strong>المهارات المتقنة:</strong> ما أظهر إتقاناً فيه (بدليل من الجلسات).</li>
+            <li><strong>بحاجة إلى مراجعة:</strong> ما تعثر فيه أكثر من مرة.</li>
+            <li><strong>الخطأ المتكرر:</strong> النمط الذي يتكرر (وليس الخطأ المنفرد).</li>
+            <li><strong>المهارة القادمة:</strong> بناءً على المنهج.</li>
+            <li><strong>التوصية للجلسة القادمة:</strong> كم دقيقة؟ ما الهدف؟ ما نوع الأسئلة؟</li>
+          </ul>
+          <p>اعرض اللوحة في جدول واضح. لا تفترض معلومات غير موجودة في السجل. إذا كانت البيانات ناقصة، قل ذلك."</p>
+        </div>
+        <button class="copy-btn" type="button" data-copy-target="p-dashboard">
+          <span class="copy-btn__ico" aria-hidden="true"><svg class="ico-copy" viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/></svg><svg class="ico-check" viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+          <span class="copy-btn__label">نسخ</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 20 — المراجع -->
+    <section class="section" id="references" aria-labelledby="references-h">
+      <div class="section__head">
+        <span class="section__ord">20</span>
+        <h2 id="references-h">المراجع والمصادر</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <p class="section__intro">هذا الدليل مبني على مراجع تربوية وأبحاث محكّمة، ثم على وثائق المنصات الرسمية للميزات الحالية. الترتيب: UNESCO + UNICEF أولاً، ثم EEF/الأبحاث المحكّمة، ثم وثائق الشركات.</p>
+      <ul class="ref-list">
+        <li class="ref-item"><strong>UNESCO — Guidance for Generative AI in Education and Research</strong><span class="ref-year">2023</span>المرجع الرئيسي للإطار الأخلاقي، الخصوصية، العمر المناسب، والتكامل التعليمي.</li>
+        <li class="ref-item"><strong>UNESCO — AI Competency Framework for Students</strong><span class="ref-year">2024، محدث 2026</span>مرجع AI literacy للطلاب: 12 كفاءة عبر أربعة أبعاد (Human-centred mindset, Ethics of AI, AI techniques and applications, AI system design).</li>
+        <li class="ref-item"><strong>UNICEF — Guidance on AI and Children, Version 3.0</strong><span class="ref-year">2025</span>مرجع أساسي لسلامة الأطفال، الخصوصية، المصلحة الفضلى، العدالة، الشفافية.</li>
+        <li class="ref-item"><strong>UNICEF — Parenting in the AI Age</strong><span class="ref-year">2026</span>مرجع عملي لوليّ الأمر، خصوصاً الخصوصية والاعتماد على AI والعلاقة بين الطفل والتقنية.</li>
+        <li class="ref-item"><strong>EEF — Metacognition and Self-Regulated Learning</strong><span class="ref-year">2025</span>مرجع عملي للتخطيط والمراقبة والتقييم الذاتي.</li>
+        <li class="ref-item"><strong>Nature Reviews Psychology — The Science of Effective Learning with Spacing and Retrieval Practice</strong>مرجع قوي لأساليب الاسترجاع والمراجعة المتباعدة.</li>
+        <li class="ref-item"><strong>Pashler et al. — Learning Styles: Concepts and Evidence</strong>يُوضع عند الحديث عن سبب عدم اعتماد «أنماط التعلّم» كتصنيف ثابت للطفل.</li>
+        <li class="ref-item"><strong>OpenAI, Google, Anthropic — وثائق المنصات الرسمية</strong><span class="ref-year">2026</span>مرجع للميزات الحالية (Study Mode، Guided Learning، NotebookLM، Claude Projects) وشروط العمر.</li>
+      </ul>
+      <div class="callout callout--info" style="margin-top:1.2rem;">
+        <strong>📌 ملاحظة:</strong> هذا الدليل لا يدّعي أن كل معلومة فيه ثابتة. المنصات تتغير، والأبحاث تتطور. راجع المصادر الرسمية بشكل دوري.
+      </div>
+    </section>
+
+    <!-- 21 — Changelog -->
+    <section class="section" id="changelog" aria-labelledby="changelog-h">
+      <div class="section__head">
+        <span class="section__ord">21</span>
+        <h2 id="changelog-h">Changelog</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+      <ul class="ref-list">
+        <li class="ref-item">
+          <strong>النسخة 2.2 — إغلاق الفجوات النهائية</strong>
+          <span class="ref-year">سبتمبر 2026</span>
+          <ul style="margin:.5rem 0 0;padding-inline-start:1.1rem;font-size:.88rem;">
+            <li>إضافة القسم 06.5 — نظام Modes (8 أوضاع تعليمية محددة).</li>
+            <li>إضافة القسم 12.5 — طبقة التحقق (6 أسئلة + برومبت المراجعة الذاتية).</li>
+            <li>إضافة القسم 17.5 — محو الأمية في AI للطفل (6 رسائل أساسية).</li>
+            <li>إضافة القسم 19.5 — لوحة متابعة وليّ الأمر (نموذج + برومبت توليد).</li>
+            <li>إضافة قسم المراجع الكامل (UNESCO، UNICEF، EEF، Nature، Pashler).</li>
+            <li>تحديث قسم Changelog ليشمل 2.0، 2.1، 2.2.</li>
+          </ul>
+        </li>
+        <li class="ref-item">
+          <strong>النسخة 2.1 — استعادة البرومبتات المفقودة + تصحيح قاعدة الصور</strong>
+          <span class="ref-year">سبتمبر 2026</span>
+          <ul style="margin:.5rem 0 0;padding-inline-start:1.1rem;font-size:.88rem;">
+            <li>استعادة 8 برومبتات كانت في النسخة 1.0 وضاعت سهواً: تحضير الدروس، ورقة عمل، ملخص بخط اليد، بطاقة مكافآت، مطوية، عجلة الحظ، بوستر 3D، مصمم جرافيك — أُضيفت في قسم جديد بعنوان «الأنشطة والموارد» (القسم 13).</li>
+            <li>استعادة برومبت «التفاعل الحواري (Socratic Method)» بشكل صريح في قسم «أتدرّب» (القسم 8).</li>
+            <li>تصحيح قاعدة «لا نص على الصورة» إلى قاعدة متدرجة حسب نوع النص: زخرفي/طويل/علمي.</li>
+            <li>إضافة سير عمل من 5 خطوات لإنتاج الصور التعليمية.</li>
+            <li>إصلاح مشكلة النسخ بثلاث طبقات (Clipboard API ← execCommand ← Modal).</li>
+          </ul>
+        </li>
+        <li class="ref-item">
+          <strong>النسخة 2.0 — إعادة بناء كاملة</strong>
+          <span class="ref-year">سبتمبر 2026</span>
+          <ul style="margin:.5rem 0 0;padding-inline-start:1.1rem;font-size:.88rem;">
+            <li>تحويل الملف من «دليل برومبتات وأدوات» إلى «نظام عملي لوليّ الأمر لبناء جلسة تعلّم مدعومة بالذكاء الاصطناعي».</li>
+            <li>إعادة تسمية الدليل: «مساعد تعلّم شخصي» بدلاً من «معلّم شخصي».</li>
+            <li>إزالة «أنماط التعلّم» واستبدالها بـ «ملف المتعلّم».</li>
+            <li>ترقية «المعادلة الذهبية» إلى «Learning Prompt Framework».</li>
+            <li>إضافة: كيف يحدث التعلم، Master Tutor Prompt، دورة 15 دقيقة، بنك الأخطاء، المراجعة المتباعدة، Source-Grounded، مصفوفة الأعمار، Tool Matrix محدّث، النزاهة الأكاديمية.</li>
+            <li>تحديث معلومات Claude (18+)، ChatGPT (Study Mode)، Gemini (Guided Learning)، NotebookLM.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="callout callout--ok" style="margin-top:1.2rem;">
+        <strong>✅ آخر مراجعة:</strong> سبتمبر 2026. راجع هذا الدليل دورياً، خصوصاً قسم الأدوات، لأن المنصات تتغير بسرعة.
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>الذكاء الاصطناعي كمساعد تعلّم شخصي لأبنائك — دليل عملي لوليّ الأمر | نسخة 2.2 | آخر مراجعة: سبتمبر 2026</p>
+  </footer>
+
+</div>
+
+<!-- Copy Modal -->
+<div class="modal-overlay" id="copyModal" role="dialog" aria-modal="true" aria-labelledby="copyModalTitle">
+  <div class="modal">
+    <button class="modal__close" type="button" id="copyModalClose" aria-label="إغلاق">✕</button>
+    <h3 id="copyModalTitle">نسخ يدوي</h3>
+    <p>تعذّر النسخ التلقائي في هذا المتصفح. حدّد النص بالكامل ثم اضغط Ctrl+C (أو Cmd+C على Mac) لنسخه.</p>
+    <textarea class="modal__textarea" id="copyModalText" readonly dir="rtl"></textarea>
+    <p class="modal__hint">سيُحدَّد النص تلقائياً عند فتح النافذة.</p>
+  </div>
+</div>
+
+<div id="live" class="sr-only" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+  var liveRegion = document.getElementById('live');
+  var modal = document.getElementById('copyModal');
+  var modalText = document.getElementById('copyModalText');
+  var modalClose = document.getElementById('copyModalClose');
+  var lastFocused = null;
+
+  function announce(message) {
+    if (!liveRegion) return;
+    liveRegion.textContent = '';
+    window.setTimeout(function () { liveRegion.textContent = message; }, 40);
+  }
+
+  function openModal(text) {
+    lastFocused = document.activeElement;
+    modal.classList.add('is-open');
+    modalText.value = text;
+    window.setTimeout(function () {
+      modalText.focus();
+      modalText.select();
+      modalText.setSelectionRange(0, modalText.value.length);
+    }, 60);
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  }
+
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modal) modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  function tryClipboardAPI(text) {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) return Promise.reject(new Error('غير متاح'));
+    return navigator.clipboard.writeText(text);
+  }
+
+  function tryExecCommand(text) {
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly','');
+      ta.style.position='fixed';ta.style.top='0';ta.style.left='0';
+      ta.style.width='2em';ta.style.height='2em';ta.style.padding='0';
+      ta.style.border='none';ta.style.outline='none';ta.style.boxShadow='none';
+      ta.style.background='transparent';ta.style.opacity='0';ta.style.zIndex='-1';
+      document.body.appendChild(ta);
+      var succeeded = false;
+      try {
+        ta.focus();ta.select();ta.setSelectionRange(0, ta.value.length);
+        succeeded = document.execCommand('copy');
+      } catch (err) { succeeded = false; }
+      try { document.body.removeChild(ta); } catch (err) {}
+      succeeded ? resolve() : reject(new Error('execCommand فشل'));
+    });
+  }
+
+  function fallbackModal(text) {
+    openModal(text);
+    return Promise.resolve();
+  }
+
+  function copyText(text) {
+    return tryClipboardAPI(text)
+      .catch(function () { return tryExecCommand(text); })
+      .catch(function () { return fallbackModal(text); });
+  }
+
+  var buttons = document.querySelectorAll('[data-copy-target]');
+  Array.prototype.forEach.call(buttons, function (btn) {
+    var label = btn.querySelector('.copy-btn__label');
+    var originalLabel = label ? label.textContent : '';
+    var timer = null;
+    function reset() {
+      btn.classList.remove('is-copied','is-failed');
+      if (label) label.textContent = originalLabel;
+    }
+    btn.addEventListener('click', function () {
+      var targetId = btn.getAttribute('data-copy-target');
+      var target = targetId ? document.getElementById(targetId) : null;
+      if (!target) return;
+      var text = (target.innerText || target.textContent || '').trim();
+      if (!text) return;
+      if (timer) window.clearTimeout(timer);
+      copyText(text).then(function () {
+        btn.classList.add('is-copied');
+        btn.classList.remove('is-failed');
+        if (label) label.textContent = 'تم النسخ';
+        announce('تم نسخ النص');
+        timer = window.setTimeout(reset, 2200);
+      }).catch(function () {
+        btn.classList.add('is-failed');
+        btn.classList.remove('is-copied');
+        if (label) label.textContent = 'تعذّر';
+        announce('تعذّر النسخ التلقائي، تم فتح نافذة النسخ اليدوي');
+        timer = window.setTimeout(reset, 2600);
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

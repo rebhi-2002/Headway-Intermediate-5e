@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>واجب الصفحة 12 – Headway Intermediate</title>
+<style>
+  :root{
+    --bg:#f4f6fb; --card:#fff; --ink:#1d2433; --muted:#667085; --line:#e4e8f0;
+    --brand:#3b5bdb; --brand-d:#2f49b0; --ok:#12b886; --warn:#f08c00;
+    --ad1:#ff6b35; --ad2:#868e96; --ad3:#7048e8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7}
+  header{background:linear-gradient(135deg,#3b5bdb,#7048e8);color:#fff;padding:28px 16px 22px;text-align:center}
+  header h1{margin:0 0 6px;font-size:1.6rem}
+  header p{margin:0;opacity:.9;font-size:.95rem}
+  .wrap{max-width:900px;margin:0 auto;padding:0 14px 60px}
+
+  /* voice bar */
+  .voicebar{position:sticky;top:0;z-index:20;background:var(--card);border:1px solid var(--line);border-radius:0 0 14px 14px;
+    box-shadow:0 4px 14px rgba(20,30,60,.08);padding:12px 14px;margin-bottom:22px;display:grid;gap:10px;
+    grid-template-columns:1fr 1fr auto;align-items:end}
+  .voicebar label{display:block;font-size:.78rem;color:var(--muted);margin-bottom:2px}
+  .voicebar select,.voicebar input[type=range]{width:100%}
+  .voicebar select{padding:8px;border:1px solid var(--line);border-radius:8px;font-size:.9rem;background:#fff;direction:ltr}
+  .voicebar .opt{grid-column:1/-1;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.85rem;color:var(--muted)}
+  .voicebar .opt label{display:inline;margin:0;font-size:.85rem}
+  #msg{color:var(--warn);font-size:.82rem}
+  @media(max-width:620px){.voicebar{grid-template-columns:1fr}}
+
+  button{font-family:inherit;cursor:pointer;border:0;border-radius:10px;padding:8px 14px;font-size:.9rem;font-weight:600;transition:.15s}
+  .btn-play{background:var(--brand);color:#fff;display:inline-flex;align-items:center;gap:6px}
+  .btn-play:hover{background:var(--brand-d)}
+  .btn-play.playing{background:var(--ok)}
+  .btn-stop{background:#fff1f0;color:#e03131;border:1px solid #ffc9c9}
+  .btn-seq{background:#2b8a3e;color:#fff;font-size:1rem;padding:10px 16px}
+  .btn-seq:hover{background:#237032}
+  .btn-pause{background:#fff9db;color:#e67700;border:1px solid #ffe066}
+  .hint{color:var(--muted);font-size:.8rem}
+  #selBtn{display:none;position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:50;background:#e8590c;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25);padding:12px 20px;border-radius:99px}
+  .en{user-select:text}
+  .btn-test{background:#eef2ff;color:var(--brand);border:1px solid #d0d9ff}
+
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:22px;overflow:hidden;
+    box-shadow:0 2px 8px rgba(20,30,60,.04)}
+  .card-head{padding:14px 18px;color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .card-head h2{margin:0;font-size:1.15rem}
+  .tag{background:rgba(255,255,255,.22);padding:2px 12px;border-radius:99px;font-size:.82rem}
+  .ad1 .card-head{background:var(--ad1)} .ad2 .card-head{background:var(--ad2)} .ad3 .card-head{background:var(--ad3)}
+  .mx .card-head{background:#0b7285}
+  .rules .card-head{background:#364fc7}
+  .chk .card-head{background:#2b8a3e}
+  .body{padding:16px 18px;display:grid;gap:14px}
+
+  .para{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fafbff;transition:.2s}
+  .para.active{border-color:var(--ok);background:#e6fcf5;box-shadow:0 0 0 3px rgba(18,184,134,.18)}
+  .para .lbl{font-size:.8rem;color:var(--muted);font-weight:700;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .en{direction:ltr;text-align:left;font-size:1.08rem;font-family:Georgia,"Times New Roman",serif}
+  .en b{color:var(--brand-d);background:#edf2ff;padding:0 4px;border-radius:4px}
+  .en b.ing{color:#c2255c;background:#fff0f6}
+  .note{font-size:.88rem;color:var(--muted);background:#f8f9fa;border-radius:8px;padding:8px 12px}
+  .note b{color:var(--ink)}
+  .chip{display:inline-block;direction:ltr;border-radius:99px;padding:0 10px;margin:2px;font-size:.85rem;font-weight:600}
+  .chip.ed{background:#edf2ff;color:var(--brand-d)} .chip.ing{background:#fff0f6;color:#c2255c}
+
+  table{width:100%;border-collapse:collapse;font-size:.95rem}
+  th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:center}
+  th{background:#e3fafc;color:#0b7285;font-size:.85rem}
+  td.en{text-align:center;font-size:1rem}
+  tr.active td{background:#e6fcf5}
+  .btn-mini{padding:5px 10px;font-size:.8rem}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap}
+  ol{margin:0;padding-inline-start:22px}
+  code{direction:ltr;unicode-bidi:embed;background:#f1f3f5;padding:1px 6px;border-radius:5px;font-size:.9em}
+  footer{text-align:center;color:var(--muted);font-size:.82rem;padding:10px}
+
+  @media print{
+    #selBtn,.voicebar,.btn-play,.btn-stop,.btn-mini,.toolbar,.noprint{display:none!important}
+    body{background:#fff} section.card{break-inside:avoid;box-shadow:none}
+    .card-head{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📘 واجب الصفحة 12 — Headway Intermediate</h1>
+  <p>All about adjectives: الإعلانات الثلاثة (-ed / -ing) + مصفوفة Adjective &amp; Noun — مع قراءة صوتية لكل فقرة</p>
+</header>
+
+<div class="wrap">
+
+  <div class="voicebar" id="voicebar">
+    <div>
+      <label for="voiceSel">🔊 الصوت (من أصوات جهازك)</label>
+      <select id="voiceSel"></select>
+    </div>
+    <div>
+      <label for="rate">السرعة: <span id="rateVal">0.9</span>×</label>
+      <input type="range" id="rate" min="0.5" max="1.5" step="0.1" value="0.9">
+    </div>
+    <div class="toolbar">
+      <button class="btn-test" id="testBtn">تجربة الصوت</button>
+      <button class="btn-pause" id="pauseBtn">⏸ إيقاف مؤقت</button>
+      <button class="btn-stop" id="stopBtn">⏹ إيقاف</button>
+    </div>
+    <div class="opt">
+      <span><input type="checkbox" id="allVoices"> <label for="allVoices">عرض كل اللغات</label></span>
+      <span id="msg"></span>
+      <span class="hint">💡 لقراءة كلمة وحدها: اضغط عليها مرتين. أو حدّد أي جزء إنجليزي واضغط «اقرأ المحدد».</span>
+    </div>
+  </div>
+
+  <section class="card rules">
+    <div class="card-head"><h2>1) القاعدة والمطلوب</h2><span class="tag">-ed vs -ing</span></div>
+    <div class="body">
+      <div class="note">
+        <b>-ed</b> = شعورك أنت: <span class="chip ed">excited</span><span class="chip ed">bored</span><span class="chip ed">puzzled</span><span class="chip ed">astonished</span><span class="chip ed">shocked</span><span class="chip ed">exhausted</span><span class="chip ed">thrilled</span><span class="chip ed">relaxed</span><br>
+        <b>-ing</b> = وصف الإعلان (سبب الشعور): <span class="chip ing">exciting</span><span class="chip ing">boring</span><span class="chip ing">astonishing</span><span class="chip ing">shocking</span><span class="chip ing">exhausting</span><span class="chip ing">thrilling</span><span class="chip ing">relaxing</span>
+      </div>
+      <div class="note"><b>طريقة الحل لكل إعلان (3 خطوات):</b><br>
+        1) اقرأ الإعلان بصوت واضح.<br>
+        2) قل إحساسك أنت بعد القراءة: <span class="chip ed">I felt bored / excited / astonished / relaxed ...</span> مع السبب بجملة قصيرة (because ...).<br>
+        3) ثم قل <u>but the advertisement is</u> + صفة تصف الإعلان نفسه، ثم رأيك فيه: هل هو جيد وواضح؟ وهل يمكن لأحد أن يعمله أفضل؟ (However, someone could do it better by ...)</div>
+      <div class="note"><b>مهم:</b> كلمة <u>but</u> تعني تناقضاً: شعورك شيء وحكمك على الإعلان شيء آخر (مثلاً: شعرت بالملل، <u>لكن</u> الإعلان نفسه مشوّق وواضح). غيّر الإحساس والحكم حسب رأيك أنت.</div>
+    </div>
+  </section>
+
+  <section class="card ad1">
+    <div class="card-head"><h2>2) الإعلان A — Looking for Love</h2><span class="tag">شعور + رأي</span></div>
+    <div class="body">
+      <div class="toolbar noprint"><button class="btn-play btn-seq" data-seq="Looking for Love. Good-looking, hard-working marketing executive, early thirties, tired of life alone, seeks interesting, well-dressed lady to share delicious meals and thrilling evenings!|After reading the advertisement, I felt bored, because I'm not interested in this kind of ad. I didn't finish reading it, and I just scrolled down. But the advertisement is clear and quite exciting. However, someone could do it better. Does anyone really do this?">▶ اقرأ الإعلان ثم إجابتي (كاملة)</button></div>
+      <div class="para" data-say="Looking for Love. Good-looking, hard-working marketing executive, early thirties, tired of life alone, seeks interesting, well-dressed lady to share delicious meals and thrilling evenings!">
+        <div class="lbl"><span>📄 الخطوة 1: قراءة الإعلان (من الكتاب)</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en"><b>Looking for Love</b> — Good-looking, hard-working marketing executive, early 30s, tired of life alone, seeks interesting, well-dressed lady to share delicious meals and thrilling evenings!</div>
+      </div>
+      <div class="para" data-say="After reading the advertisement, I felt bored, because I'm not interested in this kind of ad. I didn't finish reading it, and I just scrolled down. But the advertisement is clear and quite exciting. However, someone could do it better. Does anyone really do this?">
+        <div class="lbl"><span>🎙 الخطوة 2: إحساسي + رأيي في الإعلان</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en">After reading the advertisement, I felt <b>bored</b>, because I'm not interested in this kind of ad. I didn't finish reading it, and I just scrolled down. <u>But the advertisement is</u> clear and quite <b class="ing">exciting</b>. However, someone could do it better. Does anyone really do this?</div>
+      </div>
+      <div class="para" data-say="After reading the advertisement, I felt bored, but the advertisement is exciting.">
+        <div class="lbl"><span>✂️ نسخة مختصرة (إن طلب المدرّس جملة واحدة)</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en">After reading the advertisement, I felt <b>bored</b>, <u>but the advertisement is</u> <b class="ing">exciting</b>.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card ad2">
+    <div class="card-head"><h2>3) الإعلان B — For Sale (Robin Reliant)</h2><span class="tag">شعور + رأي</span></div>
+    <div class="body">
+      <div class="toolbar noprint"><button class="btn-play btn-seq" data-seq="For sale. A much-loved, second-hand Robin Reliant three-wheeler. Only one thousand, one hundred and fifty pounds. Low mileage. Good condition. Perfect for eccentric car lovers. Telephone 0 7 4 0 5, 4 9 8 1 4 2, for more details.|After reading the advertisement, I felt puzzled, because the whole advertisement is strange to me. But the advertisement is clear. It gives the price and a phone number. Still, it is not the best. Who would buy this car when there are better cars?">▶ اقرأ الإعلان ثم إجابتي (كاملة)</button></div>
+      <div class="para" data-say="For sale. A much-loved, second-hand Robin Reliant three-wheeler. Only one thousand, one hundred and fifty pounds. Low mileage. Good condition. Perfect for eccentric car lovers. Telephone 0 7 4 0 5, 4 9 8 1 4 2, for more details.">
+        <div class="lbl"><span>📄 الخطوة 1: قراءة الإعلان (من الكتاب)</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en"><b>FOR SALE</b> — A much-loved, second-hand Robin Reliant 3-wheeler. Only £1150. Low mileage. Good condition. Perfect for eccentric car lovers. Tel. 07405498142 for more details.</div>
+      </div>
+      <div class="para" data-say="After reading the advertisement, I felt puzzled, because the whole advertisement is strange to me. But the advertisement is clear. It gives the price and a phone number. Still, it is not the best. Who would buy this car when there are better cars?">
+        <div class="lbl"><span>🎙 الخطوة 2: إحساسي + رأيي في الإعلان</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en">After reading the advertisement, I felt <b>puzzled</b>, because the whole advertisement is strange to me. <u>But the advertisement is</u> <b class="ing">clear</b>. It gives the price and a phone number. Still, it is not the best. Who would buy this car when there are better cars?</div>
+      </div>
+      <div class="para" data-say="After reading the advertisement, I felt puzzled, but the advertisement is clear.">
+        <div class="lbl"><span>✂️ نسخة مختصرة (إن طلب المدرّس جملة واحدة)</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en">After reading the advertisement, I felt <b>puzzled</b>, <u>but the advertisement is</u> <b class="ing">clear</b>.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card ad3">
+    <div class="card-head"><h2>4) الإعلان C — For Sale (Cottage)</h2><span class="tag">شعور + رأي</span></div>
+    <div class="body">
+      <div class="toolbar noprint"><button class="btn-play btn-seq" data-seq="For sale. Cosy, old-fashioned two-bedroom cottage on edge of charming village, with mature garden. Stunning views of Malvern Hills. Within walking distance of shops and pub.|After reading the advertisement, I felt relaxed, because it sounds like a quiet place with stunning views, away from the noise and still close to the shops and the pub. But the advertisement is not complete, because the price is missing.">▶ اقرأ الإعلان ثم إجابتي (كاملة)</button></div>
+      <div class="para" data-say="For sale. Cosy, old-fashioned two-bedroom cottage on edge of charming village, with mature garden. Stunning views of Malvern Hills. Within walking distance of shops and pub.">
+        <div class="lbl"><span>📄 الخطوة 1: قراءة الإعلان (من الكتاب)</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en"><b>FOR SALE</b> — Cosy, old-fashioned 2-bedroom cottage on edge of charming village, with mature garden. Stunning views of Malvern Hills. Within walking distance of shops and pub.</div>
+      </div>
+      <div class="para" data-say="After reading the advertisement, I felt relaxed, because it sounds like a quiet place with stunning views, away from the noise and still close to the shops and the pub. But the advertisement is not complete, because the price is missing.">
+        <div class="lbl"><span>🎙 الخطوة 2: إحساسي + رأيي في الإعلان</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en">After reading the advertisement, I felt <b>relaxed</b>, because it sounds like a quiet place with stunning views, away from the noise and still close to the shops and the pub. <u>But the advertisement is</u> <b class="ing">not complete</b>, because the price is missing.</div>
+      </div>
+      <div class="para" data-say="After reading the advertisement, I felt relaxed, but the advertisement is not complete.">
+        <div class="lbl"><span>✂️ نسخة مختصرة (إن طلب المدرّس جملة واحدة)</span><button class="btn-play btn-mini">▶ استماع</button></div>
+        <div class="en">After reading the advertisement, I felt <b>relaxed</b>, <u>but the advertisement is</u> <b class="ing">not complete</b>.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card mx">
+    <div class="card-head"><h2>5) مصفوفة Adjective + Noun (التمرين 2)</h2><span class="tag">Collocations</span></div>
+    <div class="body">
+      <div class="toolbar noprint"><button class="btn-play" id="playAllMx">▶ استماع لكل المتلازمات</button></div>
+      <div style="overflow-x:auto">
+      <table id="mxTable">
+        <thead><tr><th>#</th><th>الاسم Noun</th><th>الصفة Adjective</th><th>التركيب</th><th>المعنى</th><th>ممكن أيضاً</th><th class="noprint">🔊</th></tr></thead>
+        <tbody>
+          <tr data-n="city" data-a="crowded"><td>1</td><td class="en">city</td><td class="en">crowded</td><td class="en"><b>crowded city</b></td><td>مدينة مزدحمة</td><td class="en">cosmopolitan city (الصف التالي)</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="city" data-a="cosmopolitan"><td>2</td><td class="en">city</td><td class="en">cosmopolitan</td><td class="en"><b>cosmopolitan city</b></td><td>مدينة عالمية متعددة الثقافات</td><td class="en">crowded city (الصف السابق)</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="relative" data-a="close"><td>3</td><td class="en">relative</td><td class="en">close</td><td class="en"><b>close relative</b></td><td>قريب مقرّب</td><td class="en">—</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="views" data-a="stunning"><td>4</td><td class="en">views</td><td class="en">stunning</td><td class="en"><b>stunning views</b></td><td>مناظر خلابة</td><td class="en">thrilling views</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="cottage" data-a="cosy"><td>5</td><td class="en">cottage</td><td class="en">cosy</td><td class="en"><b>cosy cottage</b></td><td>كوخ دافئ مريح</td><td class="en">—</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="garden" data-a="mature"><td>6</td><td class="en">garden</td><td class="en">mature</td><td class="en"><b>mature garden</b></td><td>حديقة ناضجة (أشجارها قديمة)</td><td class="en">—</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="job" data-a="challenging"><td>7</td><td class="en">job</td><td class="en">challenging</td><td class="en"><b>challenging job</b></td><td>وظيفة صعبة محفّزة</td><td class="en">thrilling job</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="fashions" data-a="latest"><td>8</td><td class="en">fashions</td><td class="en">latest</td><td class="en"><b>latest fashions</b></td><td>أحدث الموضات</td><td class="en">—</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="match" data-a="thrilling"><td>9</td><td class="en">match</td><td class="en">thrilling</td><td class="en"><b>thrilling match</b></td><td>مباراة مثيرة</td><td class="en">challenging match</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="room" data-a="crowded"><td>10</td><td class="en">room</td><td class="en">crowded</td><td class="en"><b>crowded room</b></td><td>غرفة مزدحمة</td><td class="en">cosy room</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="food" data-a="spicy"><td>11</td><td class="en">food</td><td class="en">spicy</td><td class="en"><b>spicy food</b></td><td>طعام حار</td><td class="en">fresh food</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="sky" data-a="cloudy"><td>12</td><td class="en">sky</td><td class="en">cloudy</td><td class="en"><b>cloudy sky</b></td><td>سماء غائمة</td><td class="en">—</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+          <tr data-n="vegetables" data-a="fresh"><td>13</td><td class="en">vegetables</td><td class="en">fresh</td><td class="en"><b>fresh vegetables</b></td><td>خضار طازجة</td><td class="en">—</td><td class="noprint"><button class="btn-play btn-mini">▶</button></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note">الزر ▶ في كل صف يقرأ: الاسم ← الصفة ← التركيب (مثال: city … crowded … crowded city). الكلمات كلها من جدول Adjective / Noun في الصفحة 12. وأمثلة الكتاب: wavy hair، stylish clothes، delicious meals.</div>
+    </div>
+  </section>
+
+  <section class="card chk">
+    <div class="card-head"><h2>6) قائمة مراجعة قبل التسجيل</h2><span class="tag">Checklist</span></div>
+    <div class="body">
+      <ol>
+        <li>اقرأ الإعلان كما هو في الكتاب.</li>
+        <li>قل شعورك: <code>After reading the advertisement, I felt [-ed], because ...</code></li>
+        <li>ثم: <code>But the advertisement is [صفة] ...</code> وأضف رأيك في جودة الإعلان وهل يمكن تحسينه.</li>
+        <li>في المصفوفة: الاسم أولاً ثم الصفة (city ➔ crowded ➔ crowded city).</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>Headway Intermediate (5th Edition) · Unit 1 · الصفحة 12</footer>
+</div>
+
+<button id="selBtn" type="button">🔊 اقرأ المحدد</button>
+<script>
+(function(){
+  var synth = window.speechSynthesis;
+  var sel = document.getElementById('voiceSel');
+  var rate = document.getElementById('rate');
+  var rateVal = document.getElementById('rateVal');
+  var allBox = document.getElementById('allVoices');
+  var msg = document.getElementById('msg');
+  var pauseBtn = document.getElementById('pauseBtn');
+  var selBtn = document.getElementById('selBtn');
+  var voices = [];
+
+  if(!synth){
+    msg.textContent = 'متصفحك لا يدعم القراءة الصوتية. جرّب Chrome أو Edge أو Safari.';
+    document.querySelectorAll('.btn-play,.btn-seq,.btn-test,.btn-pause').forEach(function(b){b.disabled=true;});
+    return;
+  }
+
+  /* ---------- voices ---------- */
+  function loadVoices(){
+    voices = synth.getVoices();
+    var saved = null;
+    try{ saved = localStorage.getItem('hw12voice'); }catch(e){}
+    var list = voices.filter(function(v){ return allBox.checked || /^en/i.test(v.lang); });
+    if(!list.length) list = voices;
+    sel.innerHTML = '';
+    list.forEach(function(v){
+      var o = document.createElement('option');
+      o.value = v.voiceURI;
+      o.textContent = v.name + ' (' + v.lang + ')' + (v.localService ? '' : ' ☁');
+      sel.appendChild(o);
+    });
+    var pick = null;
+    if(saved) pick = list.find(function(v){return v.voiceURI===saved;});
+    if(!pick) pick = list.find(function(v){return /^en-(US|GB)/i.test(v.lang);}) || list[0];
+    if(pick) sel.value = pick.voiceURI;
+    if(!voices.length) msg.textContent = 'جارٍ تحميل أصوات الجهاز...';
+    else if(!voices.some(function(v){return /^en/i.test(v.lang);})) msg.textContent = 'لا يوجد صوت إنجليزي على جهازك؛ ثبّت صوتاً إنجليزياً من إعدادات النظام.';
+    else msg.textContent = '';
+  }
+  loadVoices();
+  if(synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadVoices;
+  setTimeout(loadVoices, 600);
+  allBox.addEventListener('change', loadVoices);
+  sel.addEventListener('change', function(){ try{localStorage.setItem('hw12voice', sel.value);}catch(e){} });
+  rate.addEventListener('input', function(){ rateVal.textContent = (+rate.value).toFixed(1); });
+  function currentVoice(){ return voices.find(function(v){return v.voiceURI===sel.value;}) || null; }
+
+  /* ---------- player with pause / resume from the same word ---------- */
+  var st = {items:[], i:0, offset:0, cur:0, active:false, paused:false, token:0, el:null, btn:null, onItem:null};
+
+  function setBtn(btn, mode){            // mode: 'idle' | 'playing' | 'paused'
+    if(!btn) return;
+    if(!btn.dataset.label) btn.dataset.label = btn.textContent;
+    btn.classList.toggle('playing', mode !== 'idle');
+    btn.textContent = mode === 'idle' ? btn.dataset.label : (mode === 'playing' ? '⏸ إيقاف مؤقت' : '▶ متابعة');
+  }
+  function refreshUI(){
+    var mode = !st.active ? 'idle' : (st.paused ? 'paused' : 'playing');
+    setBtn(st.btn, mode);
+    if(st.el) st.el.classList.toggle('active', st.active);
+    pauseBtn.textContent = st.paused ? '▶ متابعة' : '⏸ إيقاف مؤقت';
+  }
+  function resetUI(){
+    if(st.el) st.el.classList.remove('active');
+    setBtn(st.btn, 'idle');
+    st.el = st.btn = null;
+    pauseBtn.textContent = '⏸ إيقاف مؤقت';
+  }
+  function stopAll(){
+    st.token++; synth.cancel();
+    st.active = false; st.paused = false;
+    resetUI();
+  }
+  function finish(){ st.active = false; st.paused = false; resetUI(); }
+
+  function run(){
+    var my = ++st.token;
+    (function next(){
+      if(my !== st.token) return;
+      if(st.i >= st.items.length){ finish(); return; }
+      if(st.onItem && st.offset === 0) st.onItem(st.i);
+      var base = st.offset;
+      var u = new SpeechSynthesisUtterance(st.items[st.i].slice(base));
+      var v = currentVoice();
+      if(v){ u.voice = v; u.lang = v.lang; } else { u.lang = 'en-US'; }
+      u.rate = +rate.value;
+      u.onboundary = function(e){ if(my === st.token && typeof e.charIndex === 'number') st.cur = base + e.charIndex; };
+      u.onend = function(){ if(my !== st.token) return; st.i++; st.offset = 0; st.cur = 0; setTimeout(next, 350); };
+      u.onerror = function(){ if(my === st.token) finish(); };
+      synth.speak(u);
+    })();
+  }
+
+  function begin(items, el, btn, onItem){
+    stopAll();
+    st.items = items; st.i = 0; st.offset = 0; st.cur = 0;
+    st.el = el; st.btn = btn; st.onItem = onItem || null;
+    st.active = true; st.paused = false;
+    refreshUI();
+    setTimeout(run, 40);
+  }
+  function pause(){
+    if(!st.active || st.paused) return;
+    st.token++; synth.cancel();                      // stop sound, remember position
+    var t = st.items[st.i] || '', o = Math.min(st.cur, t.length);
+    while(o > 0 && !/\s/.test(t.charAt(o-1))) o--;   // go back to the start of the current word
+    st.offset = o;
+    st.paused = true;
+    refreshUI();
+  }
+  function resume(){
+    if(!st.active || !st.paused) return;
+    st.paused = false;
+    refreshUI();
+    setTimeout(run, 40);
+  }
+  function toggleFor(btn, makeItems, el, onItem){
+    if(st.active && st.btn === btn){ st.paused ? resume() : pause(); return; }
+    begin(makeItems(), el, btn, onItem);
+  }
+
+  /* ---------- paragraph buttons ---------- */
+  document.querySelectorAll('.para').forEach(function(p){
+    var btn = p.querySelector('.btn-play');
+    btn.addEventListener('click', function(){ toggleFor(btn, function(){return [p.dataset.say];}, p); });
+  });
+  /* read ad, then my answer */
+  document.querySelectorAll('.btn-seq').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      toggleFor(btn, function(){return btn.dataset.seq.split('|');}, btn.closest('section'));
+    });
+  });
+
+  /* ---------- matrix ---------- */
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#mxTable tbody tr'));
+  rows.forEach(function(r){
+    var btn = r.querySelector('.btn-play');
+    btn.addEventListener('click', function(){
+      toggleFor(btn, function(){ return [r.dataset.n, r.dataset.a, r.dataset.a + ' ' + r.dataset.n]; }, r);
+    });
+  });
+  var allBtn = document.getElementById('playAllMx');
+  var prevRow = null;
+  allBtn.addEventListener('click', function(){
+    toggleFor(allBtn, function(){ return rows.map(function(r){return r.dataset.a + ' ' + r.dataset.n;}); }, null, function(i){
+      if(prevRow) prevRow.classList.remove('active');
+      prevRow = rows[i]; prevRow.classList.add('active');
+      prevRow.scrollIntoView({block:'center', behavior:'smooth'});
+    });
+  });
+  setInterval(function(){ if(!st.active && prevRow){ prevRow.classList.remove('active'); prevRow = null; } }, 500);
+
+  /* ---------- global buttons ---------- */
+  pauseBtn.addEventListener('click', function(){ st.paused ? resume() : pause(); });
+  document.getElementById('stopBtn').addEventListener('click', stopAll);
+  document.getElementById('testBtn').addEventListener('click', function(){
+    begin(['This is a test of the selected voice.'], null, null);
+  });
+
+  /* ---------- read a selected word / phrase ---------- */
+  function selectedEnglish(){
+    var sObj = window.getSelection();
+    if(!sObj || sObj.isCollapsed) return '';
+    var n = sObj.anchorNode; if(!n) return '';
+    var el = n.nodeType === 1 ? n : n.parentElement;
+    if(!el || !el.closest('.en')) return '';
+    return sObj.toString().replace(/\s+/g,' ').trim();
+  }
+  document.addEventListener('selectionchange', function(){
+    selBtn.style.display = selectedEnglish() ? 'block' : 'none';
+  });
+  selBtn.addEventListener('mousedown', function(e){ e.preventDefault(); });
+  selBtn.addEventListener('click', function(){
+    var t = selectedEnglish(); if(t) begin([t], null, null);
+  });
+  document.addEventListener('dblclick', function(){
+    var t = selectedEnglish(); if(t) begin([t], null, null);
+  });
+
+  window.addEventListener('beforeunload', function(){ synth.cancel(); });
+})();
+</script>
+</body>
+</html>

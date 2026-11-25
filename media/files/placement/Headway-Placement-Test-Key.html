@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اختبار Headway لتحديد المستوى — الأسئلة الكاملة مع الإجابات والشرح</title>
+<meta name="description" content="نسخة منظمة من اختبار Headway العام لتحديد المستوى، تضم الأسئلة المئة كاملة بلا تكرار مع نصوص الفهم المقروء، والإجابة الصحيحة وشرح مبسّط لكل سؤال.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#20242b;
+  --ink-soft:#454b55;
+  --paper:#efece3;
+  --paper-raised:#f8f6ef;
+  --line:#d7d0bd;
+  --brass:#96652a;
+  --brass-deep:#7a5220;
+  --teal:#1f5c56;
+  --teal-deep:#153e3a;
+  --rust:#8a3b2c;
+  --max-w:760px;
+  --radius:3px;
+  --font-ar:'Cairo','Tahoma','Segoe UI',sans-serif;
+  --font-en:'Lora',Georgia,'Times New Roman',serif;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-ar);
+  line-height:1.85;
+  font-size:1rem;
+}
+
+/* ---- Layout wrapper: prevents horizontal blowout while keeping pinch-zoom ---- */
+.page-wrap{
+  max-width:100%;
+  overflow-x:hidden;
+}
+.container{
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding:0 1.1rem;
+}
+
+a{color:inherit;}
+
+/* ---------------- Header ---------------- */
+.site-header{
+  background:var(--ink);
+  color:var(--paper-raised);
+  padding:2.4rem 0 2rem;
+  position:relative;
+  overflow:hidden;
+}
+.site-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(239,236,227,.05) 0 1px, transparent 1px 34px);
+  pointer-events:none;
+}
+.site-header .container{position:relative;}
+.eyebrow-mark{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  margin-bottom:1.1rem;
+}
+.eyebrow-mark svg{width:2.5rem;height:2.5rem;flex:none;}
+.eyebrow-mark span{
+  font-size:.92rem;
+  color:#c9c2ab;
+  letter-spacing:.02em;
+}
+.site-header h1{
+  margin:0 0 .35rem;
+  font-size:1.85rem;
+  line-height:1.35;
+  font-weight:700;
+}
+.site-header .subtitle-en{
+  font-family:var(--font-en);
+  font-style:italic;
+  color:#cfc9b6;
+  font-size:1.05rem;
+  margin:0 0 1.3rem;
+  display:block;
+}
+.header-rules{
+  background:rgba(239,236,227,.07);
+  border-inline-start:3px solid var(--brass);
+  border-radius:2px;
+  padding:.95rem 1.1rem;
+  font-size:.94rem;
+  color:#e4e0d3;
+}
+.header-rules p{margin:0 0 .4rem;}
+.header-rules p:last-child{margin-bottom:0;}
+.header-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem 1.4rem;
+  margin-top:1.2rem;
+  font-size:.88rem;
+  color:#b9b39d;
+}
+.header-stats strong{color:var(--paper-raised);font-size:1.05rem;}
+
+/* ---------------- Section nav (spine index) ---------------- */
+.spine-nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+}
+.spine-scroll{
+  display:flex;
+  gap:.5rem;
+  overflow-x:auto;
+  padding:.65rem 1.1rem;
+  scrollbar-width:thin;
+  -webkit-overflow-scrolling:touch;
+}
+.spine-scroll::-webkit-scrollbar{height:5px;}
+.spine-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:5px;}
+.chip{
+  flex:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.15rem;
+  background:var(--paper-raised);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:.4rem .75rem;
+  cursor:pointer;
+  font-family:var(--font-ar);
+  color:var(--ink-soft);
+  white-space:nowrap;
+  transition:border-color .15s ease, color .15s ease, background .15s ease;
+}
+.chip:hover{border-color:var(--brass);color:var(--ink);}
+.chip:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+.chip__range{font-size:.72rem;font-weight:700;color:var(--brass-deep);}
+.chip__ar{font-size:.72rem;}
+.chip[aria-selected="true"]{
+  background:var(--ink);
+  border-color:var(--ink);
+  color:var(--paper-raised);
+}
+.chip[aria-selected="true"] .chip__range{color:#e3c98d;}
+
+/* ---------------- Toolbar ---------------- */
+.toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:1.1rem 0;
+}
+.toolbar-btns{display:flex;gap:.55rem;flex-wrap:wrap;}
+.btn{
+  font-family:var(--font-ar);
+  font-size:.86rem;
+  background:var(--paper-raised);
+  border:1px solid var(--line);
+  color:var(--ink);
+  padding:.5rem .95rem;
+  border-radius:var(--radius);
+  cursor:pointer;
+}
+.btn:hover{border-color:var(--teal);}
+.btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+.toolbar-note{font-size:.82rem;color:var(--ink-soft);}
+
+/* ---------------- Sections ---------------- */
+.qsection{
+  padding:1.6rem 0 .4rem;
+  border-top:1px dashed var(--line);
+}
+.qsection:first-of-type{border-top:none;}
+.qsection__head{margin-bottom:1.1rem;}
+.qsection__range{
+  display:inline-block;
+  font-size:.78rem;
+  color:var(--brass-deep);
+  font-weight:700;
+  background:rgba(150,101,42,.1);
+  padding:.15rem .55rem;
+  border-radius:2px;
+  margin-bottom:.5rem;
+}
+.qsection h2{
+  margin:0;
+  font-size:1.18rem;
+  line-height:1.5;
+  display:flex;
+  flex-direction:column;
+  gap:.1rem;
+}
+.qsection h2 .ar{font-weight:700;}
+.qsection h2 .en{
+  font-family:var(--font-en);
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:.95rem;
+  font-weight:400;
+}
+
+/* ---------------- Question card ---------------- */
+.qcard{
+  background:var(--paper-raised);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1.05rem 1.1rem 1.1rem;
+  margin-bottom:.85rem;
+}
+.qcard__head{
+  display:flex;
+  gap:.7rem;
+  align-items:baseline;
+  margin-bottom:.7rem;
+}
+.qcard__num{
+  flex:none;
+  font-family:var(--font-en);
+  font-weight:700;
+  font-size:.95rem;
+  color:var(--paper-raised);
+  background:var(--ink);
+  min-width:1.9rem;
+  height:1.9rem;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.qcard__stem{
+  margin:0;
+  font-family:var(--font-en);
+  font-size:1.06rem;
+  line-height:1.55;
+  color:var(--ink);
+  text-align:left;
+}
+.qcard__options{
+  list-style:none;
+  margin:0 0 .8rem;
+  padding:0;
+  display:grid;
+  gap:.4rem;
+  font-family:var(--font-en);
+  direction:ltr;
+}
+.qcard__options li{
+  display:flex;
+  gap:.55rem;
+  align-items:flex-start;
+  font-size:.98rem;
+  padding-inline-start:2.35rem;
+  position:relative;
+  color:var(--ink-soft);
+}
+.opt-letter{
+  position:absolute;
+  inset-inline-start:0;
+  top:0;
+  width:1.7rem;
+  height:1.7rem;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:.8rem;
+  font-weight:700;
+  color:var(--ink-soft);
+  flex:none;
+}
+.opt-text{line-height:1.5;}
+
+/* ---- disclosure ---- */
+.qcard__reveal{border-top:1px dashed var(--line);padding-top:.55rem;}
+.qcard__reveal summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  color:var(--teal-deep);
+  font-weight:700;
+  font-size:.92rem;
+  user-select:none;
+}
+.qcard__reveal summary::-webkit-details-marker{display:none;}
+.qcard__reveal summary:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px;}
+.chev{
+  width:.6rem;height:.6rem;
+  border-inline-end:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(45deg);
+  transition:transform .18s ease;
+  flex:none;
+}
+.qcard__reveal[open] summary .chev{transform:rotate(-135deg);}
+.qcard__answer{
+  margin-top:.75rem;
+  padding-inline-start:.1rem;
+  animation:reveal .18s ease;
+}
+@keyframes reveal{from{opacity:0;transform:translateY(-3px);}to{opacity:1;transform:translateY(0);}}
+.answer-line{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  flex-wrap:wrap;
+  margin:0 0 .55rem;
+  color:var(--teal-deep);
+  font-size:.98rem;
+}
+.answer-line strong{color:var(--ink);}
+.answer-text{font-family:var(--font-en);font-weight:700;}
+.tick{
+  width:1.2rem;height:1.2rem;
+  flex:none;
+}
+.tick path{
+  fill:none;
+  stroke:var(--teal);
+  stroke-width:4.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:60;
+  stroke-dashoffset:60;
+  animation:draw-tick .4s ease forwards .05s;
+}
+@keyframes draw-tick{to{stroke-dashoffset:0;}}
+.explain-line{
+  margin:0;
+  color:var(--ink-soft);
+  font-size:.95rem;
+  line-height:1.9;
+}
+
+/* ---------------- Footer ---------------- */
+.site-footer{
+  border-top:1px solid var(--line);
+  margin-top:2rem;
+  padding-top:1.6rem;
+  padding-bottom:2.2rem;
+  color:var(--ink-soft);
+  font-size:.85rem;
+}
+.site-footer p{margin:.3rem 0;}
+
+/* ---------------- Reading passages ---------------- */
+.passage{
+  background:var(--paper-raised);
+  border:1px solid var(--line);
+  border-inline-start:4px solid var(--brass);
+  border-radius:var(--radius);
+  padding:1rem 1.15rem 1.05rem;
+  margin-bottom:1.1rem;
+}
+.passage__label{
+  margin:0 0 .6rem;
+  font-size:.82rem;
+  font-weight:700;
+  color:var(--brass-deep);
+}
+.passage__label span{
+  font-family:var(--font-en);
+  font-style:italic;
+  font-weight:400;
+  color:var(--ink-soft);
+}
+.passage p:not(.passage__label){
+  font-family:var(--font-en);
+  direction:ltr;
+  text-align:left;
+  color:var(--ink);
+  line-height:1.75;
+  font-size:1rem;
+  margin:0 0 .7rem;
+}
+.passage p:not(.passage__label):last-child{margin-bottom:0;}
+
+/* ---------------- Accessibility & reduced motion ---------------- */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width:480px){
+  .site-header{padding:1.9rem 0 1.6rem;}
+  .site-header h1{font-size:1.45rem;}
+  .qcard__stem{font-size:1rem;}
+  .toolbar{justify-content:flex-start;}
+}
+
+/* ---------------- Print ---------------- */
+@media print{
+  .spine-nav,.toolbar{display:none;}
+  .site-header{background:none;color:var(--ink);padding:0 0 1rem;}
+  .site-header::before{display:none;}
+  .header-rules{background:none;border-color:var(--ink);color:var(--ink);}
+  .header-stats{color:var(--ink);}
+  .qcard{break-inside:avoid;border-color:#999;}
+  body{background:#fff;}
+}
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="site-header">
+    <div class="container">
+      <div class="eyebrow-mark">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#c9c2ab" stroke-width="1.4"/>
+        <path d="M11 21 L17 27 L29 12" stroke="#e3c98d" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+        <span>Headway · Placement Test · Answer Key</span>
+      </div>
+      <h1>اختبار Headway العام لتحديد المستوى</h1>
+      <span class="subtitle-en">Headway General Placement Test — Full Answer Key &amp; Explanations</span>
+      <div class="header-rules">
+        <p>اختر الإجابة الأفضل لكل سؤال. الاختبار يتكوّن من 100 سؤال، ومن الأفضل عدم استخدام قاموس أو مترجم أثناء حلّه، لأن النتيجة الدقيقة هي ما يضعك في المستوى الدراسي الصحيح.</p>
+        <p>هذه الصفحة تجمع كل أسئلة الاختبار مُرتّبة حسب أقسامها الأصلية بلا أي تكرار، وتشمل نصوص الفهم المقروء الأربعة كاملة، وتحت كل سؤال إجابته الصحيحة مع توضيح مختصر لسبب صحتها وسبب خطأ بقية الخيارات.</p>
+      </div>
+      <div class="header-stats">
+        <span><strong>100</strong> سؤال</span>
+        <span><strong>13</strong> قسمًا</span>
+        <span><strong>4</strong> نصوص قراءة</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="spine-nav" aria-label="أقسام الاختبار" role="tablist">
+    <div class="spine-scroll">
+<button class="chip" data-target="s2" role="tab" aria-selected="false" id="tab-s2" aria-controls="s2"><span class="chip__range">1–14</span><span class="chip__ar">القواعد: الأزمنة والتراكيب الأساسية</span></button>
+<button class="chip" data-target="s3" role="tab" aria-selected="false" id="tab-s3" aria-controls="s3"><span class="chip__range">15–19</span><span class="chip__ar">المفردات والإنجليزية اليومية</span></button>
+<button class="chip" data-target="s4" role="tab" aria-selected="false" id="tab-s4" aria-controls="s4"><span class="chip__range">20–25</span><span class="chip__ar">فهم المقروء 1</span></button>
+<button class="chip" data-target="s5" role="tab" aria-selected="false" id="tab-s5" aria-controls="s5"><span class="chip__range">26–30</span><span class="chip__ar">القواعد: الأزمنة والتراكيب</span></button>
+<button class="chip" data-target="s6" role="tab" aria-selected="false" id="tab-s6" aria-controls="s6"><span class="chip__range">31–38</span><span class="chip__ar">الإنجليزية الوظيفية والتواصل اليومي</span></button>
+<button class="chip" data-target="s7" role="tab" aria-selected="false" id="tab-s7" aria-controls="s7"><span class="chip__range">39–44</span><span class="chip__ar">المفردات والحياة اليومية</span></button>
+<button class="chip" data-target="s8" role="tab" aria-selected="false" id="tab-s8" aria-controls="s8"><span class="chip__range">45–50</span><span class="chip__ar">فهم المقروء 2</span></button>
+<button class="chip" data-target="s9" role="tab" aria-selected="false" id="tab-s9" aria-controls="s9"><span class="chip__range">51–55</span><span class="chip__ar">القواعد</span></button>
+<button class="chip" data-target="s10" role="tab" aria-selected="false" id="tab-s10" aria-controls="s10"><span class="chip__range">56–60</span><span class="chip__ar">القواعد</span></button>
+<button class="chip" data-target="s11" role="tab" aria-selected="false" id="tab-s11" aria-controls="s11"><span class="chip__range">61–69</span><span class="chip__ar">المفردات والتعبيرات الاصطلاحية</span></button>
+<button class="chip" data-target="s12" role="tab" aria-selected="false" id="tab-s12" aria-controls="s12"><span class="chip__range">70–75</span><span class="chip__ar">فهم المقروء 3</span></button>
+<button class="chip" data-target="s13" role="tab" aria-selected="false" id="tab-s13" aria-controls="s13"><span class="chip__range">76–93</span><span class="chip__ar">القواعد والمفردات المتقدمة واستخدام اللغة</span></button>
+<button class="chip" data-target="s14" role="tab" aria-selected="false" id="tab-s14" aria-controls="s14"><span class="chip__range">94–100</span><span class="chip__ar">فهم المقروء 4</span></button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="toolbar">
+      <div class="toolbar-btns">
+        <button class="btn" id="expand-all" type="button">إظهار كل الإجابات</button>
+        <button class="btn" id="collapse-all" type="button">إخفاء كل الإجابات</button>
+      </div>
+      <span class="toolbar-note">اضغط على أي سؤال لعرض الإجابة الصحيحة وشرحها</span>
+    </div>
+
+
+    <section class="qsection" id="s2" aria-labelledby="h-s2">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 1–14</span>
+        <h2 id="h-s2"><span class="ar">القواعد: الأزمنة والتراكيب الأساسية</span><span class="en" dir="ltr" lang="en">Grammar: Basic Tenses &amp; Structures</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q1">
+        <div class="qcard__head">
+          <span class="qcard__num">1</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Pete ____ a teacher.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">isn’t</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">not</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">aren’t</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">am not</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">isn’t</span>
+            </p>
+            <p class="explain-line">الفاعل Pete مفرد غائب (he)، فالنفي الصحيح مع الفعل be هو isn’t. أما not فهي غير مكتملة بلا فعل مساعد، وaren’t تُستخدم مع الجمع أو you، وam not تُستخدم مع I فقط.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q2">
+        <div class="qcard__head">
+          <span class="qcard__num">2</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Bill ____ two brothers.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">have</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">has</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">is</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">are</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">has</span>
+            </p>
+            <p class="explain-line">مع الفاعل المفرد الغائب (he/Bill) يصبح فعل have في المضارع البسيط has. أما have فتناسب I/you/we/they، وis/are فعلان من be لا يصلحان مع الاسم two brothers.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q3">
+        <div class="qcard__head">
+          <span class="qcard__num">3</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____ Italian food?  B: Yes, I do.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Are you like</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Likes</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Do you like</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">You’re like</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Do you like</span>
+            </p>
+            <p class="explain-line">الرد Yes, I do يؤكد أن السؤال بُني بالفعل المساعد do، فتكون الصيغة الصحيحة Do you like؟ أما Are you like فتخلط بين be والفعل الرئيسي، وLikes بلا فاعل ولا أداة سؤال، وYou’re like جملة خبرية لا سؤال.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q4">
+        <div class="qcard__head">
+          <span class="qcard__num">4</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: Was Shakespeare a painter?  B: No, he ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">weren’t</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">didn’t</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">isn’t</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">wasn’t</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">wasn’t</span>
+            </p>
+            <p class="explain-line">السؤال بصيغة الماضي مع was، فالرد القصير يكرر نفس الفعل بصورة منفية: wasn’t. أما weren’t فللجمع/you، وdidn’t فعل مساعد لا يتفق مع be، وisn’t زمنها مضارع لا ماضٍ.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q5">
+        <div class="qcard__head">
+          <span class="qcard__num">5</span>
+          <p class="qcard__stem" dir="ltr" lang="en">____ up early yesterday morning?</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Got</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Did you</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">You get</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Did you get</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Did you get</span>
+            </p>
+            <p class="explain-line">سؤال بالماضي البسيط يحتاج الأداة did + فاعل + فعل أساسي: Did you get. أما Got وحدها بلا أداة سؤال ولا فاعل، وDid you ناقصة بلا الفعل get، وYou get جملة خبرية لا استفهام.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q6">
+        <div class="qcard__head">
+          <span class="qcard__num">6</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Michael ____ to work yesterday.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">not go</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">didn’t go</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">didn’t</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">wasn’t</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">didn’t go</span>
+            </p>
+            <p class="explain-line">النفي في الماضي البسيط لفعل عادي (go) يكون didn’t + فعل أساسي: didn’t go. أما not go بلا أداة نفي مساعدة، وdidn’t وحدها ناقصة بلا الفعل، وwasn’t تصلح مع be لا مع فعل حركة مثل go.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q7">
+        <div class="qcard__head">
+          <span class="qcard__num">7</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Can you ____ French?</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">speak</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">to speak</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">speaks</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">spoke</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">speak</span>
+            </p>
+            <p class="explain-line">بعد الفعل الناقص can يأتي دائماً الفعل في صورته الأساسية بلا to وبلا تصريف: speak. أما to speak فتضيف to الممنوعة بعد can، وspeaks وspoke مصرّفتان وهذا غير جائز بعد الأفعال الناقصة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q8">
+        <div class="qcard__head">
+          <span class="qcard__num">8</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: Good night.  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">That’s great. Thank you.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">No, I don’t know.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">You too. Sleep well.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Hello. How are you?</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">You too. Sleep well.</span>
+            </p>
+            <p class="explain-line">الرد المناسب على تحية المساء Good night هو رد بنفس الروح: You too. Sleep well. أما باقي الخيارات فهي ردود على شكر أو سؤال أو تحية لقاء، لا على تحية وداع مسائية.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q9">
+        <div class="qcard__head">
+          <span class="qcard__num">9</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: How do you spell ‘friend’?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">It’s Miguel.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">F-R-I-E-N-D.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">My surname is Jackson.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Yes, he is.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">F-R-I-E-N-D.</span>
+            </p>
+            <p class="explain-line">السؤال عن تهجئة الكلمة إملائياً، فالجواب المنطقي هو تهجّي الحروف: F-R-I-E-N-D. أما بقية الخيارات فتجيب عن أسئلة عن الاسم أو اللقب أو تأكيد بنعم/لا، لا عن التهجئة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q10">
+        <div class="qcard__head">
+          <span class="qcard__num">10</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: How much is the camera?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">It’s on page thirty.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">It’s from Spain.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">It’s about six months old.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">It’s fifty pounds.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">It’s fifty pounds.</span>
+            </p>
+            <p class="explain-line">How much يسأل عن السعر، فالإجابة الصحيحة تذكر مبلغاً مالياً: It’s fifty pounds. أما باقي الإجابات فتخص الصفحة أو بلد المنشأ أو العمر، لا السعر.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q11">
+        <div class="qcard__head">
+          <span class="qcard__num">11</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: How do I get to the bus station?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">In Oxford Street.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Yes, that’s right.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">It’s about ten minutes.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Go out of the school and turn right.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Go out of the school and turn right.</span>
+            </p>
+            <p class="explain-line">السؤال عن كيفية الوصول (get to) يستدعي تعليمات اتجاه: Go out of the school and turn right. أما الخيارات الأخرى فتجيب عن الموقع المجرد، أو التأكيد، أو المدة الزمنية، لا عن طريقة الوصول خطوة بخطوة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q12">
+        <div class="qcard__head">
+          <span class="qcard__num">12</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: What time were you born?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">My birthday’s in August.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">On the third of March.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">At six o’clock in the morning.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">In 1999.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">At six o’clock in the morning.</span>
+            </p>
+            <p class="explain-line">السؤال يبدأ بـ What time، أي يطلب توقيتاً بالساعة: At six o’clock in the morning. أما باقي الخيارات فتذكر شهراً أو تاريخاً أو سنة، وهذه إجابات عن When لا عن What time.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q13">
+        <div class="qcard__head">
+          <span class="qcard__num">13</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: I have a headache.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">What’s the matter?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Can I have a coffee?</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Thanks for everything.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Here’s a present.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">What’s the matter?</span>
+            </p>
+            <p class="explain-line">الرد I have a headache يصف مشكلة صحية، وهو رد طبيعي على سؤال عام عن الحال: What’s the matter؟ أما باقي الخيارات فلا علاقة لها بوصف شكوى صحية.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q14">
+        <div class="qcard__head">
+          <span class="qcard__num">14</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: What’s your job?  B: I’m ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">married</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">a doctor</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">from Italy</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Paul Johnson</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">a doctor</span>
+            </p>
+            <p class="explain-line">السؤال عن الوظيفة (job) يستدعي مهنة: a doctor. أما married فتصف الحالة الاجتماعية، وfrom Italy الجنسية، وPaul Johnson الاسم، وكلها لا تجيب عن سؤال الوظيفة.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s3" aria-labelledby="h-s3">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 15–19</span>
+        <h2 id="h-s3"><span class="ar">المفردات والإنجليزية اليومية</span><span class="en" dir="ltr" lang="en">Vocabulary &amp; Everyday English</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q15">
+        <div class="qcard__head">
+          <span class="qcard__num">15</span>
+          <p class="qcard__stem" dir="ltr" lang="en">John isn’t Alice’s ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">husband</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">wife</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">father</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">mother</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">husband</span>
+            </p>
+            <p class="explain-line">سياق الجملة الأصلي يوضح أنهما غير متزوجين (They aren’t married)، لذا فالعلاقة المنفية هي husband. أما wife/father/mother فلا تتفق مع كون جون رجلاً غير متزوج من أليس.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q16">
+        <div class="qcard__head">
+          <span class="qcard__num">16</span>
+          <p class="qcard__stem" dir="ltr" lang="en">What do they speak in Spain?</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Spanish</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Portuguese</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">American</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Brazil</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Spanish</span>
+            </p>
+            <p class="explain-line">اللغة الرسمية والمنتشرة في إسبانيا هي الإسبانية: Spanish. أما Portuguese فلغة البرتغال والبرازيل، وAmerican ليست اسم لغة، وBrazil اسم دولة لا لغة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q17">
+        <div class="qcard__head">
+          <span class="qcard__num">17</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Your car keys are in the ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">lamp</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">armchair</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">drawer</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">sofa</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">drawer</span>
+            </p>
+            <p class="explain-line">المكان المعتاد لحفظ مفاتيح صغيرة هو drawer (درج). أما lamp وarmchair وsofa فأثاث أو إضاءة لا يُستخدم للتخزين.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q18">
+        <div class="qcard__head">
+          <span class="qcard__num">18</span>
+          <p class="qcard__stem" dir="ltr" lang="en">We ____ a painting for €500.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">were</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">said</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">bought</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">heard</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">bought</span>
+            </p>
+            <p class="explain-line">دفع مبلغ مقابل لوحة فعل شراء: bought. أما were فعل ناقص بلا معنى شراء، وsaid وheard فعلا كلام وسمع لا علاقة لهما بالمبلغ المالي.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q19">
+        <div class="qcard__head">
+          <span class="qcard__num">19</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Do you play ____?</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">ice hockey</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">the cinema</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">holidays</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">sailing</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">ice hockey</span>
+            </p>
+            <p class="explain-line">الفعل play يُستخدم مع الرياضات: ice hockey. أما cinema فيُقال go to the cinema، وholidays يُقال go on holiday، وsailing يُقال go sailing، فلا تُسبق بـ play.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s4" aria-labelledby="h-s4">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 20–25</span>
+        <h2 id="h-s4"><span class="ar">فهم المقروء 1</span><span class="en" dir="ltr" lang="en">Reading Comprehension 1</span></h2>
+      </header>
+        <div class="passage">
+          <p class="passage__label">اقرأ النص التالي أولًا، ثم أجب عن الأسئلة أدناه <span dir="ltr" lang="en">— Read the text, then answer the questions below</span></p>
+          <p dir="ltr" lang="en">David Smith is a doctor. He works in a hospital. His wife, Angela, is a bank manager. They have two children, Robert and Susan. Robert is eleven and Susan is nine. They’re at school. Last Sunday, the family got up early. David made a big breakfast of eggs and sausages. Then they went to the park. David and Robert played football, and Angela and Susan played tennis. The weather was beautiful. They enjoyed it.</p>
+        </div>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q20">
+        <div class="qcard__head">
+          <span class="qcard__num">20</span>
+          <p class="qcard__stem" dir="ltr" lang="en">David and Angela are ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">brother and sister</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">married</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">doctors</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">bank managers</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">married</span>
+            </p>
+            <p class="explain-line">النص يذكر his wife, Angela، أي أنهما زوج وزوجة: married. أما doctors وbank managers فكل مهنة تخص أحدهما فقط لا كليهما، وbrother and sister تناقض كونها زوجته.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q21">
+        <div class="qcard__head">
+          <span class="qcard__num">21</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Angela is Susan’s ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">sister</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">father</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">mother</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">brother</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">mother</span>
+            </p>
+            <p class="explain-line">أنجيلا هي زوجة ديفيد ووالدة الطفلين روبرت وسوزان، فهي mother لسوزان. أما sister وbrother وfather فلا تتفق مع صفتها كأم.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q22">
+        <div class="qcard__head">
+          <span class="qcard__num">22</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Robert isn’t ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">a student</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">a child</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">a doctor</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Susan’s brother</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">a doctor</span>
+            </p>
+            <p class="explain-line">الطبيب في النص هو الأب ديفيد وحده، أما روبرت طفل في المدرسة فليس a doctor. أما a student وa child وSusan’s brother فكلها صفات صحيحة عنه، لذا لا تصلح كإجابة لسؤال isn’t.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q23">
+        <div class="qcard__head">
+          <span class="qcard__num">23</span>
+          <p class="qcard__stem" dir="ltr" lang="en">They went to the park ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">at night</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">in the evening</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">in the afternoon</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">in the morning</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">in the morning</span>
+            </p>
+            <p class="explain-line">النص يذكر أن العائلة استيقظت مبكراً وتناولت الفطور ثم ذهبت للحديقة، أي في الصباح: in the morning. أما بقية الأوقات فتخالف تسلسل الأحداث المبكر.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q24">
+        <div class="qcard__head">
+          <span class="qcard__num">24</span>
+          <p class="qcard__stem" dir="ltr" lang="en">David ____ breakfast.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">didn’t enjoy</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">bought</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">cooked</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">didn’t have</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">cooked</span>
+            </p>
+            <p class="explain-line">النص يقول David made a big breakfast، أي أنه cooked الفطور. أما didn’t enjoy وdidn’t have فتناقض الحدث، وbought لا تصف إعداد الطعام في المنزل.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q25">
+        <div class="qcard__head">
+          <span class="qcard__num">25</span>
+          <p class="qcard__stem" dir="ltr" lang="en">They had ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">a holiday</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">housework</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">a horrible day</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">a good day</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">a good day</span>
+            </p>
+            <p class="explain-line">النص يختم بأن الجو كان جميلاً واستمتعوا به (enjoyed it)، أي قضوا a good day. أما a holiday وhousework وa horrible day فلا تعكس أجواء المرح الموصوفة.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s5" aria-labelledby="h-s5">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 26–30</span>
+        <h2 id="h-s5"><span class="ar">القواعد: الأزمنة والتراكيب</span><span class="en" dir="ltr" lang="en">Grammar: Tenses &amp; Structures</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q26">
+        <div class="qcard__head">
+          <span class="qcard__num">26</span>
+          <p class="qcard__stem" dir="ltr" lang="en">They ____ in Hong Kong in 2010.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">isn’t</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">aren’t</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">wasn’t</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">weren’t</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">weren’t</span>
+            </p>
+            <p class="explain-line">الفاعل They جمع، والزمن ماضٍ (in 2010)، فالنفي الصحيح لفعل be هو weren’t. أما isn’t وaren’t فمضارع، وwasn’t تخص فاعلاً مفرداً لا جمعاً.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q27">
+        <div class="qcard__head">
+          <span class="qcard__num">27</span>
+          <p class="qcard__stem" dir="ltr" lang="en">____ swim when I was five years old.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I can</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I could</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">I</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">I was</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I could</span>
+            </p>
+            <p class="explain-line">التعبير عن قدرة في الماضي (was five years old) يستدعي could: I could. أما I can فللحاضر، وI وحدها ناقصة، وI was swim تركيب غير سليم نحوياً.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q28">
+        <div class="qcard__head">
+          <span class="qcard__num">28</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I ____ to my brother right now.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">’m talking</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">talk</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">talking</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">talked</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">’m talking</span>
+            </p>
+            <p class="explain-line">العبارة right now تدل على حدث جارٍ الآن، فيُستخدم المضارع المستمر الكامل: ’m talking. أما talk فمضارع بسيط، وtalking بلا فعل مساعد، وtalked ماضٍ.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q29">
+        <div class="qcard__head">
+          <span class="qcard__num">29</span>
+          <p class="qcard__stem" dir="ltr" lang="en">____ to stay home and watch TV.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I’m going</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I going</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Going</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Am going</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I’m going</span>
+            </p>
+            <p class="explain-line">صيغة النية المستقبلية be going to تحتاج فاعلاً وفعل be كاملين: I’m going (to stay...). أما بقية الخيارات ناقصة الفاعل أو فعل be.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q30">
+        <div class="qcard__head">
+          <span class="qcard__num">30</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Helena has never ____ to Australia.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">went</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">go</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">been</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">goes</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">been</span>
+            </p>
+            <p class="explain-line">بعد المضارع التام has never يأتي التصريف الثالث؛ والتعبير الشائع عن الزيارة هو have been to. أما went وgoes وgo فتصريفات لا تتفق مع has.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s6" aria-labelledby="h-s6">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 31–38</span>
+        <h2 id="h-s6"><span class="ar">الإنجليزية الوظيفية والتواصل اليومي</span><span class="en" dir="ltr" lang="en">Functional English &amp; Everyday Communication</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q31">
+        <div class="qcard__head">
+          <span class="qcard__num">31</span>
+          <p class="qcard__stem" dir="ltr" lang="en">We ____ invite Tomas to the party.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">haven’t</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">won’t</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">not</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">aren’t</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">won’t</span>
+            </p>
+            <p class="explain-line">بعد أداة النفي يأتي الفعل الأساسي invite مباشرة بلا تغيير، وهذا يتفق مع المستقبل المنفي won’t. أما haven’t تحتاج invited، وnot ناقصة، وaren’t تحتاج inviting.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q32">
+        <div class="qcard__head">
+          <span class="qcard__num">32</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: Sure. Good idea.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">What does ‘bilingual’ mean?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Can I open a window? It’s hot in here.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">I like your jumper.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Excuse me! Can you help me?</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Can I open a window? It’s hot in here.</span>
+            </p>
+            <p class="explain-line">الرد Sure. Good idea يوافق على طلب استئذان منطقي، وهو فتح النافذة بسبب الحر: Can I open a window? It’s hot in here. أما باقي الخيارات فتطلب تعريفاً أو مساعدة أو مجاملة، لا تناسب رد الموافقة هذا.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q33">
+        <div class="qcard__head">
+          <span class="qcard__num">33</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: There’s an Internet café in Park Lane.  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Is that near here?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Just two minutes, that’s all.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Do you need some money?</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Go straight ahead.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Is that near here?</span>
+            </p>
+            <p class="explain-line">أقرب رد منطقي على معلومة عن موقع مقهى هو الاستفسار عن قربه: Is that near here? أما باقي الخيارات فهي إجابات مناسبة لأسئلة أخرى (المدة، المال، الاتجاهات) لا لهذه الجملة الخبرية.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q34">
+        <div class="qcard__head">
+          <span class="qcard__num">34</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: No, it isn’t.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Can I speak to Emma, please?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">What’s the address?</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Can I take a message?</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Is that Emma?</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Is that Emma?</span>
+            </p>
+            <p class="explain-line">الرد No, it isn’t يناسب سؤالاً بنعم/لا عن هوية شخص على الهاتف: Is that Emma? أما الخيارات الأخرى فأسئلة مختلفة الشكل (طلب، عنوان، رسالة) لا تُجاب بـ No, it isn’t بهذا المعنى.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q35">
+        <div class="qcard__head">
+          <span class="qcard__num">35</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: Yes, please. It’s delicious.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Could you pass the salt, please?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">How would you like your coffee?</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Would you like some more rice?</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Is there any more salad left?</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Would you like some more rice?</span>
+            </p>
+            <p class="explain-line">عرض المزيد من الطعام يُقابَل بقبول ووصف الطعم: Would you like some more rice؟ → Yes, please. It’s delicious. أما باقي الأسئلة فتخص الملح أو القهوة أو توفر السلطة، ولا تنسجم مع الرد نفسه.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q36">
+        <div class="qcard__head">
+          <span class="qcard__num">36</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: What about this jacket?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Credit card’s fine.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">No, it isn’t the right blue.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">How do you want to pay?</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Can I help you?</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">No, it isn’t the right blue.</span>
+            </p>
+            <p class="explain-line">السؤال عن رأي في سترة معينة يستدعي تعليقاً على مظهرها: No, it isn’t the right blue. أما باقي الردود تخص طريقة الدفع أو بدء الخدمة، لا التعليق على السترة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q37">
+        <div class="qcard__head">
+          <span class="qcard__num">37</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: Well, we could go swimming.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">How are you feeling today?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">What shall we do this afternoon?</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">OK. I’ll get my swimming costume.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">It’s too cold to go swimming.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">What shall we do this afternoon?</span>
+            </p>
+            <p class="explain-line">الرد Well, we could go swimming يقترح نشاطاً رداً على سؤال عن الخطة: What shall we do this afternoon؟ أما باقي الخيارات فسؤال عن الصحة أو ردود لا تصلح كسؤال أصلاً.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q38">
+        <div class="qcard__head">
+          <span class="qcard__num">38</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: How do you find living in New York?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">No, I missed it.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Thank you. I’m glad you like it.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">I’m enjoying it a lot.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">I’m very well, thanks.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I’m enjoying it a lot.</span>
+            </p>
+            <p class="explain-line">السؤال How do you find + مكان يسأل عن الانطباع، فالرد المناسب: I’m enjoying it a lot. أما باقي الردود تخص سؤالاً عن الحال أو مجاملة أو موقفاً مختلفاً.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s7" aria-labelledby="h-s7">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 39–44</span>
+        <h2 id="h-s7"><span class="ar">المفردات والحياة اليومية</span><span class="en" dir="ltr" lang="en">Vocabulary &amp; Daily Life</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q39">
+        <div class="qcard__head">
+          <span class="qcard__num">39</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I don’t like preparing food, but I like ____ in restaurants.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">cooking</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">eating</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">going</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">using</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">eating</span>
+            </p>
+            <p class="explain-line">التباين واضح بين تحضير الطعام (preparing/cooking) والاستمتاع بتناوله في المطاعم: eating. أما cooking تكرر معنى preparing المرفوض، وgoing وusing لا تصف فعل تناول الطعام تحديداً.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q40">
+        <div class="qcard__head">
+          <span class="qcard__num">40</span>
+          <p class="qcard__stem" dir="ltr" lang="en">The plates are in the ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">cups</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">fridge</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">cooker</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">cupboard</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">cupboard</span>
+            </p>
+            <p class="explain-line">الأطباق تُحفظ عادة في الخزانة: cupboard. أما cups نوع آخر من الأواني لا مكان تخزين، وfridge وcooker مخصصان للتبريد والطهي لا لتخزين الأطباق.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q41">
+        <div class="qcard__head">
+          <span class="qcard__num">41</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Can you ____ this from German to English?</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">speak</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">make</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">think</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">translate</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">translate</span>
+            </p>
+            <p class="explain-line">التحويل بين لغتين هو ترجمة: translate. أما speak وmake وthink فلا تصف نقل نص من لغة لأخرى.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q42">
+        <div class="qcard__head">
+          <span class="qcard__num">42</span>
+          <p class="qcard__stem" dir="ltr" lang="en">She speaks ____ Spanish.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">fluent</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">hard</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">well</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">very</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">fluent</span>
+            </p>
+            <p class="explain-line">التركيب صفة + اسم (adjective + noun) هو الصحيح هنا: speaks fluent Spanish. أما well تحتاج أن تأتي بعد الاسم (speaks Spanish well)، وhard وvery لا يصفان إتقان اللغة بهذا الشكل.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q43">
+        <div class="qcard__head">
+          <span class="qcard__num">43</span>
+          <p class="qcard__stem" dir="ltr" lang="en">It’s a lovely day. It’s ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">cool and cloudy</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">cold and foggy</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">sunny and warm</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">wet and windy</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">sunny and warm</span>
+            </p>
+            <p class="explain-line">وصف a lovely day يتطلب طقساً جميلاً: sunny and warm. أما باقي الأوصاف (غائم، ضبابي، ممطر عاصف) تناقض معنى a lovely day.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q44">
+        <div class="qcard__head">
+          <span class="qcard__num">44</span>
+          <p class="qcard__stem" dir="ltr" lang="en">My father is a nurse. He works in a ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">cinema</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">hospital</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">factory</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">shop</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">hospital</span>
+            </p>
+            <p class="explain-line">الممرض يعمل عادة في المستشفى: hospital. أما cinema وfactory وshop فأماكن عمل لا علاقة لها بمهنة التمريض.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s8" aria-labelledby="h-s8">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 45–50</span>
+        <h2 id="h-s8"><span class="ar">فهم المقروء 2</span><span class="en" dir="ltr" lang="en">Reading Comprehension 2</span></h2>
+      </header>
+        <div class="passage">
+          <p class="passage__label">اقرأ النص التالي أولًا، ثم أجب عن الأسئلة أدناه <span dir="ltr" lang="en">— Read the text, then answer the questions below</span></p>
+          <p dir="ltr" lang="en">My name’s Rachel. I like summer best. We cook and eat in the garden, and we often go to the beach. I don’t like sunbathing, but I love swimming. I was born in a village near the seaside, and my family went to the beach almost every day. I could swim when I was a baby. I loved it then, and I love it now. My brother loves surfing and he’s really good at it. He’s the best surfer in our school. He’s won ten or fifteen competitions. I’ve tried it, but I’ve never learnt to surf. Maybe I’ll try it again when I retire.</p>
+        </div>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q45">
+        <div class="qcard__head">
+          <span class="qcard__num">45</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Rachel talks about ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">her plans for the future</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">her favourite season</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">what she did last month</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">her favourite food</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">her favourite season</span>
+            </p>
+            <p class="explain-line">النص يبدأ بجملة I like summer best وتدور حوله كل الأحداث، أي عن فصلها المفضل: her favourite season. أما باقي الخيارات (المستقبل، الشهر الماضي، الطعام) لا تمثل محور النص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q46">
+        <div class="qcard__head">
+          <span class="qcard__num">46</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Rachel talks about her ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">leisure activities</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">working life</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">school days</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">parents</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">leisure activities</span>
+            </p>
+            <p class="explain-line">النص يذكر السباحة والذهاب للشاطئ وركوب الأمواج، وهذه أنشطة وقت الفراغ: leisure activities. أما working life وschool days وparents فغير مذكورة في النص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q47">
+        <div class="qcard__head">
+          <span class="qcard__num">47</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Rachel ____ when she was very little.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">learned to swim</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">didn’t like swimming</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">lived in the city</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">rarely went to the beach</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">learned to swim</span>
+            </p>
+            <p class="explain-line">النص يقول I could swim when I was a baby، أي تعلمت السباحة صغيرة جداً: learned to swim. أما باقي الخيارات تناقض ذلك مباشرة أو غير مذكورة (المدينة).</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q48">
+        <div class="qcard__head">
+          <span class="qcard__num">48</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Rachel’s brother ____ surfing.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">is learning</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">has never been</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">has done a lot of</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">is going to try</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">has done a lot of</span>
+            </p>
+            <p class="explain-line">فوزه بعشر أو خمس عشرة مسابقة يدل على خبرة واسعة: has done a lot of surfing. أما is learning وhas never been وis going to try تناقض كونه أفضل متزلج في مدرسته.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q49">
+        <div class="qcard__head">
+          <span class="qcard__num">49</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Rachel ____ surfing.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">has never been</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">isn’t good at</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">has won awards for</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">hates</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">isn’t good at</span>
+            </p>
+            <p class="explain-line">النص يقول جربت لكن لم تتعلم ركوب الأمواج قط، أي أنها لا تجيده: isn’t good at. أما has never been تناقض أنها جربته، وhas won awards تخص أخاها لا هي، وhates لا يظهر في النص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q50">
+        <div class="qcard__head">
+          <span class="qcard__num">50</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Rachel’s brother is ____ surfer than his classmates.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">an older</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">a safer</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">a worse</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">a better</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">a better</span>
+            </p>
+            <p class="explain-line">وصفه بأنه أفضل متزلج في المدرسة يعني مقارنة تفضيلية: a better surfer. أما an older وa safer وa worse فلا تتفق مع معنى أفضل متزلج.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s9" aria-labelledby="h-s9">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 51–55</span>
+        <h2 id="h-s9"><span class="ar">القواعد</span><span class="en" dir="ltr" lang="en">Grammar</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q51">
+        <div class="qcard__head">
+          <span class="qcard__num">51</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I’m thinking ____ to Japan next year.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">of going</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I go</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">goes</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">going</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">of going</span>
+            </p>
+            <p class="explain-line">التعبير الشائع think of + فعل مضاف إليه ing: thinking of going. أما I go وgoes وgoing بلا of تركيب ناقص أو غير صحيح بعد thinking.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q52">
+        <div class="qcard__head">
+          <span class="qcard__num">52</span>
+          <p class="qcard__stem" dir="ltr" lang="en">One day, I hope ____ China.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">will visit</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">visit</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">visiting</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">to visit</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">to visit</span>
+            </p>
+            <p class="explain-line">الفعل hope يتبعه مصدر بـ to: hope to visit. أما will visit وvisit وvisiting لا تتبع hope بهذه الصورة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q53">
+        <div class="qcard__head">
+          <span class="qcard__num">53</span>
+          <p class="qcard__stem" dir="ltr" lang="en">If I ____ travelling, I’ll send you lots of postcards.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">’ll go</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">went</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">go</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">’ll</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">go</span>
+            </p>
+            <p class="explain-line">في الشرط الأول (Type 1) تُستخدم صيغة المضارع البسيط في جملة if، مع will في الجملة الرئيسية: If I go..., I’ll send. أما ’ll go فلا يجوز وجود will في جملة if، وwent يخص الشرط الثاني، وll’ ناقصة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q54">
+        <div class="qcard__head">
+          <span class="qcard__num">54</span>
+          <p class="qcard__stem" dir="ltr" lang="en">In the future, cities on Mars ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">are being built</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">can build</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">will be built</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">are being built</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">will be built</span>
+            </p>
+            <p class="explain-line">المدن لا تبني نفسها، فالفعل يجب أن يكون مبنياً للمجهول ومستقبلاً: will be built. أما are being built مضارع مستمر مبني للمجهول لا يناسب in the future المستقبلية، وcan build مبني للمعلوم وغير منطقي مع cities كفاعل.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q55">
+        <div class="qcard__head">
+          <span class="qcard__num">55</span>
+          <p class="qcard__stem" dir="ltr" lang="en">All of the sandwiches ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">were eaten</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">are eating</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">were eating</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">have eaten</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">were eaten</span>
+            </p>
+            <p class="explain-line">الساندويتشات لا تأكل نفسها، فيلزم المبني للمجهول: were eaten. أما are eating وwere eating وhave eaten كلها مبنية للمعلوم وغير منطقية مع sandwiches كفاعل.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s10" aria-labelledby="h-s10">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 56–60</span>
+        <h2 id="h-s10"><span class="ar">القواعد</span><span class="en" dir="ltr" lang="en">Grammar</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q56">
+        <div class="qcard__head">
+          <span class="qcard__num">56</span>
+          <p class="qcard__stem" dir="ltr" lang="en">There was no money in the office when I arrived. All of it ____ by burglars.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">has been stolen</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">had been stealing</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">had stolen</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">had been stolen</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">had been stolen</span>
+            </p>
+            <p class="explain-line">الحدث (السرقة) وقع قبل حدث ماضٍ آخر (arrived)، والفاعل الحقيقي مجهول (اللصوص فعلوا الفعل بالنقود)، فالصيغة الصحيحة هي الماضي التام المبني للمجهول: had been stolen. أما has been stolen مضارع تام لا ماضٍ تام، وhad been stealing مستمر غير منطقي هنا، وhad stolen مبني للمعلوم وغير مناسب لأن النقود لا تسرق نفسها.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q57">
+        <div class="qcard__head">
+          <span class="qcard__num">57</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: £8 for an adult, £4.50 for children under 12.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">How much is it to get in?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I gave you a £10 note, not a £5 note.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">How much is a litre of petrol?</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">It’s cheaper if you buy a family ticket.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">How much is it to get in?</span>
+            </p>
+            <p class="explain-line">الرد يذكر أسعار الدخول للكبار والصغار، فهذا رد على سؤال عن رسوم الدخول: How much is it to get in؟ أما باقي الجمل تخص مبلغاً مدفوعاً سابقاً أو سعر البنزين أو نصيحة إضافية، لا سؤالاً أصلياً عن سعر الدخول.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q58">
+        <div class="qcard__head">
+          <span class="qcard__num">58</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: Cheer up! You’ve got me. I’m always here for you.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I passed my exam.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I’m getting married next week.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">I’m going on holiday tomorrow.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">I don’t think I have many friends.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I don’t think I have many friends.</span>
+            </p>
+            <p class="explain-line">عبارة التشجيع Cheer up تناسب شكوى حزينة عن قلة الأصدقاء: I don’t think I have many friends. أما باقي الجمل أخبار سعيدة أو محايدة لا تستدعي التعزية والتشجيع.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q59">
+        <div class="qcard__head">
+          <span class="qcard__num">59</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: What are your symptoms?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I’ve got a temperature and I feel awful.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Just take it easy for a while.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">I’ve got food poisoning.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Drink plenty of liquids.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I’ve got a temperature and I feel awful.</span>
+            </p>
+            <p class="explain-line">السؤال عن الأعراض (symptoms) يستدعي وصف حالة جسدية ملموسة: I’ve got a temperature and I feel awful. أما باقي الخيارات نصائح أو تشخيص نهائي لا وصف أعراض مباشر.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q60">
+        <div class="qcard__head">
+          <span class="qcard__num">60</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: Hello? Hello?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I’m not sure. Can I get back to you later?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Sorry, we were cut off.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">OK. Speak to you soon.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Oh, and can you give me Dean’s number?</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Sorry, we were cut off.</span>
+            </p>
+            <p class="explain-line">تكرار Hello? Hello يوحي بانقطاع المكالمة الهاتفية ثم عودتها، فالرد المنطقي اعتذار عن الانقطاع: Sorry, we were cut off. أما باقي الردود تخص مواقف مختلفة تماماً في سياق المكالمة.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s11" aria-labelledby="h-s11">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 61–69</span>
+        <h2 id="h-s11"><span class="ar">المفردات والتعبيرات الاصطلاحية</span><span class="en" dir="ltr" lang="en">Vocabulary &amp; Idiomatic Language</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q61">
+        <div class="qcard__head">
+          <span class="qcard__num">61</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: Mike and Jo are such nice people.  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I know. There were so many problems.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Yes, I don’t know how they live in it.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">You’re right. We had so much fun with them.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">That’s true. I don’t know where it’s all gone.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">You’re right. We had so much fun with them.</span>
+            </p>
+            <p class="explain-line">الموافقة على وصف شخصين لطيفين تتبعها ذكرى ممتعة معهما: You’re right. We had so much fun with them. أما باقي الردود تتحدث عن مشاكل أو مكان سكن أو مال، بلا صلة بالمجاملة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q62">
+        <div class="qcard__head">
+          <span class="qcard__num">62</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: I’ll give you a lift into town if you like.  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I’m sorry, it’s not working today.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I’ve got enough already thanks.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Go ahead. It’s very hot in here.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">That would be great.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">That would be great.</span>
+            </p>
+            <p class="explain-line">عرض توصيلة بالسيارة يُقابَل عادة بقبول ممتن: That would be great. أما باقي الردود تخص رفض شيء آخر أو إذناً بفعل شيء، لا قبول توصيلة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q63">
+        <div class="qcard__head">
+          <span class="qcard__num">63</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I didn’t have much time, so I did my homework ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">quickly</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">lazily</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">peacefully</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">tragically</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">quickly</span>
+            </p>
+            <p class="explain-line">ضيق الوقت يستلزم إنجاز الواجب بسرعة: quickly. أما lazily وpeacefully وtragically لا تتوافق مع سبب ضيق الوقت.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q64">
+        <div class="qcard__head">
+          <span class="qcard__num">64</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I haven’t got any ____. Is there a chemist’s near here?</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">envelopes</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">doughnuts</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">stamps</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">deodorant</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">deodorant</span>
+            </p>
+            <p class="explain-line">السؤال عن أقرب صيدلية (chemist’s) يدل على حاجة لمنتج تجميلي/عناية شخصية: deodorant. أما envelopes وstamps تُشترى من مكتب البريد، وdoughnuts من مخبز، لا من الصيدلية.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q65">
+        <div class="qcard__head">
+          <span class="qcard__num">65</span>
+          <p class="qcard__stem" dir="ltr" lang="en">We were ____ during the film. It wasn’t interesting.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">shocked</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">bored</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">annoyed</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">depressed</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">bored</span>
+            </p>
+            <p class="explain-line">عدم إثارة الاهتمام (wasn’t interesting) يعني الشعور بالملل: bored. أما shocked وannoyed وdepressed مشاعر أقوى أو مختلفة لا ترتبط مباشرة بعدم التشويق.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q66">
+        <div class="qcard__head">
+          <span class="qcard__num">66</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I’m ____ a lot of training for my new job.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">spending</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">studying</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">doing</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">working</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">doing</span>
+            </p>
+            <p class="explain-line">التعبير الشائع للحصول على تدريب هو do training: doing a lot of training. أما spending وstudying وworking لا تتلازم مع كلمة training بنفس الطبيعية.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q67">
+        <div class="qcard__head">
+          <span class="qcard__num">67</span>
+          <p class="qcard__stem" dir="ltr" lang="en">He can’t ____ up his mind.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">get</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">go</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">take</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">make</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">make</span>
+            </p>
+            <p class="explain-line">التعبير الاصطلاحي الثابت هو make up one’s mind بمعنى يحسم قراره. أما get/go/take up لا تكوّن هذا التعبير الاصطلاحي.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q68">
+        <div class="qcard__head">
+          <span class="qcard__num">68</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I ____ my job because the hours were too long.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">gave up</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">took off</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">put away</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">went back</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">gave up</span>
+            </p>
+            <p class="explain-line">ترك وظيفة بسبب ساعات عمل طويلة يُعبَّر عنه بـ give up: gave up my job. أما took off وput away وwent back لا تعني الاستقالة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q69">
+        <div class="qcard__head">
+          <span class="qcard__num">69</span>
+          <p class="qcard__stem" dir="ltr" lang="en">My brother really ____ my father.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">picks up</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">gets on</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">takes after</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">looks up</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">takes after</span>
+            </p>
+            <p class="explain-line">التشابه الوراثي أو في الطباع يُعبَّر عنه بـ take after: takes after my father. أما picks up وgets on وlooks up لها معانٍ اصطلاحية مختلفة (يلتقط، ينسجم مع، يبحث عن) لا علاقة لها بالشبه.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s12" aria-labelledby="h-s12">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 70–75</span>
+        <h2 id="h-s12"><span class="ar">فهم المقروء 3</span><span class="en" dir="ltr" lang="en">Reading Comprehension 3</span></h2>
+      </header>
+        <div class="passage">
+          <p class="passage__label">اقرأ النص التالي أولًا، ثم أجب عن الأسئلة أدناه <span dir="ltr" lang="en">— Read the text, then answer the questions below</span></p>
+          <p dir="ltr" lang="en">Greg is 21 years old. He’s been studying at Manchester University for the past three years, but he’s going to finish his course next month. ‘I’d like to get a job here in Manchester,’ he says, ‘but that may not be possible. My degree is in Business, and I’d like to work in management. But there aren’t a lot of jobs right now, and I haven’t got any money. I’m feeling a bit nervous and depressed about finding a job, actually. It’s on my mind a lot. I’m afraid I won’t find one, and I’ll be unemployed for a long time.’ If Greg doesn’t find a job in Manchester, he’ll look for something in nearby Leeds or Sheffield. ‘As soon as I finish my exams, I’ll start applying,’ he says. ‘That’s next month. Right now, I need to concentrate on my studies.’ He adds, ‘I don’t think I’ll be happy until I start working in Manchester.’</p>
+        </div>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q70">
+        <div class="qcard__head">
+          <span class="qcard__num">70</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Greg ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">would like to leave Manchester</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">hopes to continue studying</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">hasn’t finished his course yet</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">wasn’t studying last year</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">hasn’t finished his course yet</span>
+            </p>
+            <p class="explain-line">النص يقول سيُنهي دراسته الشهر القادم، أي لم ينهها بعد: hasn’t finished his course yet. أما باقي الخيارات تناقض رغبته بالعمل في مانشستر واستمراره بالدراسة منذ ثلاث سنوات.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q71">
+        <div class="qcard__head">
+          <span class="qcard__num">71</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Greg ____ Business.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">would like to study</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">is studying</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">already has a job in</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">isn’t interested in</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">is studying</span>
+            </p>
+            <p class="explain-line">النص يذكر صراحة My degree is in Business، أي أنه يدرس التجارة حالياً: is studying. أما باقي الخيارات تخالف كونه بالفعل طالباً في هذا التخصص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q72">
+        <div class="qcard__head">
+          <span class="qcard__num">72</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Greg ____ finding a job.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">doesn’t think a lot about</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">thinks it won’t be difficult</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">feels confident about</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">feels worried about</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">feels worried about</span>
+            </p>
+            <p class="explain-line">النص يصف شعوره بالتوتر والقلق (nervous and depressed) تجاه إيجاد وظيفة: feels worried about. أما باقي الخيارات تصف ثقة أو عدم اكتراث يناقضان وصفه لحالته.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q73">
+        <div class="qcard__head">
+          <span class="qcard__num">73</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Greg will apply for jobs in Leeds and Sheffield ____ Manchester.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">after trying for a job</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">as soon as he finds a job</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">while he’s applying</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">before he looks</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">after trying for a job</span>
+            </p>
+            <p class="explain-line">النص يوضح أنه سيبحث في مدينتي ليدز وشيفيلد فقط إن لم يجد عملاً في مانشستر، أي بعد أن يحاول فيها أولاً: after trying for a job. أما باقي الخيارات تعكس ترتيباً زمنياً أو منطقياً مغايراً لما ورد.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q74">
+        <div class="qcard__head">
+          <span class="qcard__num">74</span>
+          <p class="qcard__stem" dir="ltr" lang="en">At the moment, Greg’s main focus is ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">his studies</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">applying for jobs</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">searching for a flat</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">preparing to move</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">his studies</span>
+            </p>
+            <p class="explain-line">النص يقول صراحة Right now, I need to concentrate on my studies، أي أن تركيزه الحالي على الدراسة: his studies. أما باقي الخيارات تخص مراحل لاحقة لم يبدأ بها بعد.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q75">
+        <div class="qcard__head">
+          <span class="qcard__num">75</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Greg won’t be happy if he doesn’t ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">fail his exams</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">have exams next month</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">get work in Leeds</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">find a job in Manchester</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">find a job in Manchester</span>
+            </p>
+            <p class="explain-line">النص يختم بأنه لن يكون سعيداً حتى يبدأ العمل في مانشستر تحديداً: find a job in Manchester. أما باقي الخيارات إما غير مرتبطة بالسعادة المذكورة أو تخص مدينة أخرى لم يُشترط العمل بها.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s13" aria-labelledby="h-s13">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 76–93</span>
+        <h2 id="h-s13"><span class="ar">القواعد والمفردات المتقدمة واستخدام اللغة</span><span class="en" dir="ltr" lang="en">Advanced Grammar, Vocabulary &amp; Use of English</span></h2>
+      </header>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q76">
+        <div class="qcard__head">
+          <span class="qcard__num">76</span>
+          <p class="qcard__stem" dir="ltr" lang="en">The sign says No parking. We ____ park here.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">shouldn’t</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">aren’t allowed to</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">can’t</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">should</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">aren’t allowed to</span>
+            </p>
+            <p class="explain-line">اللافتة تمثل قاعدة أو تصريحاً رسمياً بالمنع، فالتعبير الأدق عن غياب الإذن الرسمي هو aren’t allowed to. أما shouldn’t نصيحة أضعف من قاعدة ملزمة، وcan’t تصف عجزاً لا منعاً رسمياً بالضرورة، وshould عكس المطلوب تماماً.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q77">
+        <div class="qcard__head">
+          <span class="qcard__num">77</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: How long have you ____ English?  B: For about six years.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">studying</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">been studying</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">study</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">to study</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">been studying</span>
+            </p>
+            <p class="explain-line">السؤال How long have you...؟ عن مدة مستمرة يتطلب المضارع التام المستمر: have you been studying. أما studying وstudy وto study تراكيب ناقصة الفعل المساعد أو خاطئة الصيغة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q78">
+        <div class="qcard__head">
+          <span class="qcard__num">78</span>
+          <p class="qcard__stem" dir="ltr" lang="en">If ____ told me about your problems, I’d have helped.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">you’ll</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">you’re</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">you’ve</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">you’d</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">you’d</span>
+            </p>
+            <p class="explain-line">النتيجة I’d have helped تدل على شرط من النوع الثالث (Type 3)، وصيغة جملة if تكون had + تصريف ثالث، أي you’d (had) told. أما you’ll وyou’re وyou’ve لا تصلح لبناء الشرط الثالث.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q79">
+        <div class="qcard__head">
+          <span class="qcard__num">79</span>
+          <p class="qcard__stem" dir="ltr" lang="en">We can text ____ after work and arrange a place to meet.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">each other</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">each</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">us</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">another</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">each other</span>
+            </p>
+            <p class="explain-line">الفعل المتبادل بين شخصين (يراسل كل منهما الآخر) يُعبَّر عنه بـ each other. أما each وanother ناقصتان بمفردهما، وus ضمير مفعول لا يصلح هنا.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q80">
+        <div class="qcard__head">
+          <span class="qcard__num">80</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I saw Mrs Jones yesterday. She asked me what ____ in London.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">are you doing</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">am I doing</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">I was doing</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">if I’m doing</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I was doing</span>
+            </p>
+            <p class="explain-line">في الكلام المنقول (Reported Speech) يتحول ترتيب السؤال إلى جملة خبرية ويتراجع الزمن: what I was doing. أما are you doing/am I doing يحافظان خطأً على ترتيب السؤال المباشر، وif I’m doing تضيف if لا تصلح مع سؤال بـ wh.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q81">
+        <div class="qcard__head">
+          <span class="qcard__num">81</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I wish you ____ before you speak.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">’d think</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">’ll think</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">think</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">’re thinking</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">’d think</span>
+            </p>
+            <p class="explain-line">بعد I wish للتعبير عن رغبة بتغيير سلوك حالي متكرر تُستخدم would (مختصرة ’d): I wish you’d think. أما ’ll think وthink وre thinking’ لا تتبع wish بهذه الطريقة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q82">
+        <div class="qcard__head">
+          <span class="qcard__num">82</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: Oh dear. I’d love to, but this weekend I’m so busy.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Are you doing anything next Saturday afternoon?</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I was wondering if we could meet next Saturday morning.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">What are you doing next Sunday evening?</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">I’m afraid I’ve already got something to do on Sunday.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I was wondering if we could meet next Saturday morning.</span>
+            </p>
+            <p class="explain-line">الرد يذكر this weekend بشكل عام رداً على عرض لقاء صباح السبت تحديداً: I was wondering if we could meet next Saturday morning. أما باقي الخيارات تسأل عن وقت مختلف (بعد ظهر السبت أو مساء الأحد) أو ليست دعوة أصلاً.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q83">
+        <div class="qcard__head">
+          <span class="qcard__num">83</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: I failed my driving test again.  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Absolutely.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">That’s too bad.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Fair enough.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">That’s amazing!</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">That’s too bad.</span>
+            </p>
+            <p class="explain-line">الرسوب مرة أخرى خبر سيئ يستدعي تعاطفاً: That’s too bad. أما Absolutely وFair enough موافقة أو تسليم بأمر، وThat’s amazing تعبير إيجابي يناقض معنى الفشل.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q84">
+        <div class="qcard__head">
+          <span class="qcard__num">84</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: I think you must have made a mistake. I gave you a £20 note.  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Thanks. That’s for you.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Yes, I’m afraid it is. But it doesn’t include tax.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Sure. Tell me your account number.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Oh, did you? Er… sorry about that.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Oh, did you? Er… sorry about that.</span>
+            </p>
+            <p class="explain-line">الاعتراف بخطأ في الباقي المالي يستدعي اعتذاراً: Oh, did you? Er… sorry about that. أما باقي الردود تخص إكرامية أو ضريبة أو رقم حساب، سياقات مختلفة تماماً.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q85">
+        <div class="qcard__head">
+          <span class="qcard__num">85</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: What time will we arrive?  B: ____</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Presumably, the others will be late.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Generally, on time.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Hopefully, in the next hour.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Obviously, we’re late.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Hopefully, in the next hour.</span>
+            </p>
+            <p class="explain-line">السؤال المباشر عن وقت الوصول يستدعي إجابة تتضمن إطاراً زمنياً: Hopefully, in the next hour. أما باقي الردود تتحدث عن أشخاص آخرين أو تعميمات لا تحدد وقتاً فعلياً للوصول.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q86">
+        <div class="qcard__head">
+          <span class="qcard__num">86</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: Oh well. You live and learn.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">I trusted Adam and he stole my money.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I’ve got ten exams in the next two weeks.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">I forgot her birthday, so I sent her a text.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">I wonder if their marriage will last.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">I trusted Adam and he stole my money.</span>
+            </p>
+            <p class="explain-line">العبارة You live and learn تعني تعلّم درس من تجربة مؤلمة، وأنسب سياق هو خيانة الثقة: I trusted Adam and he stole my money. أما باقي الخيارات تخص ضغط دراسي أو نسياناً بسيطاً أو تكهناً، ولا تحمل درساً قاسياً بنفس الوزن.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q87">
+        <div class="qcard__head">
+          <span class="qcard__num">87</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A: ____  B: In your dreams. Not if you were the last man on earth.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Come on, you know you want to go out with me really.</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">I’m cleaned out! This jacket cost the earth.</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">We’re throwing caution to the wind and emigrating.</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">I’m really tired, so I’m going to stay home tonight.</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Come on, you know you want to go out with me really.</span>
+            </p>
+            <p class="explain-line">الرد الساخر In your dreams يرفض عرضاً غرامياً بازدراء، فيتفق مع محاولة مغازلة: Come on, you know you want to go out with me really. أما باقي الجمل تتحدث عن المال أو الهجرة أو التعب، لا علاقة لها بالرفض العاطفي.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q88">
+        <div class="qcard__head">
+          <span class="qcard__num">88</span>
+          <p class="qcard__stem" dir="ltr" lang="en">His attendance is ____. Some weeks he comes every day, other weeks he misses classes.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">irregular</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">unsuitable</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">untrue</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">inaccurate</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">irregular</span>
+            </p>
+            <p class="explain-line">التناوب بين الحضور المنتظم والغياب يصف نمطاً غير ثابت: irregular. أما unsuitable وuntrue وinaccurate تصف الملاءمة أو الصدق أو الدقة، لا انتظام الحضور.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q89">
+        <div class="qcard__head">
+          <span class="qcard__num">89</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I don’t eat much fruit. I’m not that ____ on it.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">crazy</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">keen</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">fond</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">excited</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">keen</span>
+            </p>
+            <p class="explain-line">التعبير الاصطلاحي الثابت هو keen on بمعنى مولع بـ. أما crazy about وfond of وexcited about تُستخدم مع حروف جر مختلفة، فلا تصح مع on هنا.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q90">
+        <div class="qcard__head">
+          <span class="qcard__num">90</span>
+          <p class="qcard__stem" dir="ltr" lang="en">A lot of people visited the art gallery to see the painter’s ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">service</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">masterpiece</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">architecture</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">headline</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">masterpiece</span>
+            </p>
+            <p class="explain-line">زيارة معرض فني لرؤية عمل فنان تعني الإعجاب بتحفته: masterpiece. أما service وarchitecture وheadline لا علاقة مباشرة لها بعمل رسام في معرض.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q91">
+        <div class="qcard__head">
+          <span class="qcard__num">91</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Two men ____ jail last night.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">broke out of</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">sorted out</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">took up</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">broke up with</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">broke out of</span>
+            </p>
+            <p class="explain-line">الهروب من السجن تعبير ثابت: break out of jail. أما sorted out (رتّب) وtook up (بدأ هواية) وbroke up with (انفصل عن) لا علاقة لها بالفرار من السجن.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q92">
+        <div class="qcard__head">
+          <span class="qcard__num">92</span>
+          <p class="qcard__stem" dir="ltr" lang="en">I felt bad because my brother and I ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">admitted</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">accused</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">quarrelled</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">criticized</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">quarrelled</span>
+            </p>
+            <p class="explain-line">الشعور بالسوء تجاه علاقة أخوية غالباً بسبب شجار: quarrelled. أما admitted وaccused وcriticized أفعال تحتاج مفعولاً واضحاً ولا تصف نزاعاً متبادلاً بين طرفين بهذه الصيغة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q93">
+        <div class="qcard__head">
+          <span class="qcard__num">93</span>
+          <p class="qcard__stem" dir="ltr" lang="en">The sailors didn’t see ____ for two months as they crossed the Atlantic.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">world</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">earth</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">ground</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">land</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">land</span>
+            </p>
+            <p class="explain-line">عبور المحيط دون رؤية اليابسة يُعبَّر عنه بكلمة land. أما world وearth وground كلمات عامة أو غير مستخدمة بهذا التعبير البحري الثابت (see land).</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+    <section class="qsection" id="s14" aria-labelledby="h-s14">
+      <header class="qsection__head">
+        <span class="qsection__range">أسئلة 94–100</span>
+        <h2 id="h-s14"><span class="ar">فهم المقروء 4</span><span class="en" dir="ltr" lang="en">Reading Comprehension 4</span></h2>
+      </header>
+        <div class="passage">
+          <p class="passage__label">اقرأ النص التالي أولًا، ثم أجب عن الأسئلة أدناه <span dir="ltr" lang="en">— Read the text, then answer the questions below</span></p>
+          <p dir="ltr" lang="en">Seamus Carver had lived next door to Andrew Smith for about two years before they met. ‘Seamus used to go to work early in the morning and come home in the afternoon, and I used to work nights at the factory,’ said Andrew. ‘We were never home at the same time. He worked on Saturdays and Sundays, and had Tuesdays and Wednesdays off. We never had a good look at each other.’ But when both men retired in the same year, their schedules changed. ‘We’d both been out to the cinema one night, and we came home at the same time and met in front of our houses.’</p><p dir="ltr" lang="en">‘Right away, Seamus asked me if I’d gone to school at Oak Park Primary School in York. I said that I had, and then I understood. He and I had known each other for a year or two when we were young kids, like maybe six. And amazingly, we still remembered each other!’ Both Seamus and Andrew said their families had moved away from York when they were young. What they hadn’t realised was that both families had moved to Bristol, and both men had been living there ever since.</p>
+        </div>
+      <div class="qsection__body">
+        
+      <article class="qcard" id="q94">
+        <div class="qcard__head">
+          <span class="qcard__num">94</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Seamus and Andrew became next-door neighbours ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">two years after they first met</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">before they met</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">after they met at work</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">because they were friends</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">before they met</span>
+            </p>
+            <p class="explain-line">النص يذكر أنهما كانا جارين لمدة عامين تقريباً قبل أن يلتقيا (had lived next door... before they met)، أي أصبحا جارين before they met. أما باقي الخيارات تعكس ترتيباً زمنياً أو سبباً مخالفاً للنص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q95">
+        <div class="qcard__head">
+          <span class="qcard__num">95</span>
+          <p class="qcard__stem" dir="ltr" lang="en">While they were working, they ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">tried to meet</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">sometimes met</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">didn’t meet</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">didn’t get along well</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">didn’t meet</span>
+            </p>
+            <p class="explain-line">النص يوضح أن مواعيد عملهما لم تتقاطع أبداً (never home at the same time)، أي لم يلتقيا: didn’t meet. أما باقي الخيارات تصف محاولة لقاء أو علاقة سيئة، وهذا غير مذكور؛ فالمشكلة كانت غياب الفرصة لا سوء العلاقة.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q96">
+        <div class="qcard__head">
+          <span class="qcard__num">96</span>
+          <p class="qcard__stem" dir="ltr" lang="en">When they met, they ____ the cinema.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">hadn’t yet been to</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">were in</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">were leaving</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">were coming home from</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">were coming home from</span>
+            </p>
+            <p class="explain-line">النص يقول ذهبا للسينما في تلك الليلة وعادا للمنزل معاً في نفس الوقت والتقيا أمام بيتيهما، أي كانا عائدين من السينما: were coming home from. أما باقي الخيارات تصف كونهما لم يذهبا بعد أو داخل السينما وقت اللقاء، وهذا يخالف النص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q97">
+        <div class="qcard__head">
+          <span class="qcard__num">97</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Seamus asked, “____ to Oak Park Primary School in York?”</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">Have you ever been</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">Did you go</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">Were you going</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">Had you gone</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">Did you go</span>
+            </p>
+            <p class="explain-line">سؤال مباشر بسيط عن حدث ماضٍ محدد (الدراسة في تلك المدرسة) يُصاغ بالماضي البسيط: Did you go؟ أما Have you ever been وHad you gone أزمنة تامة لا تناسب حدثاً محدداً بهذه البساطة، وWere you going مستمر غير منطقي مع سؤال عن واقعة مضت.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q98">
+        <div class="qcard__head">
+          <span class="qcard__num">98</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Seamus and Andrew had been friends ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">after their families moved to Bristol</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">for the past two years</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">their whole lives</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">when they were very young</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">when they were very young</span>
+            </p>
+            <p class="explain-line">النص يذكر أنهما تعارفا طفلين في السادسة من العمر تقريباً، أي عندما كانا صغيرين جداً: when they were very young. أما باقي الخيارات تخص فترات لاحقة أو مبالغات (طوال حياتهما) لا يدعمها النص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q99">
+        <div class="qcard__head">
+          <span class="qcard__num">99</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Andrew and Seamus had known each other ____.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">when they were one or two</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">for about six years</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">when they were about six years old</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">for the past six years</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">when they were about six years old</span>
+            </p>
+            <p class="explain-line">النص يذكر تحديداً أنهما تعارفا في طفولتهما، ربما في نحو السادسة من العمر (maybe six): when they were about six years old. أما باقي الخيارات تخلط بين عمرهما وقتها ومدة معرفتهما الفعلية، وهو تفسير غير دقيق للنص.</p>
+          </div>
+        </details>
+      </article>
+      <article class="qcard" id="q100">
+        <div class="qcard__head">
+          <span class="qcard__num">100</span>
+          <p class="qcard__stem" dir="ltr" lang="en">Both families ____ when the men were young.</p>
+        </div>
+        <ol class="qcard__options">
+          <li><span class="opt-letter">A</span><span class="opt-text" dir="ltr" lang="en">stayed in York</span></li><li><span class="opt-letter">B</span><span class="opt-text" dir="ltr" lang="en">moved to Bristol</span></li><li><span class="opt-letter">C</span><span class="opt-text" dir="ltr" lang="en">moved to different cities</span></li><li><span class="opt-letter">D</span><span class="opt-text" dir="ltr" lang="en">lived next door to each other</span></li>
+        </ol>
+        <details class="qcard__reveal">
+          <summary>
+            <span class="summary-txt">إظهار الإجابة والشرح</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="qcard__answer" aria-live="polite">
+            <p class="answer-line">
+              <svg class="tick" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 21 L16 30 L34 8" /></svg>
+              <strong>الإجابة الصحيحة:</strong>
+              <span class="answer-text" dir="ltr" lang="en">moved to Bristol</span>
+            </p>
+            <p class="explain-line">النص يوضح صراحة أن العائلتين انتقلتا كلتاهما إلى مدينة بريستول (both families had moved to Bristol) دون أن تدركا ذلك وقتها: moved to Bristol. أما stayed in York يناقض الانتقال أصلاً، وmoved to different cities يخالف كونهما انتقلتا لنفس المدينة تحديداً، وlived next door to each other كانت الحال لاحقاً في يورك لا وصفاً لحدث الانتقال.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer container">
+    <p>المصدر: Headway General Placement Test — تم حذف أي أسئلة أو صفحات مكررة ظهرت بالخطأ في الملف الأصلي، والاحتفاظ بالأسئلة المئة كاملة مرة واحدة فقط لكل سؤال، مع الإبقاء على نصوص الفهم المقروء كاملة.</p>
+    <p>الإجابات والشروحات أُعدّت بالاعتماد على قواعد اللغة الإنجليزية ومضمون نصوص الفهم المقروء الواردة في الاختبار نفسه.</p>
+  </footer>
+
+</div>
+<script>
+(function(){
+  "use strict";
+
+  var sections = Array.prototype.slice.call(document.querySelectorAll(".qsection"));
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+
+  // Click on a chip scrolls to its section
+  chips.forEach(function(chip){
+    chip.addEventListener("click", function(){
+      var target = document.getElementById(chip.getAttribute("data-target"));
+      if(target){
+        target.scrollIntoView({behavior:"smooth", block:"start"});
+      }
+    });
+  });
+
+  // Highlight active chip while scrolling, using IntersectionObserver (falls back silently if unsupported)
+  var chipStrip = document.querySelector(".spine-scroll");
+
+  function centerChipHorizontally(chip){
+    if(!chipStrip) return;
+    // Scroll only the horizontal chip strip itself — never the page/vertical scroll.
+    var stripRect = chipStrip.getBoundingClientRect();
+    var chipRect = chip.getBoundingClientRect();
+    var delta = (chipRect.left + chipRect.width / 2) - (stripRect.left + stripRect.width / 2);
+    chipStrip.scrollBy({left: delta, behavior: "smooth"});
+  }
+
+  if("IntersectionObserver" in window){
+    var byId = {};
+    chips.forEach(function(c){ byId[c.getAttribute("data-target")] = c; });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var chip = byId[entry.target.id];
+        if(!chip) return;
+        if(entry.isIntersecting){
+          chips.forEach(function(c){ c.setAttribute("aria-selected","false"); });
+          chip.setAttribute("aria-selected","true");
+          centerChipHorizontally(chip);
+        }
+      });
+    }, {rootMargin:"-45% 0px -50% 0px", threshold:0});
+    sections.forEach(function(s){ observer.observe(s); });
+  }
+
+  // Expand all / collapse all
+  var expandBtn = document.getElementById("expand-all");
+  var collapseBtn = document.getElementById("collapse-all");
+  var allDetails = function(){ return Array.prototype.slice.call(document.querySelectorAll(".qcard__reveal")); };
+
+  if(expandBtn){
+    expandBtn.addEventListener("click", function(){
+      allDetails().forEach(function(d){ d.open = true; });
+    });
+  }
+  if(collapseBtn){
+    collapseBtn.addEventListener("click", function(){
+      allDetails().forEach(function(d){ d.open = false; });
+    });
+  }
+
+  // Ensure a clean, fully-open print output, then restore prior state
+  var priorOpenState = null;
+  window.addEventListener("beforeprint", function(){
+    priorOpenState = allDetails().map(function(d){ return d.open; });
+    allDetails().forEach(function(d){ d.open = true; });
+  });
+  window.addEventListener("afterprint", function(){
+    if(!priorOpenState) return;
+    allDetails().forEach(function(d, i){ d.open = priorOpenState[i]; });
+    priorOpenState = null;
+  });
+})();
+
+</script>
+</body>
+</html>
